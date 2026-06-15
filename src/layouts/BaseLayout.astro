@@ -22,7 +22,10 @@ const {
   description,
   ogImage = `${SITE.baseUrl}/images/og-home.jpg`,
   ogImageAlt = 'Mount Kilimanjaro at sunrise',
-  canonical = SITE.baseUrl + Astro.url.pathname.replace(/\/$/, '') + (Astro.url.pathname === '/' ? '' : ''),
+  canonical = SITE.baseUrl + Astro.url.pathname
+    .replace(/index\.html$/, '')
+    .replace(/\.html$/, '')
+    .replace(/\/$/, ''),
   ogType = 'website',
   schemas = [],
   noNav = false,

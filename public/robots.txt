@@ -1,8 +1,6 @@
 # Default for all crawlers
 User-agent: *
 Allow: /
-Disallow: /download_photos.py
-Disallow: /PHOTOS.md
 
 # Explicitly welcome AI / LLM crawlers (Generative Engine Optimization)
 User-agent: GPTBot
@@ -47,4 +45,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://gokilimanjarotreks.com/sitemap.xml
+Sitemap: https://gokilimanjarotreks.com/sitemap-index.xml

@@ -48,7 +48,7 @@ export const ORG_LD = {
   founder: {
     '@type': 'Person',
     name: SITE.founder,
-    url: `${SITE.baseUrl}/about.html`,
+    url: `${SITE.baseUrl}/about`,
   },
   address: {
     '@type': 'PostalAddress',
