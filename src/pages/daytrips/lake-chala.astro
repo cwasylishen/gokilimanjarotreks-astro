@@ -1,23 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "name": "Ngorongoro Crater Day Trip", "description": "Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Af", "provider": {"@id": "https://gokilimanjarotreks.com/#organization"}, "touristType": "Day-trip traveller", "url": "https://gokilimanjarotreks.com/daytrips/ngorongoro", "duration": "P1D", "offers": {"@type": "Offer", "price": "620", "priceCurrency": "USD", "url": "https://gokilimanjarotreks.com/daytrips/ngorongoro", "availability": "https://schema.org/InStock", "description": "Starting price per person"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/"}, {"@type": "ListItem", "position": 2, "name": "Day Trips", "item": "https://gokilimanjarotreks.com/daytrips"}, {"@type": "ListItem", "position": 3, "name": "Ngorongoro Crater Day Trip", "item": "https://gokilimanjarotreks.com/daytrips/ngorongoro"}]}];
+const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "name": "Lake Chala", "description": "A day trip to Lake Chala, a spring-fed volcanic crater lake on the Tanzania and Kenya border, for hiking, birdwatching and quiet swimming.", "provider": {"@id": "https://gokilimanjarotreks.com/#organization"}, "touristType": "Day-trip traveller", "url": "https://gokilimanjarotreks.com/daytrips/lake-chala", "duration": "P1D", "offers": {"@type": "Offer", "price": "118", "priceCurrency": "USD", "url": "https://gokilimanjarotreks.com/daytrips/lake-chala", "availability": "https://schema.org/InStock", "description": "Starting price per person"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/"}, {"@type": "ListItem", "position": 2, "name": "Day Trips", "item": "https://gokilimanjarotreks.com/daytrips"}, {"@type": "ListItem", "position": 3, "name": "Lake Chala", "item": "https://gokilimanjarotreks.com/daytrips/lake-chala"}]}];
 ---
 
 <BaseLayout
-  title="Ngorongoro Crater Day Trip | Go Kilimanjaro Treks"
-  description="Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Af"
-  ogImage="https://gokilimanjarotreks.com/images/gallery/ngorongoro-lion-crater-walls.jpg"
-  ogImageAlt="Lion on the Ngorongoro Crater floor"
+  title="Lake Chala Day Trip | Go Kilimanjaro Treks"
+  description="A day trip to Lake Chala, a spring-fed volcanic crater lake on the Tanzania and Kenya border, for hiking, birdwatching and quiet swimming."
+  ogImage="https://gokilimanjarotreks.com/images/daytrip-chala.jpg"
+  ogImageAlt="Lake Chala, a volcanic crater lake on the Tanzania and Kenya border"
   schemas={schemas}
 >
 
 <section class="page-hero">
-  <img src="/images/gallery/ngorongoro-lion-crater-walls.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55" />
+  <img src="/images/daytrip-chala.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55" />
   <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
   <div class="container">
     <span class="page-hero-eyebrow">Tanzania Day Trip</span>
-    <h1>Ngorongoro Crater Day Trip</h1>
-    <p>Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Africa. Descend the crater wall into a self-contained world of grassland, swamp, forest and soda lake, where the Big Five can be seen in a single day.</p>
+    <h1>Lake Chala</h1>
+    <p>Discover a hidden paradise tucked away on the border of Tanzania and Kenya. Lake Chala is a deep, pristine volcanic crater lake fed entirely by clean, underground springs from Mount Kilimanjaro. Surrounded by lush, steep green crater walls, it offers a tranquil oasis perfect for hiking, birdwatching, and peaceful relaxation away from safari crowds.</p>
     <div class="hero-ctas">
       <a href="/contact" class="btn-primary">Request a Quote &#x2192;</a>
       <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
@@ -27,29 +27,30 @@ const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "nam
 
 <section class="section-white">
   <div class="container" style="max-width:820px">
-    <p style="font-size:1.15rem;color:var(--amber-cta);font-weight:700;margin:30px 0 18px">From $620 per person</p>
+    <p style="font-size:1.15rem;color:var(--amber-cta);font-weight:700;margin:30px 0 18px">From $118 per person</p>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">Highlights</h2>
     <ul style="padding-left:22px;margin-bottom:8px">
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Descend more than 600 metres into the floor of an intact volcanic caldera.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">One of the best places in Tanzania to see the Big Five, including the rare black rhino, in a single day.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Flamingos, crowned cranes and ostriches around the soda lake at Lake Magadi.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Hike down the steep, verdant volcanic crater rim to touch the crystal-clear waters.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Spot varied birdlife, monkeys, and unique flora in a peaceful, untouched sanctuary.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Relax or paddle along the quiet edges of a lake split between two countries.</li>
     </ul>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">A Day on This Trip</h2>
     <ol style="padding-left:22px;margin-bottom:8px">
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Early morning: Drive from Arusha up to the Ngorongoro Conservation Area and the crater rim.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Mid morning: Descend the steep access road onto the crater floor and begin the game drive across grasslands, swamps and forest.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Midday: Picnic lunch at a scenic site on the crater floor, surrounded by wildlife.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Afternoon: Continue the game drive, looking for lion, elephant, buffalo, hyena, hippo and black rhino, then ascend the crater wall.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Late afternoon: Drive back to Arusha.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">08:00 AM: Drive from Arusha or Moshi through vibrant rural towns towards the Kenyan border.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">10:00 AM: Arrive at Lake Chala and take a guided walk along the high crater rim to enjoy the panoramic views.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">11:00 AM: Carefully hike down the forest-lined path to the water&#39;s edge.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">12:30 PM: Enjoy a relaxing lunch by the water or at a designated lakeside viewpoint.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">01:30 PM: Spend time exploring the nature trails, birdwatching, or relaxing in the serene environment.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">03:30 PM: Hike back up to the crater rim and drive back to town.</li>
     </ol>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Included</h2>
-    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Ngorongoro Conservation Area fees, crater service fee, professional English-speaking safari guide, private 4x4 safari vehicle with pop-up roof, picnic lunch, bottled drinking water, government taxes and VAT.</p>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Ground transportation, Lake Chala reserve entry fees, professional local guide, picnic lunch, and bottled water.</p>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Not Included</h2>
-    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">International flights, travel insurance, personal expenses, alcoholic and soft drinks, tips and gratuities, items of a personal nature.</p>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Kayaking rentals (subject to seasonal availability), tips, and personal items.</p>
     <p style="font-size:.92rem;color:var(--muted);line-height:1.7;margin-top:18px">Every day trip is private and fully customisable. Prices vary with group size and season, so message Nelson for an exact quote for your dates.</p>
   </div>
 </section>
@@ -64,12 +65,12 @@ const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "nam
 <a href="/daytrips/arusha-national-park" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Arusha Safari</a>
 <a href="/daytrips/ol-doinyo-lengai" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ol Doinyo Lengai</a>
 <a href="/daytrips/kilimanjaro-helicopter-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Kilimanjaro Helicopter Tour</a>
-<a href="/daytrips/lake-chala" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Lake Chala</a>
 <a href="/daytrips/ndarakwai-ranch" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ndarakwai Ranch</a>
 <a href="/daytrips/chemka-hot-springs" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Chemka Hot Springs</a>
 <a href="/daytrips/kilimanjaro-day-hike" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Mount Kilimanjaro Day Hikes</a>
 <a href="/daytrips/horseback-riding" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Horseback Riding</a>
 <a href="/daytrips/arusha-shopping-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Arusha Shopping Tour</a>
+<a href="/daytrips/ngorongoro" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ngorongoro Crater Day Trip</a>
     </div>
     <p style="margin-top:24px"><a href="/daytrips" style="color:var(--amber-cta);font-weight:600">See all day trips &#x2192;</a></p>
   </div>

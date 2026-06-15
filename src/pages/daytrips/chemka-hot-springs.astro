@@ -1,23 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "name": "Ngorongoro Crater Day Trip", "description": "Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Af", "provider": {"@id": "https://gokilimanjarotreks.com/#organization"}, "touristType": "Day-trip traveller", "url": "https://gokilimanjarotreks.com/daytrips/ngorongoro", "duration": "P1D", "offers": {"@type": "Offer", "price": "620", "priceCurrency": "USD", "url": "https://gokilimanjarotreks.com/daytrips/ngorongoro", "availability": "https://schema.org/InStock", "description": "Starting price per person"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/"}, {"@type": "ListItem", "position": 2, "name": "Day Trips", "item": "https://gokilimanjarotreks.com/daytrips"}, {"@type": "ListItem", "position": 3, "name": "Ngorongoro Crater Day Trip", "item": "https://gokilimanjarotreks.com/daytrips/ngorongoro"}]}];
+const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "name": "Chemka Hot Springs", "description": "A relaxing day trip to Chemka (Kikuletwa) Hot Springs, warm turquoise pools under ancient fig trees, perfect after a safari or Kilimanjaro climb.", "provider": {"@id": "https://gokilimanjarotreks.com/#organization"}, "touristType": "Day-trip traveller", "url": "https://gokilimanjarotreks.com/daytrips/chemka-hot-springs", "duration": "P1D", "offers": {"@type": "Offer", "price": "85", "priceCurrency": "USD", "url": "https://gokilimanjarotreks.com/daytrips/chemka-hot-springs", "availability": "https://schema.org/InStock", "description": "Starting price per person"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/"}, {"@type": "ListItem", "position": 2, "name": "Day Trips", "item": "https://gokilimanjarotreks.com/daytrips"}, {"@type": "ListItem", "position": 3, "name": "Chemka Hot Springs", "item": "https://gokilimanjarotreks.com/daytrips/chemka-hot-springs"}]}];
 ---
 
 <BaseLayout
-  title="Ngorongoro Crater Day Trip | Go Kilimanjaro Treks"
-  description="Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Af"
-  ogImage="https://gokilimanjarotreks.com/images/gallery/ngorongoro-lion-crater-walls.jpg"
-  ogImageAlt="Lion on the Ngorongoro Crater floor"
+  title="Chemka Hot Springs Day Trip | Go Kilimanjaro Treks"
+  description="A relaxing day trip to Chemka (Kikuletwa) Hot Springs, warm turquoise pools under ancient fig trees, perfect after a safari or Kilimanjaro climb."
+  ogImage="https://gokilimanjarotreks.com/images/daytrip-chemka.jpg"
+  ogImageAlt="Kikuletwa Hot Springs turquoise pools surrounded by fig trees"
   schemas={schemas}
 >
 
 <section class="page-hero">
-  <img src="/images/gallery/ngorongoro-lion-crater-walls.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55" />
+  <img src="/images/daytrip-chemka.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55" />
   <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
   <div class="container">
     <span class="page-hero-eyebrow">Tanzania Day Trip</span>
-    <h1>Ngorongoro Crater Day Trip</h1>
-    <p>Spend a full day inside the Ngorongoro Crater, the largest unbroken volcanic caldera on Earth and home to the densest concentration of large wildlife in Africa. Descend the crater wall into a self-contained world of grassland, swamp, forest and soda lake, where the Big Five can be seen in a single day.</p>
+    <h1>Chemka Hot Springs</h1>
+    <p>Unwind in an enchanting desert oasis hidden within an arid scrubland plain. Chemka Hot Springs (also known as Kikuletwa) features beautiful pools of warm, crystal-clear turquoise water surrounded by a dense canopy of ancient fig trees and twisting roots. It is the perfect tropical paradise for swimming, relaxing, and refreshing your body after a dusty safari or a grueling mountain trek.</p>
     <div class="hero-ctas">
       <a href="/contact" class="btn-primary">Request a Quote &#x2192;</a>
       <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
@@ -27,29 +27,29 @@ const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "nam
 
 <section class="section-white">
   <div class="container" style="max-width:820px">
-    <p style="font-size:1.15rem;color:var(--amber-cta);font-weight:700;margin:30px 0 18px">From $620 per person</p>
+    <p style="font-size:1.15rem;color:var(--amber-cta);font-weight:700;margin:30px 0 18px">From $85 per person</p>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">Highlights</h2>
     <ul style="padding-left:22px;margin-bottom:8px">
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Descend more than 600 metres into the floor of an intact volcanic caldera.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">One of the best places in Tanzania to see the Big Five, including the rare black rhino, in a single day.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Flamingos, crowned cranes and ostriches around the soda lake at Lake Magadi.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Swim in perfectly clear, warm geothermal water pools.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Play around on the rope swings or enjoy a natural &#39;fish pedicure&#39; from tiny river fish.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Relax in a striking, lush jungle oasis tucked away inside a dry savannah landscape.</li>
     </ul>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">A Day on This Trip</h2>
     <ol style="padding-left:22px;margin-bottom:8px">
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Early morning: Drive from Arusha up to the Ngorongoro Conservation Area and the crater rim.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Mid morning: Descend the steep access road onto the crater floor and begin the game drive across grasslands, swamps and forest.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Midday: Picnic lunch at a scenic site on the crater floor, surrounded by wildlife.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Afternoon: Continue the game drive, looking for lion, elephant, buffalo, hyena, hippo and black rhino, then ascend the crater wall.</li>
-<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">Late afternoon: Drive back to Arusha.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">09:00 AM: Depart Arusha or Moshi, driving past sugar cane plantations and baobab patches down bumpy dirt roads.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">10:30 AM: Arrive at the springs; change into swimwear and dive into the inviting, warm turquoise water.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">01:00 PM: Enjoy a freshly cooked hot lunch featuring local favorites like Chipsi Mayai or Nyama Choma.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">02:00 PM: Spend the afternoon lounging on the banks, sunbathing, or enjoying the rope swings.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">04:00 PM: Pack up and drive back to town as the sun begins to set.</li>
     </ol>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Included</h2>
-    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Ngorongoro Conservation Area fees, crater service fee, professional English-speaking safari guide, private 4x4 safari vehicle with pop-up roof, picnic lunch, bottled drinking water, government taxes and VAT.</p>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Round-trip transport, hot springs entry fees, local guide, freshly prepared local lunch, and bottled water.</p>
 
     <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Not Included</h2>
-    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">International flights, travel insurance, personal expenses, alcoholic and soft drinks, tips and gratuities, items of a personal nature.</p>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Swimwear rentals (best to bring your own), alcoholic drinks, and tips.</p>
     <p style="font-size:.92rem;color:var(--muted);line-height:1.7;margin-top:18px">Every day trip is private and fully customisable. Prices vary with group size and season, so message Nelson for an exact quote for your dates.</p>
   </div>
 </section>
@@ -66,10 +66,10 @@ const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "nam
 <a href="/daytrips/kilimanjaro-helicopter-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Kilimanjaro Helicopter Tour</a>
 <a href="/daytrips/lake-chala" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Lake Chala</a>
 <a href="/daytrips/ndarakwai-ranch" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ndarakwai Ranch</a>
-<a href="/daytrips/chemka-hot-springs" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Chemka Hot Springs</a>
 <a href="/daytrips/kilimanjaro-day-hike" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Mount Kilimanjaro Day Hikes</a>
 <a href="/daytrips/horseback-riding" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Horseback Riding</a>
 <a href="/daytrips/arusha-shopping-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Arusha Shopping Tour</a>
+<a href="/daytrips/ngorongoro" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ngorongoro Crater Day Trip</a>
     </div>
     <p style="margin-top:24px"><a href="/daytrips" style="color:var(--amber-cta);font-weight:600">See all day trips &#x2192;</a></p>
   </div>

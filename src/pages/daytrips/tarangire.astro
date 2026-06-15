@@ -1,31 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const schemas = [{
-  "@context":"https://schema.org","@type":"TouristTrip",
-  "name":"Tarangire National Park Day Trip",
-  "description":"Tanzania day trip safari to Tarangire National Park, famous for its baobab trees and large elephant herds.",
-  "provider":{"@id":"https://gokilimanjarotreks.com/#organization"},
-  "touristType":"Day-trip safari traveller",
-  "url":"https://gokilimanjarotreks.com/daytrips/tarangire",
-  "duration":"P1D"
-}];
+const schemas = [{"@context": "https://schema.org", "@type": "TouristTrip", "name": "Tarangire Safari Tour", "description": "A full-day game drive in Tarangire National Park from Arusha, famous for its giant elephant herds and ancient baobab trees.", "provider": {"@id": "https://gokilimanjarotreks.com/#organization"}, "touristType": "Day-trip traveller", "url": "https://gokilimanjarotreks.com/daytrips/tarangire", "duration": "P1D", "offers": {"@type": "Offer", "price": "245", "priceCurrency": "USD", "url": "https://gokilimanjarotreks.com/daytrips/tarangire", "availability": "https://schema.org/InStock", "description": "Starting price per person"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/"}, {"@type": "ListItem", "position": 2, "name": "Day Trips", "item": "https://gokilimanjarotreks.com/daytrips"}, {"@type": "ListItem", "position": 3, "name": "Tarangire Safari Tour", "item": "https://gokilimanjarotreks.com/daytrips/tarangire"}]}];
 ---
 
 <BaseLayout
-  title="Tarangire National Park Day Trip | Go Kilimanjaro Treks"
-  description="Tanzania day trip safari to Tarangire National Park, famous for its baobab trees and large elephant herds."
-  ogImage="https://gokilimanjarotreks.com/images/gallery/serengeti-elephant-herd.jpg"
-  ogImageAlt="Elephant herd in Tanzania"
+  title="Tarangire Safari Day Trip | Go Kilimanjaro Treks"
+  description="A full-day game drive in Tarangire National Park from Arusha, famous for its giant elephant herds and ancient baobab trees."
+  ogImage="https://gokilimanjarotreks.com/images/daytrip-tarangire.jpg"
+  ogImageAlt="Elephant herd at Tarangire National Park"
   schemas={schemas}
 >
 
 <section class="page-hero">
-  <img src="/images/gallery/serengeti-elephant-herd.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;opacity:0.55" />
+  <img src="/images/daytrip-tarangire.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55" />
   <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
   <div class="container">
     <span class="page-hero-eyebrow">Tanzania Day Trip</span>
-    <h1>Tarangire National Park Day Trip.</h1>
-    <p>Tanzania day trip safari to Tarangire National Park, famous for its baobab trees and large elephant herds.</p>
+    <h1>Tarangire Safari Tour</h1>
+    <p>Escape into a beautifully rugged wilderness defined by massive ancient baobab trees and iconic African landscapes. This day trip takes you into one of Tanzania&#39;s most dynamic seasonal parks, famous for its raw, untamed atmosphere and exceptional wildlife concentrations.</p>
     <div class="hero-ctas">
       <a href="/contact" class="btn-primary">Request a Quote &#x2192;</a>
       <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
@@ -35,27 +27,51 @@ const schemas = [{
 
 <section class="section-white">
   <div class="container" style="max-width:820px">
-    <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">DAY TRIP TO TARANGIRE NATIONAL PARK</h2>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Price Starts From 360 USD.</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Discover the beauty of Tarangire National Park, one of Tanzania's most remarkable wildlife destinations. Known for its large elephant herds, iconic baobab trees, and diverse wildlife, Tarangire offers an authentic safari experience in a stunning natural setting.</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Enjoy a full-day game drive through the park's varied landscapes, including open savannahs, acacia woodlands, and the Tarangire River, which attracts a wide range of animals throughout the year. Wildlife sightings may include elephants, lions, leopards, giraffes, zebras, wildebeests, buffaloes, impalas, warthogs, and many other species. The park is also a paradise for bird lovers, with over 500 recorded bird species.</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">A picnic lunch will be served at one of the park's scenic picnic sites, allowing you to relax and enjoy the surrounding wilderness before continuing your afternoon game drive.</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Tarangire is especially famous for its ancient baobab trees and exceptional elephant population, making it one of the most unique and rewarding safari destinations in Northern Tanzania.</p>
-<h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">Price includes</h2>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Park entrance fees</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Professional English-speaking safari guide</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Private 4x4 safari vehicle with pop-up roof</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Picnic lunch</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Bottled drinking water</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Government taxes and VAT</p>
-<h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">Not Included</h2>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• International flights</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Travel insurance</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Personal expenses</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Alcoholic and soft drinks</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Tips and gratuities</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">• Items of a personal nature</p>
-<p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">END.</p>
+    <p style="font-size:1.15rem;color:var(--amber-cta);font-weight:700;margin:30px 0 18px">From $245 per person</p>
+
+    <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">Highlights</h2>
+    <ul style="padding-left:22px;margin-bottom:8px">
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Witness some of the largest elephant herds in Africa wandering beneath ancient baobab trees.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Experience stunning game viewing along the life-giving Tarangire River.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:8px">Spot specialized dry-country wildlife like the fringe-eared oryx and lesser kudu.</li>
+    </ul>
+
+    <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">A Day on This Trip</h2>
+    <ol style="padding-left:22px;margin-bottom:8px">
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">07:30 AM: Pick up from your hotel in Arusha and drive through the scenic Maasai Steppe to Tarangire National Park.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">10:00 AM: Enter the park and begin tracking wildlife along the riverbanks and golden savannah plains.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">01:00 PM: Enjoy a packed lunch at a scenic viewpoint overlooking the river, keeping an eye out for elephants below.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">02:00 PM: Continue exploring different loops of the park to spot big cats and unique bird species.</li>
+<li style="font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:10px">04:00 PM: Exit the park gates and drive back to Arusha, arriving in the early evening.</li>
+    </ol>
+
+    <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Included</h2>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Transport in a 4x4 safari vehicle with a pop-up roof, professional English-speaking safari guide, national park entry fees, picnic lunchbox, and bottled drinking water.</p>
+
+    <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-cta);margin:32px 0 12px">What is Not Included</h2>
+    <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">Tips/gratuities for the guide, alcoholic beverages, travel insurance, and personal souvenirs.</p>
+    <p style="font-size:.92rem;color:var(--muted);line-height:1.7;margin-top:18px">Every day trip is private and fully customisable. Prices vary with group size and season, so message Nelson for an exact quote for your dates.</p>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container" style="max-width:900px;text-align:center">
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--ink-2);margin-bottom:8px">More Tanzania Day Trips</h2>
+    <p style="color:var(--muted);margin-bottom:22px">Pair this with another single-day adventure from Moshi or Arusha.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+<a href="/daytrips/materuni-waterfall-coffee" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Materuni Waterfall and Coffee Farm Tour</a>
+<a href="/daytrips/arusha-national-park" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Arusha Safari</a>
+<a href="/daytrips/ol-doinyo-lengai" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ol Doinyo Lengai</a>
+<a href="/daytrips/kilimanjaro-helicopter-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Kilimanjaro Helicopter Tour</a>
+<a href="/daytrips/lake-chala" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Lake Chala</a>
+<a href="/daytrips/ndarakwai-ranch" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ndarakwai Ranch</a>
+<a href="/daytrips/chemka-hot-springs" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Chemka Hot Springs</a>
+<a href="/daytrips/kilimanjaro-day-hike" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Mount Kilimanjaro Day Hikes</a>
+<a href="/daytrips/horseback-riding" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Horseback Riding</a>
+<a href="/daytrips/arusha-shopping-tour" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Arusha Shopping Tour</a>
+<a href="/daytrips/ngorongoro" style="display:inline-block;padding:8px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--ink-2);text-decoration:none;font-weight:600">Ngorongoro Crater Day Trip</a>
+    </div>
+    <p style="margin-top:24px"><a href="/daytrips" style="color:var(--amber-cta);font-weight:600">See all day trips &#x2192;</a></p>
   </div>
 </section>
 

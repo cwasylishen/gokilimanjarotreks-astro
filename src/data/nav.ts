@@ -40,11 +40,12 @@ export const FOOTER_KILIMANJARO: NavItem[] = [
 ];
 
 export const FOOTER_PLAN: NavItem[] = [
+  { href: '/safaris', label: 'Safari Itineraries' },
+  { href: '/destinations', label: 'Destinations Guide' },
   { href: '/safety', label: 'Safety & Rescue' },
   { href: '/travel-guide', label: 'Travel Guide' },
   { href: '/choose-operator', label: 'Choose an Operator' },
   { href: '/blog', label: 'Blog' },
-  { href: '/destinations', label: 'Destinations Guide' },
 ];
 
 export const FOOTER_COMPANY: NavItem[] = [
