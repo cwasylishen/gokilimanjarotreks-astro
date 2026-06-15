@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Climb Kilimanjaro","item":"https://gokilimanjarotreks.com/kilimanjaro.html"},{"@type":"ListItem","position":3,"name":"Packing List","item":"https://gokilimanjarotreks.com/packing-list.html"}],"dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"FAQPage","url":"https://gokilimanjarotreks.com/packing-list.html","dateModified":"2026-06-14","mainEntity":[{"@type":"Question","name":"Can I rent gear in Moshi?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most quality gear is available to rent in Moshi at fair rates: down jackets, sleeping bags rated to -10 C or colder, hiking boots, trekking poles, gaiters, waterproof shells. Renting is a sensible option if you fly in with one bag and don't want to buy specialist kit for a one-time climb. We can connect you with a trusted rental provider on arrival or you can rent through your hotel."}},{"@type":"Question","name":"Do I need crampons or technical climbing gear for Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"No. Kilimanjaro is a trekking mountain, not a technical climb. You do not need crampons, ice axes, harnesses, ropes, or any specialised mountaineering equipment. The standard summit night is a long walk in the dark in heavy clothing. The optional post-summit glacier tour to the Heim Glacier viewpoint may require microspikes if ice conditions warrant, and we carry team kit for that."}},{"@type":"Question","name":"How heavy can my duffel bag be?","acceptedAnswer":{"@type":"Answer","text":"Tanzania National Parks regulations cap porter loads at 20 kg (44 lb) per porter, which includes the duffel plus food and team supplies the porter is also carrying. Your personal duffel should be no more than 15 kg (33 lb). We will weigh duffels at the gate. Pack a daypack you carry yourself with what you need during the hiking day (water, snacks, layers, camera, sunscreen, basic medical)."}},{"@type":"Question","name":"Do I need a 4-season sleeping bag?","acceptedAnswer":{"@type":"Answer","text":"A 3-season bag rated to about -10 C (14 F) is enough for most climbers because we provide insulated sleeping pads and you sleep in thermal base layers. If you sleep cold or you are on the Northern Circuit or Crater Camp variants, go for a 4-season bag rated to -18 C (0 F). A bag liner adds 5-10 C of warmth and is light to pack."}},{"@type":"Question","name":"What kind of headlamp do I need?","acceptedAnswer":{"@type":"Answer","text":"A reliable headlamp with at least 200 lumens for summit night. Petzl, Black Diamond, and similar brands are reliable. Bring spare batteries. Test the headlamp at home before you fly. Lithium batteries last much longer in cold than alkaline. Bring a small backup headlamp; redundancy matters on summit night."}},{"@type":"Question","name":"Should I bring my own snacks?","acceptedAnswer":{"@type":"Answer","text":"Optional but recommended. Our cook prepares hot meals at every camp and packed lunches for the trail, but personal snack preferences are personal. Energy bars, dried fruit, nuts, chocolate, and salted candies travel well. Bring snacks that are easy to eat when you are tired and cold."}},{"@type":"Question","name":"What about toiletries and personal items?","acceptedAnswer":{"@type":"Answer","text":"Minimal is the rule. Travel-size toothpaste, biodegradable soap, wet wipes for camp washing, hand sanitiser, lip balm with SPF, high-SPF sunscreen, anti-chafing balm. Forget the makeup and the heavy moisturisers. Wet wipes are your shower for the week. Pack a small bag for toiletries that can be carried inside your jacket on summit night so things don't freeze."}},{"@type":"Question","name":"Can I bring a camera or drone?","acceptedAnswer":{"@type":"Answer","text":"Camera yes, drone no. Drones require advance permits (Tanzania Film Board plus TCAA plus Ministry of Defense plus TANAPA) and customs will impound them on arrival without those permits. See our Travel Guide for the full drone law. Cameras up to GoPro and standard DSLR size are fine for personal photography with no permit required."}},{"@type":"Question","name":"Do I need walking poles?","acceptedAnswer":{"@type":"Answer","text":"Yes. Trekking poles materially reduce the load on your knees during the long Day 7 or 8 descent. They also help with balance on Barranco Wall scrambles and the loose scree of summit night and the descent from Stella Point. Use poles you have hiked with before. Telescoping or folding poles both work."}},{"@type":"Question","name":"Anything I should NOT bring?","acceptedAnswer":{"@type":"Answer","text":"Plastic bags of any kind (banned in Tanzania since June 2019), drones without permits, jewellery and valuables, heavy cotton clothing (cotton kills in cold and wet), brand new boots (break them in at home), and anything heavier than 15 kg total in your duffel."}}]},{"@context":"https://schema.org","@type":"Article","headline":"Mount Kilimanjaro Packing List: Complete Gear Guide for Climbers","description":"The complete packing list for a successful Mount Kilimanjaro climb: required documents, layered clothing, hands/head/feet, daypack contents, personal medical, sleep system, and what to leave behind.","url":"https://gokilimanjarotreks.com/packing-list.html","image":"https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg","author":{"@type":"Person","name":"Nelson Mushi","url":"https://gokilimanjarotreks.com/about.html"},"publisher":{"@id":"https://gokilimanjarotreks.com/#organization"},"datePublished":"2026-06-14","dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"HowTo","name":"How to Pack for a Mount Kilimanjaro Climb","description":"The complete packing approach for Mount Kilimanjaro by climate zone and category, from a Moshi-based senior guide.","image":"https://gokilimanjarotreks.com/images/page-hero-kilimanjaro.jpg","totalTime":"PT2H","estimatedCost":{"@type":"MonetaryAmount","currency":"USD","value":"150"},"author":{"@type":"Person","name":"Nelson Mushi","url":"https://gokilimanjarotreks.com/about.html"},"publisher":{"@id":"https://gokilimanjarotreks.com/#organization"},"dateModified":"2026-06-14","step":[{"@type":"HowToStep","name":"Required Documents","text":"Passport valid 6+ months past entry with 2 blank pages, printed Tanzania e-Visa confirmation, vaccination records, mandatory travel insurance covering trekking to 6,000 m including helicopter evacuation, printed flight itinerary."},{"@type":"HowToStep","name":"Clothing: Layered System","text":"Merino or synthetic base layers (top and bottom, no cotton), heavy fleece mid-layer, heavy down or synthetic puffy jacket rated to -15 C, waterproof and windproof hardshell jacket and pants. Layers go on and off through five climate zones."},{"@type":"HowToStep","name":"Extremities","text":"Hands: liner gloves plus heavy insulated outer gloves rated to -20 C. Head: wool beanie plus balaclava or buff covering the face. Feet: insulated waterproof hiking boots already broken in, 4-5 pairs heavy wool hiking socks, sock liners."},{"@type":"HowToStep","name":"Sleeping System","text":"Sleeping bag rated to -10 C minimum (rentable in Moshi for the climb), inflatable sleeping pad, silk or synthetic liner adds warmth and keeps the bag clean."},{"@type":"HowToStep","name":"Daypack Contents (30-40 L)","text":"Three-litre hydration capacity using Nalgene wide-mouth bottles plus a bladder, camera, snacks, headlamp with spare batteries, sunglasses category 4 UV, mineral SPF50 sunscreen, lip balm SPF30, personal first aid kit including blister care, hand warmers for summit night."},{"@type":"HowToStep","name":"Renting Gear in Moshi","text":"Full kit rental (sleeping bag, hardshell pants, down puffy, gloves, trekking poles, gaiters) is typically USD 100-150 for the climb. Discuss at the pre-trek briefing the day before heading to the gate."},{"@type":"HowToStep","name":"Do NOT Bring","text":"No cotton clothing (becomes lethal at altitude when wet), no brand new boots (blisters end summit attempts), no drones (impounded without permits), no plastic bags (banned in Tanzania since 2019), no alcohol (no benefit at altitude, dehydrates)."}]}];
+---
+
+<BaseLayout
+  title="Kilimanjaro Packing List: Complete Gear Guide From Nelson Mushi | Go Kilimanjaro Treks"
+  description="The complete Mount Kilimanjaro packing list from Nelson Mushi: required documents, layered clothing, boots, daypack, sleep system, personal medical kit, and what to leave behind. Renting in Moshi, weight limits, and gear FAQ."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Mount Kilimanjaro packing list and gear guide for a successful summit climb"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Complete Gear Guide</span>
+    <h1>Kilimanjaro <em>Packing List.</em></h1>
+    <p>The full kit you need to climb Kilimanjaro safely and comfortably, organised by category. Nothing extra you don't need, nothing missing you do. Rentals available in Moshi for everything specialist.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Book Your Climb &#x2192;</a>
+      <a href="#leadmag-form" class="btn-ghost">&#x2B07; Free Packing PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="leadmag" aria-label="Free Kilimanjaro packing list PDF download">
+  <div class="container">
+    <div class="leadmag-card">
+      <div class="leadmag-left">
+        <span class="badge">Free Download</span>
+        <h2>Take Nelson's <em>Packing List</em> With You.</h2>
+        <p>Get the same printable PDF every Go Kilimanjaro Treks climber receives in their pre-trek briefing. Nine categories, climate-zone notes, what to rent in Moshi, and what not to bring. Ten pages, brand-clean design, ready to print or save to your phone.</p>
+        <div class="leadmag-checks">
+          <span class="leadmag-check">Nine categories covered</span>
+          <span class="leadmag-check">What to rent in Moshi</span>
+          <span class="leadmag-check">What NOT to bring</span>
+          <span class="leadmag-check">Print-ready PDF</span>
+        </div>
+      </div>
+      <div>
+        <form id="leadmag-form" class="leadmag-form" novalidate>
+          <input type="text" name="_company" class="leadmag-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Packing List PDF download">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="source" value="packing-list.html">
+          <div>
+            <label for="lm-name">First Name</label>
+            <input type="text" id="lm-name" name="name" placeholder="Nelson" required minlength="2">
+          </div>
+          <div>
+            <label for="lm-email">Email</label>
+            <input type="email" id="lm-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <button type="submit" id="lm-btn">
+            <span id="lm-btn-text">Email Me the PDF &#x2192;</span>
+          </button>
+          <p class="leadmag-fine">No spam. Nelson may follow up about your climb. Unsubscribe anytime.</p>
+        </form>
+        <div id="leadmag-success" class="leadmag-success">
+          <strong>Asante! Your download is starting.</strong>
+          If nothing happens in 5 seconds, <a href="/downloads/kilimanjaro-packing-list.pdf" download>click here to grab it</a>.
+        </div>
+        <div id="leadmag-error" class="leadmag-error"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:880px;margin:0 auto" class="reveal prose-section">
+      <div class="toc">
+        <h3>Sections in this guide</h3>
+        <ol>
+          <li><a href="#required">Required documents</a></li>
+          <li><a href="#layering">Layered clothing system</a></li>
+          <li><a href="#feet">Head, hands, feet</a></li>
+          <li><a href="#sleep">Sleeping system</a></li>
+          <li><a href="#daypack">Daypack contents</a></li>
+          <li><a href="#medical">Personal medical &amp; toiletries</a></li>
+          <li><a href="#summit-night">Summit night specifics</a></li>
+          <li><a href="#dont-bring">What NOT to bring</a></li>
+          <li><a href="#rent">Renting in Moshi</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </div>
+
+      <p>This list is built from 22 years of Nelson's experience on Kilimanjaro. It is honest about what you actually need, not padded with affiliate-link gear you won't use. We rent anything specialist in Moshi at fair rates, so don't feel pressured to buy a -18 C sleeping bag for a one-time climb.</p>
+
+      <div class="callout-blue"><strong>Weight rule:</strong> Tanzania National Parks regulations cap porter loads at 20 kg. Your personal duffel should be 15 kg or less. We will weigh duffels at the gate. Pack your daypack with what you need during the hiking day: water, snacks, layers, camera, sunscreen.</div>
+
+      <h2 id="required">1. Required documents</h2>
+      <ul class="checklist">
+        <li>Passport with at least 6 months validity beyond your trip</li><li>TANAPA park permits (we arrange these as part of your package)</li><li>Proof of comprehensive travel insurance covering helicopter rescue (mandatory)</li><li>Yellow fever vaccination certificate if travelling from an endemic country</li>
+      </ul>
+      <p>The insurance is non-negotiable. Without proof of comprehensive travel insurance covering helicopter rescue and emergency medical evacuation, climbers will not be permitted to start. See our <a href="/safety">Safety page</a> for the specific coverage requirements.</p>
+
+      <h2 id="layering">2. Layered clothing system</h2>
+      <p>Temperatures range from tropical heat in the lower rainforest to -20 C or colder on summit night. The system is layers, not single heavy garments. Cotton kills in cold and wet; everything next to skin should be merino or synthetic.</p>
+      <table class="safety-table"><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Base layer top</strong></td><td>2x merino or synthetic moisture-wicking long-sleeve. No cotton.</td></tr><tr><td><strong>Base layer bottoms</strong></td><td>2x merino or synthetic. Worn for sleeping and as layer 1 on summit night.</td></tr><tr><td><strong>Hiking pants</strong></td><td>2 pairs lightweight quick-dry trekking pants.</td></tr><tr><td><strong>Shorts</strong></td><td>Optional, useful in the lower forest.</td></tr><tr><td><strong>Fleece mid-layer</strong></td><td>Heavy fleece or light puffy. Worn most days above the moorland.</td></tr><tr><td><strong>Insulated jacket</strong></td><td>Down or synthetic puffy rated to about -15 C. Summit night essential.</td></tr><tr><td><strong>Waterproof shell jacket</strong></td><td>Hard shell with hood, fully waterproof and windproof.</td></tr><tr><td><strong>Waterproof shell pants</strong></td><td>Hard shell pants, ideally with full side zips for layering over boots.</td></tr><tr><td><strong>Hiking socks</strong></td><td>5-6 pairs merino wool, mid-weight to thick.</td></tr><tr><td><strong>Sock liners</strong></td><td>2-3 pairs thin liners to reduce blister risk.</td></tr></tbody></table>
+
+      <h2 id="feet">3. Head, hands, feet</h2>
+      <p>Frostbite risk is real on summit night. Extremities lose heat fastest. The kit below is non-negotiable.</p>
+      <table class="safety-table"><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Hiking boots</strong></td><td>Sturdy, waterproof, ankle-supporting. Broken in at home. Vibram or similar high-traction soles. The single most important piece of gear.</td></tr><tr><td><strong>Camp shoes</strong></td><td>Lightweight trainers, Crocs, or down booties for camp.</td></tr><tr><td><strong>Gaiters</strong></td><td>Knee-high gaiters to keep scree out of boots on summit night descent. Strongly recommended.</td></tr><tr><td><strong>Sun hat / cap</strong></td><td>Wide-brimmed sun hat for daytime UV.</td></tr><tr><td><strong>Beanie / warm hat</strong></td><td>Wool or fleece beanie that covers the ears.</td></tr><tr><td><strong>Balaclava or buff</strong></td><td>Wraps the face for summit night.</td></tr><tr><td><strong>Liner gloves</strong></td><td>Thin merino or fleece liner gloves.</td></tr><tr><td><strong>Insulated gloves</strong></td><td>Heavy insulated outer gloves rated for -20 C. Summit night essential.</td></tr><tr><td><strong>Sunglasses</strong></td><td>UV 400-protective wraparound sunglasses, glacier-grade ideal. Mandatory. UV at 5,895 m is 60 percent higher than at sea level.</td></tr></tbody></table>
+
+      <h2 id="sleep">4. Sleeping system</h2>
+      <p>You will sleep at altitudes from 2,700 m to 4,750 m. Tents are 4-season, we provide insulated pads. Your bag is what keeps you warm.</p>
+      <table class="safety-table"><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Sleeping bag</strong></td><td>Rated to -10 C (3-season) for most climbs. -18 C (4-season) for Northern Circuit, Crater Camp, or if you sleep cold.</td></tr><tr><td><strong>Sleeping bag liner</strong></td><td>Adds 5-10 C of warmth. Silk or merino liners are light and pack small.</td></tr><tr><td><strong>Inflatable pillow or stuff sack with clothes</strong></td><td>Camp comfort.</td></tr><tr><td><strong>Insulated sleeping pad</strong></td><td>We provide a 4-season insulated pad. Bring a small foam closed-cell pad if you sleep cold.</td></tr></tbody></table>
+
+      <h2 id="daypack">5. Daypack contents (carried by you every day)</h2>
+      <table class="safety-table"><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Daypack</strong></td><td>30-40 litre comfortable hip-belt pack. Carried by you every day.</td></tr><tr><td><strong>Hydration system</strong></td><td>3-litre bladder plus 1-litre Nalgene-type bottle. Total carry capacity 3-4 litres. Insulated hose to prevent freezing on summit night.</td></tr><tr><td><strong>Headlamp + spare batteries</strong></td><td>200+ lumens. Lithium batteries for cold. Test before flight.</td></tr><tr><td><strong>Backup mini-flashlight or headlamp</strong></td><td>Redundancy is essential on summit night.</td></tr><tr><td><strong>Trekking poles</strong></td><td>Telescoping or folding. Adjusted to your height.</td></tr><tr><td><strong>Sunscreen (SPF 50+)</strong></td><td>Reapply through the day. UV at altitude is intense.</td></tr><tr><td><strong>Lip balm with SPF</strong></td><td>Wind and UV chap lips fast at altitude.</td></tr><tr><td><strong>Sun hat and sunglasses</strong></td><td>Worn during daytime trekking.</td></tr><tr><td><strong>Personal snacks</strong></td><td>Energy bars, nuts, dried fruit, chocolate, salted sweets.</td></tr><tr><td><strong>Camera or phone</strong></td><td>Phones double as cameras and step counters. Cold drains batteries fast; keep inside jacket.</td></tr><tr><td><strong>Personal documents in a waterproof pouch</strong></td><td>Passport copy, insurance details, emergency contacts.</td></tr></tbody></table>
+
+      <h2 id="medical">6. Personal medical and toiletries</h2>
+      <p>Our team carries a full first-aid kit and emergency oxygen. Your personal kit is for daily comfort items only.</p>
+      <table class="safety-table"><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Prescription medications</strong></td><td>Bring at least the trip duration plus a 3-day buffer.</td></tr><tr><td><strong>Diamox (acetazolamide)</strong></td><td>If your doctor has prescribed it. Discuss the right dose with your doctor weeks before the trip.</td></tr><tr><td><strong>Ibuprofen / paracetamol</strong></td><td>For headaches, sore muscles, generic pain relief.</td></tr><tr><td><strong>Anti-diarrhoeal tablets</strong></td><td>Imodium or similar, just in case.</td></tr><tr><td><strong>Antihistamine</strong></td><td>For mild allergic reactions and as sleep aid.</td></tr><tr><td><strong>Throat lozenges</strong></td><td>Cold dry mountain air irritates throats.</td></tr><tr><td><strong>Personal first aid mini-kit</strong></td><td>Blister tape, plasters, antiseptic wipes, small bandage.</td></tr><tr><td><strong>Wet wipes (biodegradable)</strong></td><td>Your shower for the week.</td></tr><tr><td><strong>Toilet paper / tissues</strong></td><td>Personal supply.</td></tr><tr><td><strong>Hand sanitiser</strong></td><td>Travel size, multiple bottles.</td></tr><tr><td><strong>Toothbrush and travel toothpaste</strong></td><td>Compact size.</td></tr></tbody></table>
+
+      <h2 id="summit-night">7. Summit night specifics</h2>
+      <p>Summit night starts around 11 PM and you reach Uhuru Peak around sunrise. It is the coldest, darkest, longest section of the climb.</p>
+      <ul class="checklist">
+        <li>Wear ALL warm layers before you start. Don't peel off during the climb; you'll just have to put them back on.</li>
+        <li>Heated water bottles wrapped in spare clothes inside your jacket so the hose doesn't freeze.</li>
+        <li>Two headlamps. Spare lithium batteries in an inside pocket so they stay warm.</li>
+        <li>High-calorie snacks accessible without removing gloves. Hard candies are easier than bars at altitude.</li>
+        <li>Camera or phone inside jacket against your body. Cold drains batteries; keep them warm.</li>
+        <li>Sunglasses ready for sunrise on the descent.</li>
+      </ul>
+
+      <h2 id="dont-bring">8. What NOT to bring</h2>
+      <ul class="checklist">
+        <li><strong>Plastic bags of any kind.</strong> Banned in Tanzania since June 2019. Use reusable fabric, paper, or waterproof nylon bags instead.</li>
+        <li><strong>Drones.</strong> Without TANAPA + Tanzania Film Board + TCAA + Ministry of Defense permits, customs will impound on arrival.</li>
+        <li><strong>Jewellery and valuables.</strong> Leave them at your hotel.</li>
+        <li><strong>Heavy cotton clothing.</strong> Cotton holds water, doesn't dry, and kills in cold conditions.</li>
+        <li><strong>Brand new boots.</strong> Break them in at home with 30+ km of hiking before you fly.</li>
+        <li><strong>Anything over 15 kg.</strong> We weigh at the gate.</li>
+        <li><strong>Heavy moisturisers and makeup.</strong> Wet wipes are your shower.</li>
+      </ul>
+
+      <h2 id="rent">9. Renting kit in Moshi</h2>
+      <p>If you don't already own specialist gear, renting in Moshi is the sensible play. We can connect you with a trusted local rental provider on arrival. Available rentals typically include: down jackets, sleeping bags (3-season and 4-season), hiking boots, trekking poles, gaiters, hard-shell waterproofs, daypacks. Rates are fair and gear is well-maintained.</p>
+      <p>If you're flying in with only carry-on, plan to rent the bulk items (sleeping bag, down jacket) and bring only the personal items (base layers, boots if you have them broken in, headlamp, daypack).</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="dest-faq" style="margin-top:20px">
+<details><summary>Can I rent gear in Moshi?</summary><p>Yes. Most quality gear is available to rent in Moshi at fair rates: down jackets, sleeping bags rated to -10 C or colder, hiking boots, trekking poles, gaiters, waterproof shells. Renting is a sensible option if you fly in with one bag and don&#x27;t want to buy specialist kit for a one-time climb. We can connect you with a trusted rental provider on arrival or you can rent through your hotel.</p></details><details><summary>Do I need crampons or technical climbing gear for Kilimanjaro?</summary><p>No. Kilimanjaro is a trekking mountain, not a technical climb. You do not need crampons, ice axes, harnesses, ropes, or any specialised mountaineering equipment. The standard summit night is a long walk in the dark in heavy clothing. The optional post-summit glacier tour to the Heim Glacier viewpoint may require microspikes if ice conditions warrant, and we carry team kit for that.</p></details><details><summary>How heavy can my duffel bag be?</summary><p>Tanzania National Parks regulations cap porter loads at 20 kg (44 lb) per porter, which includes the duffel plus food and team supplies the porter is also carrying. Your personal duffel should be no more than 15 kg (33 lb). We will weigh duffels at the gate. Pack a daypack you carry yourself with what you need during the hiking day (water, snacks, layers, camera, sunscreen, basic medical).</p></details><details><summary>Do I need a 4-season sleeping bag?</summary><p>A 3-season bag rated to about -10 C (14 F) is enough for most climbers because we provide insulated sleeping pads and you sleep in thermal base layers. If you sleep cold or you are on the Northern Circuit or Crater Camp variants, go for a 4-season bag rated to -18 C (0 F). A bag liner adds 5-10 C of warmth and is light to pack.</p></details><details><summary>What kind of headlamp do I need?</summary><p>A reliable headlamp with at least 200 lumens for summit night. Petzl, Black Diamond, and similar brands are reliable. Bring spare batteries. Test the headlamp at home before you fly. Lithium batteries last much longer in cold than alkaline. Bring a small backup headlamp; redundancy matters on summit night.</p></details><details><summary>Should I bring my own snacks?</summary><p>Optional but recommended. Our cook prepares hot meals at every camp and packed lunches for the trail, but personal snack preferences are personal. Energy bars, dried fruit, nuts, chocolate, and salted candies travel well. Bring snacks that are easy to eat when you are tired and cold.</p></details><details><summary>What about toiletries and personal items?</summary><p>Minimal is the rule. Travel-size toothpaste, biodegradable soap, wet wipes for camp washing, hand sanitiser, lip balm with SPF, high-SPF sunscreen, anti-chafing balm. Forget the makeup and the heavy moisturisers. Wet wipes are your shower for the week. Pack a small bag for toiletries that can be carried inside your jacket on summit night so things don&#x27;t freeze.</p></details><details><summary>Can I bring a camera or drone?</summary><p>Camera yes, drone no. Drones require advance permits (Tanzania Film Board plus TCAA plus Ministry of Defense plus TANAPA) and customs will impound them on arrival without those permits. See our Travel Guide for the full drone law. Cameras up to GoPro and standard DSLR size are fine for personal photography with no permit required.</p></details><details><summary>Do I need walking poles?</summary><p>Yes. Trekking poles materially reduce the load on your knees during the long Day 7 or 8 descent. They also help with balance on Barranco Wall scrambles and the loose scree of summit night and the descent from Stella Point. Use poles you have hiked with before. Telescoping or folding poles both work.</p></details><details><summary>Anything I should NOT bring?</summary><p>Plastic bags of any kind (banned in Tanzania since June 2019), drones without permits, jewellery and valuables, heavy cotton clothing (cotton kills in cold and wet), brand new boots (break them in at home), and anything heavier than 15 kg total in your duffel.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Questions on <em>Gear?</em></h2>
+      <p>Send Nelson your kit list and he'll tell you what you actually need, what to rent in Moshi, and what to skip.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Contact Nelson &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

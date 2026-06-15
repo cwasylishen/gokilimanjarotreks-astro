@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://gokilimanjarotreks.com/blog/"}],"dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"Blog","url":"https://gokilimanjarotreks.com/blog/","name":"Go Kilimanjaro Treks Blog","description":"Practical advice and stories from Nelson Mushi and the Go Kilimanjaro Treks team. Training, gear, routes, summit night, altitude, culture, and what climbing Kilimanjaro is really like.","publisher":{"@id":"https://gokilimanjarotreks.com/#organization"},"dateModified":"2026-06-14","blogPost":[{"@type":"BlogPosting","headline":"How Fit Do You Need to Be to Climb Kilimanjaro?","url":"https://gokilimanjarotreks.com/blog/how-fit-do-you-need-to-be.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/daytrip-dayhike.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"What Is Diamox and Should You Take It on Kilimanjaro?","url":"https://gokilimanjarotreks.com/blog/what-is-diamox.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/page-hero-kilimanjaro.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"How Cold Does Kilimanjaro Actually Get?","url":"https://gokilimanjarotreks.com/blog/how-cold-is-kilimanjaro.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/hero.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"When Is the Best Month to Climb Kilimanjaro?","url":"https://gokilimanjarotreks.com/blog/best-month-to-climb-kilimanjaro.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-lemosho.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"What Summit Night on Kilimanjaro Actually Feels Like","url":"https://gokilimanjarotreks.com/blog/what-summit-night-feels-like.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/hero.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Pole Pole: The Swahili Philosophy That Gets Climbers to Uhuru Peak","url":"https://gokilimanjarotreks.com/blog/pole-pole-swahili-philosophy.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-machame.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Climbing Kilimanjaro With Kids: Minimum Age, Success Rates, and What Families Need to Know","url":"https://gokilimanjarotreks.com/blog/kilimanjaro-with-kids.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/nelson.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Karanga to Barafu: The Shortcut Nelson Pioneered on Kilimanjaro","url":"https://gokilimanjarotreks.com/blog/karanga-to-barafu-shortcut.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-machame.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"The Glaciers on Mount Kilimanjaro: What Remains and Why","url":"https://gokilimanjarotreks.com/blog/glaciers-on-kilimanjaro.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/hero.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Climbing Kilimanjaro in the Rainy Season: Should You Go?","url":"https://gokilimanjarotreks.com/blog/kilimanjaro-in-the-rainy-season.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-rongai.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Lemosho vs Machame: Which Kilimanjaro Route Is Right for You?","url":"https://gokilimanjarotreks.com/blog/lemosho-vs-machame.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-lemosho.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"The Kissing Rock and the Barranco Wall on Kilimanjaro","url":"https://gokilimanjarotreks.com/blog/kissing-rock-barranco-wall.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/route-machame.jpg","author":{"@type":"Person","name":"Nelson Mushi"}},{"@type":"BlogPosting","headline":"Coffee, Chagga Culture, and the Slopes of Kilimanjaro","url":"https://gokilimanjarotreks.com/blog/coffee-chagga-culture-kilimanjaro.html","datePublished":"2026-06-14","image":"https://gokilimanjarotreks.com/images/daytrip-materuni.jpg","author":{"@type":"Person","name":"Nelson Mushi"}}]}];
+---
+
+<BaseLayout
+  title="Kilimanjaro &amp; Tanzania Blog | Go Kilimanjaro Treks"
+  description="Practical advice and stories from Nelson Mushi and the Go Kilimanjaro Treks team. Training, gear, routes, summit night, altitude, culture, and what climbing Kilimanjaro is really like."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Go Kilimanjaro Treks blog with practical Kilimanjaro climbing advice"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Stories &amp; Advice</span>
+    <h1>The <em>Blog.</em></h1>
+    <p>Practical advice and stories from Nelson Mushi and the Go Kilimanjaro Treks team. Training, gear, routes, summit night, altitude, culture, weather, and what climbing Kilimanjaro is really like.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div class="blog-grid">
+<a href="/blog/how-fit-do-you-need-to-be" class="blog-card">
+  <img src="/images/daytrip-dayhike.jpg" alt="Hiker on Kilimanjaro montane forest trail, building endurance for summit climb" loading="lazy">
+  <div class="body">
+    <span class="tag">Training</span>
+    <h3>How Fit Do You Need to Be to Climb Kilimanjaro?</h3>
+    <p>You don't need to be an elite athlete. You do need a solid cardio base and multi-day endurance under a loaded pack. Here is the honest benchmark.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/what-is-diamox" class="blog-card">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="Mount Kilimanjaro summit visible from altitude, where acetazolamide can help with acclimatization" loading="lazy">
+  <div class="body">
+    <span class="tag">Altitude</span>
+    <h3>What Is Diamox and Should You Take It on Kilimanjaro?</h3>
+    <p>Diamox helps your body acclimatize faster at altitude. Here is who benefits, how to take it, what the side effects feel like, and when it doesn't help.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/how-cold-is-kilimanjaro" class="blog-card">
+  <img src="/images/hero.jpg" alt="Snow-capped summit of Mount Kilimanjaro at sunrise showing the extreme cold of summit night" loading="lazy">
+  <div class="body">
+    <span class="tag">Weather</span>
+    <h3>How Cold Does Kilimanjaro Actually Get?</h3>
+    <p>Tropical heat at the gate, -20 C at the summit. Five distinct climate zones, each with its own dress code. Here is what to expect by altitude.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/best-month-to-climb-kilimanjaro" class="blog-card">
+  <img src="/images/route-lemosho.jpg" alt="Lemosho Route trail through the rainforest in optimal climbing season" loading="lazy">
+  <div class="body">
+    <span class="tag">Planning</span>
+    <h3>When Is the Best Month to Climb Kilimanjaro?</h3>
+    <p>January-March and June-October are the two dry windows. Each has its own personality. Here is the honest month-by-month breakdown.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/what-summit-night-feels-like" class="blog-card">
+  <img src="/images/hero.jpg" alt="Mount Kilimanjaro summit at sunrise after the long cold ascent through summit night" loading="lazy">
+  <div class="body">
+    <span class="tag">Summit Night</span>
+    <h3>What Summit Night on Kilimanjaro Actually Feels Like</h3>
+    <p>Eleven PM wake-up. Eight hours of cold dark ascent. Sunrise on the crater rim. The honest hour-by-hour account.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/pole-pole-swahili-philosophy" class="blog-card">
+  <img src="/images/route-machame.jpg" alt="Climbers walking pole pole along the Machame Route on Mount Kilimanjaro" loading="lazy">
+  <div class="body">
+    <span class="tag">Philosophy</span>
+    <h3>Pole Pole: The Swahili Philosophy That Gets Climbers to Uhuru Peak</h3>
+    <p>Two words that determine whether you reach the summit. The Swahili philosophy that beats power on Kilimanjaro and the reason your guide will not let you walk fast.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/kilimanjaro-with-kids" class="blog-card">
+  <img src="/images/nelson.jpg" alt="Nelson Mushi has guided multi-generational families to the summit of Kilimanjaro" loading="lazy">
+  <div class="body">
+    <span class="tag">Families</span>
+    <h3>Climbing Kilimanjaro With Kids: Minimum Age, Success Rates, and What Families Need to Know</h3>
+    <p>Tanzania National Parks allows climbers from age 10. The realistic minimum is higher. Here is the honest guide for families.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/karanga-to-barafu-shortcut" class="blog-card">
+  <img src="/images/route-machame.jpg" alt="The Karanga to Barafu direct route on the Southern Circuit of Mount Kilimanjaro" loading="lazy">
+  <div class="body">
+    <span class="tag">Mountain History</span>
+    <h3>Karanga to Barafu: The Shortcut Nelson Pioneered on Kilimanjaro</h3>
+    <p>Nelson helped pioneer a navigational refinement on the Southern Circuit that's now used by guides across the mountain. The story behind the route.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/glaciers-on-kilimanjaro" class="blog-card">
+  <img src="/images/hero.jpg" alt="The remaining glaciers and ice fields on the summit of Mount Kilimanjaro" loading="lazy">
+  <div class="body">
+    <span class="tag">Mountain</span>
+    <h3>The Glaciers on Mount Kilimanjaro: What Remains and Why</h3>
+    <p>Eleven square kilometres of ice in 1912. Less than one square kilometre today. Here are the remaining glaciers and what's happening to them.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/kilimanjaro-in-the-rainy-season" class="blog-card">
+  <img src="/images/route-rongai.jpg" alt="Rongai Route on the northern side of Kilimanjaro, the preferred route in the rainy season" loading="lazy">
+  <div class="body">
+    <span class="tag">Weather</span>
+    <h3>Climbing Kilimanjaro in the Rainy Season: Should You Go?</h3>
+    <p>April-May rains soak the western and southern routes. Rongai and Marangu still work. Here is what to expect in the wet season.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/lemosho-vs-machame" class="blog-card">
+  <img src="/images/route-lemosho.jpg" alt="Lemosho Route trail leading toward the Shira Plateau on Mount Kilimanjaro" loading="lazy">
+  <div class="body">
+    <span class="tag">Routes</span>
+    <h3>Lemosho vs Machame: Which Kilimanjaro Route Is Right for You?</h3>
+    <p>Both routes meet at Lava Tower and follow the same Southern Circuit. The difference is what happens in the first three days. Here is the honest comparison.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/kissing-rock-barranco-wall" class="blog-card">
+  <img src="/images/route-machame.jpg" alt="Climbers scrambling up the Barranco Wall on Kilimanjaro Southern Circuit" loading="lazy">
+  <div class="body">
+    <span class="tag">On Trail</span>
+    <h3>The Kissing Rock and the Barranco Wall on Kilimanjaro</h3>
+    <p>The iconic morning scramble on the Southern Circuit. The Kissing Rock, the steep rock face, and why it looks scarier than it is.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a><a href="/blog/coffee-chagga-culture-kilimanjaro" class="blog-card">
+  <img src="/images/daytrip-materuni.jpg" alt="Materuni Waterfall on the lower slopes of Mount Kilimanjaro, near the Chagga coffee farms" loading="lazy">
+  <div class="body">
+    <span class="tag">Culture</span>
+    <h3>Coffee, Chagga Culture, and the Slopes of Kilimanjaro</h3>
+    <p>Below the rainforest. The Chagga homeland, the coffee farms, and the Materuni waterfall. The cultural side of Kilimanjaro most climbers miss.</p>
+    <span class="read-more">Read article &#x2192;</span>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Ready to <em>Climb?</em></h2>
+      <p>Reading the blog is one thing. Climbing the mountain is another. Talk to Nelson about your itinerary.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan My Climb &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

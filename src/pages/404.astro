@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Go Kilimanjaro Treks"
+  description="The page you are looking for is not here, but the mountain still is. Find your route, your trip, or talk to Nelson."
+>
+  <main>
+<section class="errpage">
+  <div class="errpage-inner">
+    <span class="code">404</span>
+    <h1>This trail does not appear on our <em>map.</em></h1>
+    <p class="lead">The page you were looking for is no longer here, has moved, or never existed. The mountain is still here. Pick a path below or talk to Nelson directly.</p>
+    <div class="err-grid">
+      <a href="/" class="err-card"><span class="h">Home</span><span class="d">Back to the start</span></a>
+      <a href="/kilimanjaro.html" class="err-card"><span class="h">Climb Kilimanjaro</span><span class="d">Six routes, every level</span></a>
+      <a href="/safari.html" class="err-card"><span class="h">Tanzania Safaris</span><span class="d">Serengeti, Ngorongoro, Tarangire</span></a>
+      <a href="/blog/" class="err-card"><span class="h">Blog</span><span class="d">13 practical guides from Nelson</span></a>
+      <a href="/safety.html" class="err-card"><span class="h">Safety & Rescue</span><span class="d">How every climb is run</span></a>
+      <a href="/contact.html" class="err-card"><span class="h">Contact Nelson</span><span class="d">Personal reply within 24 hours</span></a>
+    </div>
+    <div class="err-actions">
+      <a href="/contact" class="btn-primary" style="font-size:1.02rem;padding:16px 36px">Contact Nelson &#x2192;</a>
+      <a href="https://wa.me/255677917500" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);border-radius:12px;font-weight:600;font-size:.96rem;text-decoration:none">&#x1F4AC; WhatsApp Now</a>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

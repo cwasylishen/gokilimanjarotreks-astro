@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Travel Guide","item":"https://gokilimanjarotreks.com/travel-guide.html"}],"dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"FAQPage","url":"https://gokilimanjarotreks.com/travel-guide.html","dateModified":"2026-06-14","mainEntity":[{"@type":"Question","name":"Do I need a tourist visa for Tanzania?","acceptedAnswer":{"@type":"Answer","text":"Most foreign nationals need a visa to enter Tanzania. The simplest path is to apply online in advance via the official Tanzania Immigration Department website. You can also obtain your visa on arrival at the airport, but the queue is longer. The e-Visa costs USD 50 for most travellers and USD 100 for American citizens. Processing takes up to 10 days."}},{"@type":"Question","name":"As a US citizen, which visa option do I select?","acceptedAnswer":{"@type":"Answer","text":"American nationals must select Multiple Entry Visa as the visa type. Choose Holiday and Leisure as the purpose of travel. Visa cost for US citizens is USD 100."}},{"@type":"Question","name":"What do I put under accommodation and local host on the e-Visa form?","acceptedAnswer":{"@type":"Answer","text":"Select Hotel as the accommodation type, even if you'll be camping during your trek. For your physical address, enter Go Kilimanjaro Treks, Moshi, Tanzania, or the name of your first night's accommodation. Under Local Host, select Company or Organization and list Go Kilimanjaro Treks as your reference, with the relationship noted as Tour Operator."}},{"@type":"Question","name":"Is Yellow Fever vaccination required to enter Tanzania?","acceptedAnswer":{"@type":"Answer","text":"Yellow Fever vaccination is mandatory only if you are arriving from, or have recently transited through, a country where Yellow Fever is endemic. If you are travelling directly from the United States, the United Kingdom, or Europe and have not recently visited a Yellow Fever endemic country, the certificate is not required for entry. The vaccine is still often recommended as a precaution."}},{"@type":"Question","name":"What other vaccinations do you recommend for Tanzania?","acceptedAnswer":{"@type":"Answer","text":"The World Health Organization and the US Centers for Disease Control and Prevention recommend Hepatitis A and B, Typhoid, Cholera, and Tetanus for most travellers. Ensure all routine vaccinations (Measles, Mumps, Rubella, Polio) are up to date. Malaria is present in Tanzania, so consult your doctor well in advance about the right prophylaxis. Visit a travel health clinic at least six to eight weeks before departure."}},{"@type":"Question","name":"Which airport should I fly into?","acceptedAnswer":{"@type":"Answer","text":"Kilimanjaro International Airport (JRO) is the preferred entry point for climbers and northern Tanzania safari travellers. It sits 40 minutes from Moshi and 50 minutes from Arusha. Major airlines serving JRO include KLM, Turkish Airlines, Qatar Airways, Ethiopian Airlines, Swiss International Air Lines, and Air Tanzania. If you fly into Julius Nyerere International Airport (DAR) in Dar es Salaam or Zanzibar Airport (ZNZ), domestic carriers like Air Tanzania, Precision Air, and Flightlink connect easily to JRO or Arusha Airport."}},{"@type":"Question","name":"Can I drive from Nairobi to Moshi or Arusha?","acceptedAnswer":{"@type":"Answer","text":"Yes. From Nairobi, Kenya, the drive to Moshi or Arusha takes approximately five to six hours via the Namanga border crossing. The road is well-maintained and the border crossing is straightforward for most nationalities."}},{"@type":"Question","name":"What currency do I use in Tanzania?","acceptedAnswer":{"@type":"Answer","text":"The official currency is the Tanzanian Shilling (TZS). Since March 2025, only Tanzanian Shillings are accepted for everyday cash payments (restaurants, shops, taxis, local markets). Tour operators including Go Kilimanjaro Treks are permitted to invoice and accept payment in foreign currencies from international visitors. US Dollars to exchange must be printed after 2009; older notes are routinely declined. Visa and Mastercard are accepted at most hotels and tour operators, typically with a 3.5 to 5 percent surcharge."}},{"@type":"Question","name":"What is the plastic bag ban in Tanzania?","acceptedAnswer":{"@type":"Answer","text":"Since 1 June 2019 there is a comprehensive ban on plastic carrier bags, including cling film and plastic wrapping. The ban is enforced at all border crossings and airports. Bringing prohibited plastic bags into Tanzania can result in significant fines. Small ziploc bags used for personal toiletries or documents in hand luggage are permitted, provided they are kept in your possession and not discarded in Tanzania. Pack in reusable fabric bags, paper bags, or waterproof nylon bags."}},{"@type":"Question","name":"Do I need a permit to take photos in Tanzania?","acceptedAnswer":{"@type":"Answer","text":"No permit is required for personal photography or video on a smartphone, personal camera, or GoPro. Capture your memories freely. A filming permit IS required for professional photographers, videographers, journalists, or documentary makers, or anyone using large professional camera equipment or commissioned projects. The Tanzania Film Board permit costs USD 1,000 and must be applied for at least 30 days before filming. National Parks filming fees from TANAPA are an additional USD 300 per day for the Serengeti and USD 250 per day for other national parks, plus 18 percent VAT."}},{"@type":"Question","name":"Can I bring a drone to Tanzania?","acceptedAnswer":{"@type":"Answer","text":"Drones are strictly regulated. Without prior authorisation, customs officers will impound your drone immediately on arrival. To operate legally you must obtain permission from the Tanzania Film Board, then the Tanzania Civil Aviation Authority (TCAA), then the Ministry of Defense (which assigns an army officer to accompany the crew at your cost), then TANAPA or NCAA if flying inside a park. Given the complexity, we generally advise against bringing drones for casual use. Professional crews planning drone projects should contact us in advance."}},{"@type":"Question","name":"What does Go Kilimanjaro Treks do at the airport?","acceptedAnswer":{"@type":"Answer","text":"Our driver will be waiting at the arrivals hall with a signboard displaying your name. Transfers are available 24 hours a day, seven days a week. Share your flight details with us in advance and we handle the rest. Whether you land at JRO or Arusha Airport, the transfer to your hotel or lodge in Moshi or Arusha is included in your climbing or safari package."}},{"@type":"Question","name":"How long should my passport be valid?","acceptedAnswer":{"@type":"Answer","text":"Your passport must be valid for at least six months beyond your intended date of departure from Tanzania. If your passport is close to expiry, renew it before you travel."}},{"@type":"Question","name":"Are there ATMs at JRO airport?","acceptedAnswer":{"@type":"Answer","text":"Yes, currency exchange desks and ATMs are located near the exit at Kilimanjaro International Airport. ATMs in Moshi and Arusha dispense Tanzanian Shillings only. Notify your bank of your travel dates before you depart so your card is not blocked."}},{"@type":"Question","name":"What's at JRO airport on arrival?","acceptedAnswer":{"@type":"Answer","text":"Kilimanjaro International Airport is modern and well-equipped for its size. Expect currency exchange desks and ATMs near the exit, a restaurant, cafe, and lounge on the second floor, a small selection of souvenir shops (your last chance to buy Tanzanite), and an on-site health clinic for last-minute vaccination needs. Free Wi-Fi is advertised but the connection can be unreliable; use your mobile data if you need internet on arrival."}}]},{"@context":"https://schema.org","@type":"Article","headline":"Tanzania Travel Guide for Kilimanjaro Climbers and Safari Travellers","description":"Practical pre-trip guide for Tanzania visitors: e-Visa walk-through, recommended vaccinations, Kilimanjaro International Airport (JRO), Tanzanian Shilling, the 2019 plastic bag ban, filming permits, and drone laws. Prepared by Go Kilimanjaro Treks.","url":"https://gokilimanjarotreks.com/travel-guide.html","image":"https://gokilimanjarotreks.com/images/og-safari.jpg","author":{"@type":"Person","name":"Nelson Mushi","url":"https://gokilimanjarotreks.com/about.html"},"publisher":{"@id":"https://gokilimanjarotreks.com/#organization"},"datePublished":"2026-06-14","dateModified":"2026-06-14"}];
+---
+
+<BaseLayout
+  title="Tanzania Travel Guide: Visas, Vaccinations, JRO Airport, Currency, Plastic Ban | Go Kilimanjaro Treks"
+  description="Practical pre-trip guide for Tanzania visitors: e-Visa walk-through, recommended vaccinations, Kilimanjaro International Airport (JRO), Tanzanian Shilling, the 2019 plastic bag ban, filming permits, and drone laws. Prepared by Go Kilimanjaro Treks."
+  ogImage="https://gokilimanjarotreks.com/images/og-safari.jpg"
+  ogImageAlt="Tanzania traveller arriving at Kilimanjaro International Airport with Mount Kilimanjaro in the background"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/page-hero-safari.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Essential Pre-Trip Info</span>
+    <h1>Tanzania <em>Travel Guide.</em></h1>
+    <p>Everything you need to sort before you fly: visa, vaccinations, currency rules, the plastic bag ban, Kilimanjaro International Airport, filming permits, and drone laws. Prepared by Nelson and the Go Kilimanjaro Treks team in Moshi.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Plan My Trip &#x2192;</a>
+      <a href="#visa" class="btn-ghost">Jump to Visa Info</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:840px;margin:0 auto" class="reveal prose-section">
+      <div class="toc reveal">
+        <h3>In This Guide</h3>
+        <ol>
+          <li><a href="#visa">Getting a Tourist Visa for Tanzania</a></li>
+          <li><a href="#vaccinations">Immunisations Before Your Trip</a></li>
+          <li><a href="#getting-there">How to Get to Kilimanjaro</a></li>
+          <li><a href="#currency">Currency in Tanzania</a></li>
+          <li><a href="#plastic-ban">The Plastic Bag Ban</a></li>
+          <li><a href="#jro">Kilimanjaro International Airport (JRO)</a></li>
+          <li><a href="#filming">Filming in Tanzania</a></li>
+          <li><a href="#drone">Drone Filming and Tanzania Drone Laws</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </div>
+
+      <h2 id="visa"><span class="num">1.</span> Getting a Tourist Visa for Tanzania</h2>
+      <p>Most foreign nationals need a visa to enter Tanzania. The process is straightforward and you have two paths: apply online in advance, or obtain your visa on arrival at the airport.</p>
+      <p>For peace of mind, we recommend <strong>applying in advance through the official Tanzania Immigration Department website</strong>. You save considerable time on arrival and walk straight through immigration without queuing.</p>
+      <div class="callout"><strong>Important:</strong> Only complete your e-Visa through the official Tanzania Immigration website. Do not share your passport number with any other site offering visas. The only authentic e-Visa is on the official government immigration portal.</div>
+      <h3>For US Citizens</h3>
+      <p>On the application form, you must select <strong>Multiple Entry Visa</strong>. This is the required option for American nationals entering Tanzania as a tourist. Choose <strong>Holiday and Leisure</strong> as the purpose of travel. Visa cost is <strong>USD 100</strong>.</p>
+      <h3>For Other Nationals</h3>
+      <p>Consider whether single entry or multiple entry suits your travel plans. Most travellers from the United Kingdom and Europe pay <strong>USD 50</strong> for a single-entry tourist visa.</p>
+      <h3>Processing Time</h3>
+      <p>The application takes up to 10 days to process, so plan ahead. If you are short on time, you can still obtain your visa on arrival; this is widely used.</p>
+      <h3>Filling Out the Travel Information Section</h3>
+      <p>Under <strong>Accommodation Type</strong>, select <strong>Hotel</strong>, even if you'll be camping or staying at lodges during your trek. For your <strong>Physical Address</strong>, enter <em>Go Kilimanjaro Treks, Moshi, Tanzania</em>, or the name of your first night's accommodation. Under <strong>Local Host</strong>, select <strong>Company or Organization</strong> and list <em>Go Kilimanjaro Treks</em> as your reference, with relationship noted as <strong>Tour Operator</strong>. This ensures your application processes smoothly.</p>
+      <h3>Visa on Arrival</h3>
+      <p>If you choose visa on arrival, bring the exact fee in clean US dollar bills <strong>printed after 2009</strong>. Older notes are routinely declined. Be prepared for a longer wait in the immigration queue compared with the e-Visa lane.</p>
+      <h3>Passport Validity</h3>
+      <p>Your passport must be valid for at least <strong>six months beyond</strong> your intended date of departure from Tanzania. If your passport is close to expiry, renew it before you travel.</p>
+
+      <h2 id="vaccinations"><span class="num">2.</span> Immunisations Before Your Trip</h2>
+      <h3>Yellow Fever (Mandatory in Certain Cases)</h3>
+      <p>If you are arriving from, or have recently transited through, a country where Yellow Fever is endemic, you must present a valid Yellow Fever vaccination certificate at immigration. If you are travelling directly from the United States, United Kingdom, or Europe and have not recently visited a Yellow Fever endemic country, the certificate is not required. The vaccine is still often recommended as a precaution.</p>
+      <h3>Recommended Vaccinations</h3>
+      <p>The World Health Organization and the US Centers for Disease Control and Prevention recommend the following for most travellers to Tanzania: <strong>Hepatitis A and B, Typhoid, Cholera, and Tetanus</strong>. Ensure your routine vaccinations are up to date: Measles, Mumps, Rubella, and Polio.</p>
+      <h3>Malaria</h3>
+      <p>Malaria is present in Tanzania. Consult your doctor well in advance about the right prophylaxis medication for your trip.</p>
+      <div class="callout"><strong>Our Advice:</strong> Visit your doctor or a travel health clinic at least <strong>six to eight weeks before</strong> your departure date. This gives you enough time to complete vaccination courses and obtain prescriptions.</div>
+
+      <h2 id="getting-there"><span class="num">3.</span> How to Get to Kilimanjaro</h2>
+      <h3>By Plane: The Fastest and Most Convenient Option</h3>
+      <p>The best way to arrive is to fly directly into <strong>Kilimanjaro International Airport (JRO)</strong>. JRO sits 40 minutes from Moshi and 50 minutes from Arusha, making it the ideal entry point for any Kilimanjaro climb or northern Tanzania safari. Major international airlines serving JRO include <strong>KLM, Turkish Airlines, Qatar Airways, Ethiopian Airlines, Swiss International Air Lines, and Air Tanzania</strong>.</p>
+      <h3>Connecting Through Other Airports</h3>
+      <p>If your routing takes you through Julius Nyerere International Airport (DAR) in Dar es Salaam or Zanzibar Airport (ZNZ), you can easily connect to Kilimanjaro or Arusha Airport via domestic carriers: <strong>Air Tanzania, Precision Air, and Flightlink</strong>. Domestic flights are short and comfortable.</p>
+      <h3>By Road</h3>
+      <p>If you are already in East Africa, the Kilimanjaro region is accessible by road. From Nairobi, the drive to Moshi or Arusha takes approximately <strong>five to six hours</strong> via the Namanga border crossing. The road is well-maintained and the border crossing is straightforward for most nationalities.</p>
+      <h3>Airport Transfers with Go Kilimanjaro Treks</h3>
+      <p>We provide professional airport transfers for all our clients. Whether you land at JRO or Arusha Airport, <strong>our driver will be waiting at the arrivals hall with a signboard displaying your name</strong>. We offer transfers 24 hours a day, seven days a week. Share your flight details with us in advance and we take care of the rest.</p>
+
+      <h2 id="currency"><span class="num">4.</span> Currency in Tanzania</h2>
+      <p>The official currency is the <strong>Tanzanian Shilling (TZS)</strong>, used across both mainland Tanzania and the islands of Zanzibar.</p>
+      <h3>Cash Payments</h3>
+      <p>Since March 2025, <strong>only Tanzanian Shillings are accepted for everyday cash payments</strong> within the country. Before using cash in restaurants, shops, taxis, or local markets, exchange your foreign currency at a bank or licensed exchange bureau. An important exception applies to the tourism industry: tour operators, including Go Kilimanjaro Treks, are permitted to invoice and accept payment in foreign currencies from international visitors.</p>
+      <div class="callout"><strong>Important:</strong> When bringing US Dollars to exchange, ensure all banknotes are <strong>printed after 2009</strong>. Older notes are routinely declined by banks and exchange offices due to counterfeiting concerns.</div>
+      <h3>Card Payments</h3>
+      <p>Visa and Mastercard are accepted at most major hotels, lodges, and tour operators. A surcharge of approximately <strong>3.5 to 5 percent</strong> typically applies to card transactions. ATMs are available in Moshi and Arusha and dispense Tanzanian Shillings only. Notify your bank of your travel dates and destination before you depart to prevent your card being blocked.</p>
+      <h3>Our Practical Advice</h3>
+      <p>Carry at least 25 percent of your planned travel budget in cash. Avoid over-exchanging: Tanzanian Shillings cannot be taken out of the country, and converting them back to foreign currency usually results in a poor rate.</p>
+
+      <h2 id="plastic-ban"><span class="num">5.</span> The Plastic Bag Ban</h2>
+      <p>Tanzania takes the protection of its natural environment seriously. Since <strong>1 June 2019</strong>, a comprehensive ban on plastic bags has been in full effect across the country, enforced strictly at all border crossings and airports.</p>
+      <h3>What Is Banned</h3>
+      <p>The ban covers all types of plastic carrier bags regardless of thickness, including cling film and plastic wrapping. <strong>Bringing prohibited plastic bags into Tanzania, using them, or disposing of them in the country can result in significant fines.</strong></p>
+      <h3>What Is Permitted</h3>
+      <p>The ban does not apply to sealed plastic packaging for medicines, to plastic packaging that preserves product quality, or to small ziploc bags for personal toiletries or documents in your hand luggage, provided they stay in your possession and are not discarded in Tanzania.</p>
+      <h3>How to Pack</h3>
+      <p>Before you travel, check all your luggage and remove plastic bags and plastic wrapping. We recommend packing in <strong>reusable fabric bags, paper bags, or waterproof nylon bags</strong>.</p>
+
+      <h2 id="jro"><span class="num">6.</span> Kilimanjaro International Airport (JRO)</h2>
+      <p>JRO is the preferred arrival point for climbers and safari travellers visiting northern Tanzania. Opened in 1971, it sits between Moshi and Arusha and serves as the main hub for international arrivals in the region.</p>
+      <p>The airport is modern and well-equipped for its size. Here is what to expect on arrival:</p>
+      <ul>
+        <li><strong>Currency exchange and ATMs:</strong> located near the exit, where you can withdraw Tanzanian Shillings or exchange foreign currency.</li>
+        <li><strong>Dining:</strong> a restaurant, cafe, and lounge area on the second floor for relaxing before or after your flight.</li>
+        <li><strong>Shopping:</strong> a small selection of souvenir shops, including your last opportunity to purchase Tanzanite, the rare gemstone unique to Tanzania.</li>
+        <li><strong>Health clinic:</strong> an on-site clinic for last-minute vaccination needs.</li>
+        <li><strong>Wi-Fi:</strong> free Wi-Fi is advertised throughout the airport, but the connection can be unreliable. We recommend using your mobile data on arrival.</li>
+        <li><strong>Your Go Kilimanjaro Treks transfer:</strong> as soon as you step through the arrivals doors, our representative is waiting with a signboard displaying your name. The transfer to Moshi or Arusha is included in your package and available at any hour.</li>
+      </ul>
+
+      <h2 id="filming"><span class="num">7.</span> Filming in Tanzania</h2>
+      <p>Tanzania's landscapes and wildlife have attracted filmmakers for decades. Filming is subject to regulations that all visitors should know.</p>
+      <h3>No Permit Required</h3>
+      <p>If you are filming for personal use (smartphone, personal camera, GoPro), <strong>you do not need any permit</strong>. Capture your memories as you wish.</p>
+      <h3>Permit Required</h3>
+      <p>A filming permit is required if you are a professional photographer, videographer, journalist, or documentary maker, if you are using large professional camera equipment, or if your project is commissioned or contracted.</p>
+      <h3>Tanzania Film Board Permit</h3>
+      <p>The primary permit is from the Tanzania Film Board in Dar es Salaam. The permit costs <strong>USD 1,000</strong> and must be applied for at least 30 days before filming begins, with processing potentially taking two to three months. An expedited seven-day option is available for USD 3,000. The permit is valid for three months. A free copy of the completed film must be provided to the Tanzania Film Board on completion.</p>
+      <h3>National Parks Filming Fees</h3>
+      <p>If filming inside any of Tanzania's national parks, you need a separate permit from the Tanzania National Parks Authority (TANAPA). Fees are charged per day:</p>
+      <ul>
+        <li><strong>USD 300 per day</strong> for the Serengeti.</li>
+        <li><strong>USD 180 per day</strong> for Gombe and Mahale.</li>
+        <li><strong>USD 250 per day</strong> for all other national parks.</li>
+      </ul>
+      <p>An additional 18 percent VAT applies. A separate permit from the Ngorongoro Conservation Area Authority is required for filming there at USD 300 per day.</p>
+      <div class="callout"><strong>Important:</strong> Professional film crews must enter Tanzania on a <strong>Business Visa</strong>, not a Tourist Visa. A Business Visa allows up to three months in Tanzania and requires an invitation from a registered host organisation.</div>
+
+      <h2 id="drone"><span class="num">8.</span> Drone Filming and Tanzania Drone Laws</h2>
+      <p>Drones (UAVs) are strictly regulated in Tanzania. The regulations apply to all drones, including small personal devices, and must be taken seriously.</p>
+      <div class="callout"><strong>Customs Warning:</strong> Unless all required permits are prepared and presented on arrival, <strong>customs officers at the airport will impound your drone immediately</strong>. Do not bring a drone to Tanzania without completing the full authorisation process in advance.</div>
+      <p>To operate a drone legally in Tanzania, you must obtain permission from several authorities in order:</p>
+      <h3>Step 1: Tanzania Film Board</h3>
+      <p>Secure a general filming permit from the Tanzania Film Board first. This must be in place before any drone-related applications can be made.</p>
+      <h3>Step 2: Tanzania Civil Aviation Authority (TCAA)</h3>
+      <p>Submit an application to the TCAA in Dar es Salaam. Your application must include drone type and serial number, the pilot's license or certificate, and the pilot's full curriculum vitae.</p>
+      <h3>Step 3: Ministry of Defense, Dodoma</h3>
+      <p>Once TCAA permission is granted, the Ministry will assign an army officer to accompany your filming crew throughout the project. This officer ensures the drone does not fly over restricted areas. <strong>The filming crew is responsible for covering the officer's travel expenses, accommodation, and meals.</strong></p>
+      <h3>Step 4: TANAPA or NCAA</h3>
+      <p>If you plan to fly inside a national park or the Ngorongoro Conservation Area, you must obtain specific drone filming permission from TANAPA or NCAA, presenting all previously obtained permits as part of your application.</p>
+      <h3>Our Recommendation</h3>
+      <p>Given the complexity, time, and cost of drone authorisation, <strong>we generally advise against bringing drones for casual or amateur use</strong>. If you are a professional crew planning a drone project in Tanzania, we have extensive experience managing the full permit process and are happy to assist.</p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="dest-faq" style="margin-top:20px">
+<details><summary>Do I need a tourist visa for Tanzania?</summary><p>Most foreign nationals need a visa to enter Tanzania. The simplest path is to apply online in advance via the official Tanzania Immigration Department website. You can also obtain your visa on arrival at the airport, but the queue is longer. The e-Visa costs USD 50 for most travellers and USD 100 for American citizens. Processing takes up to 10 days.</p></details><details><summary>As a US citizen, which visa option do I select?</summary><p>American nationals must select Multiple Entry Visa as the visa type. Choose Holiday and Leisure as the purpose of travel. Visa cost for US citizens is USD 100.</p></details><details><summary>What do I put under accommodation and local host on the e-Visa form?</summary><p>Select Hotel as the accommodation type, even if you'll be camping during your trek. For your physical address, enter Go Kilimanjaro Treks, Moshi, Tanzania, or the name of your first night's accommodation. Under Local Host, select Company or Organization and list Go Kilimanjaro Treks as your reference, with the relationship noted as Tour Operator.</p></details><details><summary>Is Yellow Fever vaccination required to enter Tanzania?</summary><p>Yellow Fever vaccination is mandatory only if you are arriving from, or have recently transited through, a country where Yellow Fever is endemic. If you are travelling directly from the United States, the United Kingdom, or Europe and have not recently visited a Yellow Fever endemic country, the certificate is not required for entry. The vaccine is still often recommended as a precaution.</p></details><details><summary>What other vaccinations do you recommend for Tanzania?</summary><p>The World Health Organization and the US Centers for Disease Control and Prevention recommend Hepatitis A and B, Typhoid, Cholera, and Tetanus for most travellers. Ensure all routine vaccinations (Measles, Mumps, Rubella, Polio) are up to date. Malaria is present in Tanzania, so consult your doctor well in advance about the right prophylaxis. Visit a travel health clinic at least six to eight weeks before departure.</p></details><details><summary>Which airport should I fly into?</summary><p>Kilimanjaro International Airport (JRO) is the preferred entry point for climbers and northern Tanzania safari travellers. It sits 40 minutes from Moshi and 50 minutes from Arusha. Major airlines serving JRO include KLM, Turkish Airlines, Qatar Airways, Ethiopian Airlines, Swiss International Air Lines, and Air Tanzania. If you fly into Julius Nyerere International Airport (DAR) in Dar es Salaam or Zanzibar Airport (ZNZ), domestic carriers like Air Tanzania, Precision Air, and Flightlink connect easily to JRO or Arusha Airport.</p></details><details><summary>Can I drive from Nairobi to Moshi or Arusha?</summary><p>Yes. From Nairobi, Kenya, the drive to Moshi or Arusha takes approximately five to six hours via the Namanga border crossing. The road is well-maintained and the border crossing is straightforward for most nationalities.</p></details><details><summary>What currency do I use in Tanzania?</summary><p>The official currency is the Tanzanian Shilling (TZS). Since March 2025, only Tanzanian Shillings are accepted for everyday cash payments (restaurants, shops, taxis, local markets). Tour operators including Go Kilimanjaro Treks are permitted to invoice and accept payment in foreign currencies from international visitors. US Dollars to exchange must be printed after 2009; older notes are routinely declined. Visa and Mastercard are accepted at most hotels and tour operators, typically with a 3.5 to 5 percent surcharge.</p></details><details><summary>What is the plastic bag ban in Tanzania?</summary><p>Since 1 June 2019 there is a comprehensive ban on plastic carrier bags, including cling film and plastic wrapping. The ban is enforced at all border crossings and airports. Bringing prohibited plastic bags into Tanzania can result in significant fines. Small ziploc bags used for personal toiletries or documents in hand luggage are permitted, provided they are kept in your possession and not discarded in Tanzania. Pack in reusable fabric bags, paper bags, or waterproof nylon bags.</p></details><details><summary>Do I need a permit to take photos in Tanzania?</summary><p>No permit is required for personal photography or video on a smartphone, personal camera, or GoPro. Capture your memories freely. A filming permit IS required for professional photographers, videographers, journalists, or documentary makers, or anyone using large professional camera equipment or commissioned projects. The Tanzania Film Board permit costs USD 1,000 and must be applied for at least 30 days before filming. National Parks filming fees from TANAPA are an additional USD 300 per day for the Serengeti and USD 250 per day for other national parks, plus 18 percent VAT.</p></details><details><summary>Can I bring a drone to Tanzania?</summary><p>Drones are strictly regulated. Without prior authorisation, customs officers will impound your drone immediately on arrival. To operate legally you must obtain permission from the Tanzania Film Board, then the Tanzania Civil Aviation Authority (TCAA), then the Ministry of Defense (which assigns an army officer to accompany the crew at your cost), then TANAPA or NCAA if flying inside a park. Given the complexity, we generally advise against bringing drones for casual use. Professional crews planning drone projects should contact us in advance.</p></details><details><summary>What does Go Kilimanjaro Treks do at the airport?</summary><p>Our driver will be waiting at the arrivals hall with a signboard displaying your name. Transfers are available 24 hours a day, seven days a week. Share your flight details with us in advance and we handle the rest. Whether you land at JRO or Arusha Airport, the transfer to your hotel or lodge in Moshi or Arusha is included in your climbing or safari package.</p></details><details><summary>How long should my passport be valid?</summary><p>Your passport must be valid for at least six months beyond your intended date of departure from Tanzania. If your passport is close to expiry, renew it before you travel.</p></details><details><summary>Are there ATMs at JRO airport?</summary><p>Yes, currency exchange desks and ATMs are located near the exit at Kilimanjaro International Airport. ATMs in Moshi and Arusha dispense Tanzanian Shillings only. Notify your bank of your travel dates before you depart so your card is not blocked.</p></details><details><summary>What's at JRO airport on arrival?</summary><p>Kilimanjaro International Airport is modern and well-equipped for its size. Expect currency exchange desks and ATMs near the exit, a restaurant, cafe, and lounge on the second floor, a small selection of souvenir shops (your last chance to buy Tanzanite), and an on-site health clinic for last-minute vaccination needs. Free Wi-Fi is advertised but the connection can be unreliable; use your mobile data if you need internet on arrival.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Ready to <em>Plan Your Trip?</em></h2>
+      <p>Whether you need help with the visa form or you're ready to book, Nelson responds personally within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Contact Nelson &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

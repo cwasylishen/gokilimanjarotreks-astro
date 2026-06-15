@@ -1,0 +1,502 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":"Go Kilimanjaro Treks","description":"Expert-guided Mount Kilimanjaro climbing tours and Tanzania safari packages operated by Nelson Mushi from Moshi, Tanzania.","url":"https://gokilimanjarotreks.com","telephone":"+255677917500","email":"info@gokilimanjarotreks.com","address":{"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":"-3.3731","longitude":"37.3441"},"priceRange":"$$","sameAs":["https://www.facebook.com/gokilimanjarotreks","https://www.instagram.com/gokilimanjarotreks"],"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fit do I need to be to climb Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"You don't need to be an elite athlete, but a solid base of cardiovascular fitness is essential. We recommend being able to hike 6-8 hours a day for several consecutive days. In the months before your climb, focus on hiking with a loaded pack, stair climbing, and long-distance cardio. We'll give you a full preparation guide when you book."}},{"@type":"Question","name":"What is the summit success rate on Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"The overall success rate across all routes and operators is around 65%. However, with Go Kilimanjaro Treks, our success rate is significantly higher because we select the right route for each client, enforce proper pacing (pole pole (slowly, slowly)), and monitor health closely throughout. Choosing a longer route like the Lemosho or Northern Circuit dramatically increases your odds."}},{"@type":"Question","name":"Is altitude sickness a serious risk on Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"Altitude sickness (AMS) is the number one reason people don't summit, not fitness. Symptoms can affect anyone regardless of age or fitness level. Our guides use pulse oximeters to monitor blood oxygen levels daily, we pace the climb carefully, and we carry supplemental oxygen. If a climber shows dangerous symptoms, our policy is always to descend immediately. Choosing a longer route gives your body more time to acclimatize."}},{"@type":"Question","name":"What is included in your Kilimanjaro packages?","acceptedAnswer":{"@type":"Answer","text":"Our all-inclusive packages cover: park entrance fees and conservation fees, all camping equipment (4-season tents, sleeping pads, dining tent, toilet tent), all meals on the mountain (3 meals per day plus snacks), experienced lead guide and assistant guides, professionally equipped porters, cook, first aid equipment including supplemental oxygen, pre-climb briefing, gear check, airport transfers, and accommodation in Moshi before and after the climb. We can also arrange travel insurance referrals."}},{"@type":"Question","name":"Which Kilimanjaro route should I choose?","acceptedAnswer":{"@type":"Answer","text":"It depends on your priorities. The Lemosho Route (7 days) is our most popular, with excellent scenery, great acclimatization, good success rates. The Northern Circuit (9-10 days) has the highest success rate of all routes and is ideal if time allows. The Marangu Route (5-6 days) is best for those wanting hut accommodation. The Rongai Route suits those wanting a quieter northern approach. The Umbwe Route is for experienced hikers wanting a challenge. Contact us and Nelson will recommend the right route for your specific situation."}},{"@type":"Question","name":"When is the best time to climb Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"The best months are January to March and June to October during Tanzania's two dry seasons. January to March is quieter and often has clearer skies but can be cold at the summit. July to September is peak season with the most stable weather but more crowds. The mountain can be climbed year-round and even the \"wet\" months often have clear mornings, though we advise avoiding the heaviest rains of April, May, and November if possible."}},{"@type":"Question","name":"Can children climb Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"Tanzania National Parks requires climbers to be at least 10 years old. We have successfully guided teenagers as young as 15 to the summit, including on family group expeditions. Children must be physically fit and mentally prepared for the challenge. We highly recommend the Lemosho or Rongai routes for family groups as they provide the best acclimatization profile. Speak with Nelson directly about whether a summit attempt or a high-altitude camp is the right goal for younger climbers."}}],"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"VideoObject","name":"Tanzania Travel Experts: Go Kilimanjaro Treks","description":"A look at Mount Kilimanjaro climbs and Tanzania safaris with Nelson Mushi and the Go Kilimanjaro Treks team. Glaciers, volcanic rock, the Roof of Africa, and northern Tanzania wildlife.","thumbnailUrl":"https://gokilimanjarotreks.com/images/hero-uhuru.jpg","contentUrl":"https://pub-f40abf59e7614debb140769c3f4b1c19.r2.dev/Tanzania-Travel-Experts.mp4","embedUrl":"https://pub-f40abf59e7614debb140769c3f4b1c19.r2.dev/Tanzania-Travel-Experts.mp4","uploadDate":"2026-03-19","duration":"PT2M","publisher":{"@id":"https://gokilimanjarotreks.com/#organization"},"dateModified":"2026-05-26"}];
+---
+
+<BaseLayout
+  title="Kilimanjaro Treks &amp; Tanzania Safaris | Go Kilimanjaro Treks"
+  description="Expert-guided Kilimanjaro climbs &amp; Tanzania safaris with Nelson Mushi. Lemosho, Rongai, Marangu &amp; Northern Circuit routes. 270+ summits. Book your Roof of Africa adventure."
+  ogImage="https://gokilimanjarotreks.com/images/og-home.jpg"
+  ogImageAlt="Mount Kilimanjaro summit above the clouds at sunrise"
+  schemas={schemas}
+>
+  <main>
+
+<!-- ── HERO ── -->
+<section class="hero" aria-label="Hero">
+  <!-- Hero: Kilimanjaro mountain above the clouds, replace with Nelson's best summit shot -->
+  <picture>
+    <source media="(max-width:640px)" srcset="images/hero-uhuru-mobile.jpg">
+    <source media="(max-width:1024px)" srcset="images/hero-uhuru-tablet.jpg">
+    <img src="/images/hero-uhuru.jpg"
+         sizes="100vw"
+         class="hero-bg-img"
+         alt=""
+         aria-hidden="true"
+         fetchpriority="high"
+         decoding="async"
+         width="1440"
+         height="900">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-sky" aria-hidden="true" style="display:none" id="hero-sky-fallback"></div>
+  <aside class="moshi-now" id="moshi-now" aria-label="Live conditions in Moshi, Tanzania">
+    <div class="mn-head">
+      <span class="mn-loc">Moshi, Tanzania</span>
+      <span class="mn-time" id="mn-time">&#xB7;&#xB7;:&#xB7;&#xB7;</span>
+    </div>
+    <div class="mn-row">
+      <span class="mn-icon" id="mn-icon">&#x1F324;</span>
+      <div>
+        <div class="mn-temp" id="mn-temp">&#xB7;&#xB7;&#xB0;C</div>
+        <div class="mn-cond" id="mn-cond">At the foot of Kilimanjaro</div>
+      </div>
+    </div>
+  </aside>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Tanzania &#x2022; East Africa &#x2022; 5,895m</span>
+    <h1 class="hero-title">Conquer<br><em>Kilimanjaro.</em></h1>
+    <p class="hero-subtitle">Expert-guided climbs to the Roof of Africa with Nelson Mushi and the Go Kilimanjaro Treks team. Six routes. Every fitness level. A summit experience built around your success.</p>
+    <div class="hero-actions">
+      <a href="/kilimanjaro" class="btn-primary">View All Routes &#x2192;</a>
+      <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── STATS BAND ── -->
+<section aria-label="Key statistics">
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-num">270+</div><div class="stat-label">Successful Summits</div></div>
+        <div class="stat-item"><div class="stat-num">22+</div><div class="stat-label">Years Experience</div></div>
+        <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Routes Guided</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Safety Record</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT NELSON ── -->
+<section class="section-white" id="about">
+  <div class="container">
+    <div class="about-strip">
+      <div>
+        <span class="section-eyebrow">Your Guide to the Summit</span>
+        <h2 class="section-title">Meet Nelson Mushi &amp; the Go Kilimanjaro Team</h2>
+        <p class="section-lead" style="margin-top:16px">Nelson Mushi grew up in the Machame ward, directly below Kilimanjaro's southern base. In 22+ years as a senior lead guide, he has personally reached Uhuru Peak over 270 times and was among the guides who pioneered the Karanga to Barafu shortcut now used across the mountain. His approach: professional standards, genuine care, and a depth of mountain knowledge that only comes from a lifetime on the slopes.</p>
+        <div class="feature-list reveal">
+          <div class="feature-item">
+            <div class="feat-icon">&#x1F9ED;</div>
+            <div class="feat-text"><strong>Licensed &amp; Certified Guide</strong><span>Registered with Tanzania National Parks (TANAPA) with full Wilderness First Aid certification</span></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">&#x1F465;</div>
+            <div class="feat-text"><strong>Family &amp; Group Specialist</strong><span>Led multi-generational family teams including children as young as 15 to the summit</span></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">&#x2764;&#xFE0F;</div>
+            <div class="feat-text"><strong>Cultural Immersion</strong><span>Chagga culture, coffee farm tours, and local community experiences woven into every trip</span></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">&#x1F4CB;</div>
+            <div class="feat-text"><strong>End-to-End Planning</strong><span>Logistics, gear checks, permits, porters, meals, and accommodation all handled for you</span></div>
+          </div>
+        </div>
+        <a href="/about" class="btn-primary" style="margin-top:32px;display:inline-flex">Read Nelson's Story &#x2192;</a>
+      </div>
+      <div class="about-img-wrap reveal">
+        <img src="/images/nelson-home.jpg" alt="Nelson Mushi and team at Kilimanjaro summit" width="800" height="600" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+        <div class="about-badge">Nelson Mushi<small>Lead Guide &amp; Founder</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROUTES ── -->
+<section class="section-tinted" id="routes">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Choose Your Climb</span>
+      <h2 class="section-title">Kilimanjaro Trekking Routes</h2>
+      <p class="section-lead" style="margin-top:16px">Six distinct routes to the summit. Each offers a different experience, from the ultra-scenic Lemosho to the remote Northern Circuit, the traditional Marangu hut route, and the dramatic Umbwe challenge. Nelson will help you pick the right one for your fitness and goals.</p>
+    </div>
+    <div class="routes-grid">
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-lemosho">
+          <img src="/images/route-lemosho.jpg" alt="Lemosho Route, lush rainforest and Shira Plateau, Kilimanjaro" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Most Popular</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Lemosho Route</h3>
+          <div class="route-meta"><span class="route-tag">7 Days</span><span class="route-tag">High Success Rate</span><span class="route-tag">Scenic</span></div>
+          <p class="route-desc">The gold standard. Approaches from the west through pristine rainforest and the iconic Shira Plateau. Best acclimatization of all southern routes, stunning Barranco Wall, and panoramic Southern Circuit views to Uhuru Peak.</p>
+          <a href="/kilimanjaro#lemosho" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-northern">
+          <img src="/images/route-northern.jpg" alt="Northern Circuit, remote northern slopes of Kilimanjaro at sunrise" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Highest Success Rate</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Northern Circuit</h3>
+          <div class="route-meta"><span class="route-tag">9-10 Days</span><span class="route-tag">Remote</span><span class="route-tag">Best Acclimatization</span></div>
+          <p class="route-desc">Kilimanjaro's longest and most remote route circles the entire mountain. Extra acclimatization days, sparse crowds, and jaw-dropping views of Kenya's plains from the north. The highest summit success rate of all routes.</p>
+          <a href="/kilimanjaro#northern" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-marangu">
+          <img src="/images/route-marangu.jpg" alt="Marangu Route, mountain huts and forest trail on Kilimanjaro" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Hut Accommodation</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Marangu Route</h3>
+          <div class="route-meta"><span class="route-tag">5-6 Days</span><span class="route-tag">Huts</span><span class="route-tag">Classic</span></div>
+          <p class="route-desc">The original Kilimanjaro route, known as the "Coca-Cola Route." The only trail offering permanent hut dormitories instead of camping. Ideal for those who prefer a more comfortable mountain experience.</p>
+          <a href="/kilimanjaro#marangu" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-rongai">
+          <img src="/images/route-rongai.jpg" alt="Rongai Route, northern approach to Kilimanjaro with Kenya plains view" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Quietest Route</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Rongai Route</h3>
+          <div class="route-meta"><span class="route-tag">7 Days</span><span class="route-tag">Northern Approach</span><span class="route-tag">Wildlife</span></div>
+          <p class="route-desc">Approaches from the north near the Kenyan border through remote wilderness. Sparse crowds, expansive savanna views, and a full mountain traverse descending via Marangu. Includes an extra acclimatization day.</p>
+          <a href="/kilimanjaro#rongai" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-umbwe">
+          <img src="/images/route-umbwe.jpg" alt="Umbwe Route, steep ridgeline through Kilimanjaro rainforest" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Advanced Climbers</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Umbwe Route</h3>
+          <div class="route-meta"><span class="route-tag">6 Days</span><span class="route-tag">Challenging</span><span class="route-tag">Solitude</span></div>
+          <p class="route-desc">Kilimanjaro's most direct and demanding route. Steep ridgelines through dense rainforest, very few other climbers, and maximum solitude. For experienced hikers who want a serious challenge and unmatched views.</p>
+          <a href="/kilimanjaro#umbwe" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+      <article class="route-card reveal">
+        <div class="route-card-photo rc-machame">
+          <img src="/images/route-machame.jpg" alt="Machame Route, scenic Shira Plateau and Kilimanjaro landscape" loading="lazy" width="800" height="450">
+          <span class="route-card-badge">Scenic &amp; Varied</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name">Machame Route</h3>
+          <div class="route-meta"><span class="route-tag">7 Days</span><span class="route-tag">Diverse Terrain</span><span class="route-tag">Popular</span></div>
+          <p class="route-desc">The "Whiskey Route," a step up from Marangu in challenge and scenery. Diverse ecosystems, the dramatic Shira Plateau, and the Southern Circuit. Wide enough trails, excellent acclimatization, and stunning summit views.</p>
+          <a href="/kilimanjaro#machame" class="route-link">Explore Route &#x2192;</a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="/kilimanjaro" class="btn-primary">Compare All Routes &amp; Pricing &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section class="section-dark" id="why-us">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow light">Why Climbers Choose Us</span>
+      <h2 class="section-title light">The Go Kilimanjaro Difference</h2>
+      <p class="section-lead light" style="margin-top:16px">We are not a booking platform. We are guides who live at the foot of Kilimanjaro and have dedicated our careers to getting you to the summit safely.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">&#x1F3AF;</div>
+        <h3 class="why-title">Expert-Led, Every Climb</h3>
+        <p class="why-desc">Nelson personally leads or oversees every climb. No outsourced guides or third parties. Your safety and experience are always in expert hands.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#x1FA96;</div>
+        <h3 class="why-title">Safety First, Always</h3>
+        <p class="why-desc">Wilderness First Aid certified guides, daily health monitoring, supplemental oxygen available, and conservative turnaround policies. Your life matters more than a summit photo.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#x1F91D;</div>
+        <h3 class="why-title">Porter Welfare Guarantee</h3>
+        <p class="why-desc">We pay porters fair above-minimum wages, provide proper equipment, and treat our team as the professionals they are. Good ethics, a happy team, a better climb.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#x2702;&#xFE0F;</div>
+        <h3 class="why-title">Fully Tailored Packages</h3>
+        <p class="why-desc">No cookie-cutter trips. Every itinerary is built around your fitness, timeline, budget, and goals. Family groups, solo adventurers, corporate teams. We design it all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KILIMANJARO INFO (SEO) ── -->
+<section class="section-white" id="about-kilimanjaro">
+  <div class="container">
+    <div class="kili-info">
+      <div class="kili-text">
+        <span class="section-eyebrow">The Mountain</span>
+        <h2 class="section-title">About Mount Kilimanjaro</h2>
+        <p style="margin-top:16px;color:var(--muted);line-height:1.8;font-size:.97rem">Mount Kilimanjaro is the highest mountain in Africa, rising to <strong>5,895 metres (19,341 feet)</strong> above sea level. Located in northern Tanzania near the town of Moshi, it is the tallest free-standing mountain on Earth, a dormant volcanic massif that towers above the surrounding savanna plains in one of the most dramatic geological formations on the planet.</p>
+        <p style="margin-top:12px;color:var(--muted);line-height:1.8;font-size:.97rem">Unlike many of the world's great peaks, Kilimanjaro requires no technical climbing equipment: no ropes, crampons, or ice axes on the standard routes. What it demands instead is physical fitness, mental determination, and the patience to acclimatize properly. With the right guide, the right route, and the right mindset, Kilimanjaro is achievable for most healthy adults.</p>
+        <h3 class="section-title" style="font-size:1.6rem;margin-top:32px;margin-bottom:12px">The Five Ecological Zones</h3>
+        <p style="color:var(--muted);line-height:1.75;font-size:.93rem;margin-bottom:16px">One of Kilimanjaro's most extraordinary features is its journey through five distinct climate zones as you ascend:</p>
+        <div class="zones-list reveal">
+          <div class="zone-item"><span class="zone-alt">800-1,800m</span><div><span class="zone-name">Cultivated Zone</span><br><small style="color:var(--muted);font-size:.8rem">Coffee plantations, banana groves, and Chagga villages</small></div></div>
+          <div class="zone-item"><span class="zone-alt">1,800-2,800m</span><div><span class="zone-name">Montane Forest</span><br><small style="color:var(--muted);font-size:.8rem">Dense rainforest with blue monkeys, colobus monkeys, and 140+ bird species</small></div></div>
+          <div class="zone-item"><span class="zone-alt">2,800-4,000m</span><div><span class="zone-name">Heath &amp; Moorland</span><br><small style="color:var(--muted);font-size:.8rem">Giant heathers, giant lobelias, and the dramatic Shira Plateau</small></div></div>
+          <div class="zone-item"><span class="zone-alt">4,000-5,000m</span><div><span class="zone-name">Alpine Desert</span><br><small style="color:var(--muted);font-size:.8rem">Stark, arid landscape. Temperature swings of 40°C between day and night</small></div></div>
+          <div class="zone-item"><span class="zone-alt">5,000-5,895m</span><div><span class="zone-name">Arctic Summit Zone</span><br><small style="color:var(--muted);font-size:.8rem">Glaciers, ice fields, and Uhuru Peak, the Roof of Africa</small></div></div>
+        </div>
+      </div>
+      <div>
+        <span class="section-eyebrow">Fast Facts</span>
+        <h3 class="section-title" style="font-size:1.6rem;margin-bottom:24px">Kilimanjaro at a Glance</h3>
+        <div class="kili-facts reveal">
+          <div class="fact-box"><strong>5,895m</strong><span>Uhuru Peak elevation</span></div>
+          <div class="fact-box"><strong>19,341ft</strong><span>In imperial feet</span></div>
+          <div class="fact-box"><strong>#1</strong><span>Highest in Africa</span></div>
+          <div class="fact-box"><strong>35,000+</strong><span>Climbers per year</span></div>
+          <div class="fact-box"><strong>6</strong><span>Main trekking routes</span></div>
+          <div class="fact-box"><strong>5-10</strong><span>Days to summit</span></div>
+          <div class="fact-box"><strong>Tanzania</strong><span>Northern region, Moshi</span></div>
+          <div class="fact-box"><strong>~65%</strong><span>Overall summit rate</span></div>
+        </div>
+        <div style="margin-top:32px;padding:24px;background:linear-gradient(135deg,#0b1a2e,#1d3557);border-radius:16px" class="reveal">
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:10px">Best Time to Climb</h3>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:16px">Kilimanjaro can be climbed year-round, but the best conditions are during the two dry seasons.</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="background:rgba(251,191,36,.15);border-left:3px solid var(--gold);padding:10px 14px;border-radius:8px"><strong style="color:var(--gold);font-size:.85rem">Primary Season:</strong><span style="color:rgba(255,255,255,.8);font-size:.85rem"> January to March &amp; June to October</span></div>
+            <div style="background:rgba(255,255,255,.07);border-left:3px solid rgba(255,255,255,.2);padding:10px 14px;border-radius:8px"><strong style="color:rgba(255,255,255,.7);font-size:.85rem">Shoulder Season:</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem"> November, December, April (quieter, wetter)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIDEO ── -->
+<section class="video-section" id="video">
+  <div class="container">
+    <div class="video-grid reveal">
+      <div class="video-text">
+        <span class="section-eyebrow light">See the Mountain</span>
+        <h2 class="section-title light" style="margin-bottom:20px">Watch What Awaits You at 5,895 m</h2>
+        <p style="color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:32px">Glaciers, volcanic rock, and a sunrise above the clouds. Kilimanjaro is unlike anything you've ever experienced. This is what Nelson and his team do every week. Watch the journey.</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="#fbbf24"/></svg>
+            </div>
+            <div><strong style="color:#fff;display:block;font-size:.95rem">270+ successful summits</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">A track record built climb by climb</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#fbbf24"/></svg>
+            </div>
+            <div><strong style="color:#fff;display:block;font-size:.95rem">22+ years guiding experience</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">Every route, every season, every level</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#fbbf24"/></svg>
+            </div>
+            <div><strong style="color:#fff;display:block;font-size:.95rem">Small, personal groups</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">Maximum 8 climbers, no factory tours</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="video-embed-wrap" id="videoWrap">
+          <!-- Video hosted on Cloudflare R2: Tanzania-Travel-Experts.mp4 -->
+          <video
+            id="heroVideo"
+            poster="images/hero-uhuru.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+            <source src="https://pub-f40abf59e7614debb140769c3f4b1c19.r2.dev/Tanzania-Travel-Experts.mp4" type="video/mp4">
+            <!-- Once video is uploaded to R2, replace the src above with:
+                 https://pub-HASH.r2.dev/Tanzania-Travel-Experts.mp4 -->
+          </video>
+          <div class="video-play-overlay" id="playOverlay" style="display:none">
+            <div class="video-play-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="#0b1a2e"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section-navy" id="testimonials">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow light">What Climbers Say</span>
+      <h2 class="section-title light">Real Stories from the Summit</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testi-text">"We had an amazing Kilimanjaro climb led by Nelson Mushi. My husband and I and another couple took our 8 kids ages 15-26 and all summited. Nelson and his team were checking in on all of us regularly to make sure we were drinking enough fluid and feeling well. It was an incredible experience for two Canadian families to share."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">C</div>
+          <div><div class="testi-name">Cathryn B.</div><div class="testi-meta">2 families, 10 climbers &bull; Kilimanjaro 6-Day</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testi-text">"I hired Nelson to take me onto Mount Kilimanjaro for a day trip while my husband hiked to the top. Nelson was well prepared and informative, and he even lent me heavier duty rain gear when the skies opened on us. He arranged an outing for a second day to expose me to the Chagga culture and coffee making process. I thoroughly enjoyed my time with Nelson."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">N</div>
+          <div><div class="testi-name">NJ-PQ</div><div class="testi-meta">Verified &bull; Kilimanjaro Day Trek &amp; Cultural Tour</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testi-text">"From the moment we landed in Moshi to the moment we stood on Uhuru Peak, everything was handled perfectly. The porters were incredible, the food was outstanding, and Nelson's calm confidence when the weather turned gave us the courage to push through. We recommend Nelson to everyone who asks about Kilimanjaro."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div><div class="testi-name">James &amp; Sarah K.</div><div class="testi-meta">Verified &bull; Lemosho Route, 7 Days</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section-tinted" id="how-it-works">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Simple Process</span>
+      <h2 class="section-title">How Your Kilimanjaro Journey Works</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Describe Your Dream</h3>
+        <p class="step-desc">Tell us your dates, fitness level, group size, and budget. WhatsApp, email, or use our contact form and Nelson responds personally within 24 hours.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Get Your Custom Plan</h3>
+        <p class="step-desc">We design a tailored itinerary with the best route for your group, recommended accommodation, gear list, and a transparent all-inclusive price.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Confirm &amp; Prepare</h3>
+        <p class="step-desc">Secure your dates with a deposit. We handle all park permits, porter hiring, and logistics. You focus on your fitness training and we'll handle the rest.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Reach the Summit</h3>
+        <p class="step-desc">Arrive in Moshi, meet your team, and begin the adventure of a lifetime. We guide you every step to Uhuru Peak and safely back down.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="/contact" class="btn-primary">Start Planning My Climb &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section-white" id="faq">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Common Questions</span>
+      <h2 class="section-title">Kilimanjaro FAQ</h2>
+      <p class="section-lead" style="margin-top:16px">Everything you need to know before booking your Kilimanjaro climb.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How fit do I need to be to climb Kilimanjaro?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You don't need to be an elite athlete, but a solid base of cardiovascular fitness is essential. We recommend being able to hike 6-8 hours a day for several consecutive days. In the months before your climb, focus on hiking with a loaded pack, stair climbing, and long-distance cardio. We'll give you a full preparation guide when you book.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the summit success rate on Kilimanjaro?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The overall success rate across all routes and operators is around 65%. However, with Go Kilimanjaro Treks, our success rate is significantly higher because we select the right route for each client, enforce proper pacing (pole pole (slowly, slowly)), and monitor health closely throughout. Choosing a longer route like the Lemosho or Northern Circuit dramatically increases your odds.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is altitude sickness a serious risk on Kilimanjaro?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Altitude sickness (AMS) is the number one reason people don't summit, not fitness. Symptoms can affect anyone regardless of age or fitness level. Our guides use pulse oximeters to monitor blood oxygen levels daily, we pace the climb carefully, and we carry supplemental oxygen. If a climber shows dangerous symptoms, our policy is always to descend immediately. Choosing a longer route gives your body more time to acclimatize.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is included in your Kilimanjaro packages?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Our all-inclusive packages cover: park entrance fees and conservation fees, all camping equipment (4-season tents, sleeping pads, dining tent, toilet tent), all meals on the mountain (3 meals per day plus snacks), experienced lead guide and assistant guides, professionally equipped porters, cook, first aid equipment including supplemental oxygen, pre-climb briefing, gear check, airport transfers, and accommodation in Moshi before and after the climb. We can also arrange travel insurance referrals.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Which Kilimanjaro route should I choose?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">It depends on your priorities. The Lemosho Route (7 days) is our most popular, with excellent scenery, great acclimatization, good success rates. The Northern Circuit (9-10 days) has the highest success rate of all routes and is ideal if time allows. The Marangu Route (5-6 days) is best for those wanting hut accommodation. The Rongai Route suits those wanting a quieter northern approach. The Umbwe Route is for experienced hikers wanting a challenge. Contact us and Nelson will recommend the right route for your specific situation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">When is the best time to climb Kilimanjaro?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The best months are January to March and June to October during Tanzania's two dry seasons. January to March is quieter and often has clearer skies but can be cold at the summit. July to September is peak season with the most stable weather but more crowds. The mountain can be climbed year-round and even the "wet" months often have clear mornings, though we advise avoiding the heaviest rains of April, May, and November if possible.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can children climb Kilimanjaro?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Tanzania National Parks requires climbers to be at least 10 years old. We have successfully guided teenagers as young as 15 to the summit, including on family group expeditions. Children must be physically fit and mentally prepared for the challenge. We highly recommend the Lemosho or Rongai routes for family groups as they provide the best acclimatization profile. Speak with Nelson directly about whether a summit attempt or a high-altitude camp is the right goal for younger climbers.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SAFARI TEASER ── -->
+<section class="section-dark" id="safaris">
+  <div class="container">
+    <div style="display:grid;gap:40px;align-items:center" class="kili-info">
+      <div class="reveal">
+        <span class="section-eyebrow light">Beyond the Summit</span>
+        <h2 class="section-title light">Tanzania Wildlife Safaris</h2>
+        <p class="section-lead light" style="margin-top:16px">Kilimanjaro is just the beginning. Tanzania is home to the Serengeti, the world's greatest wildlife spectacle, the Ngorongoro Crater, Tarangire's elephant herds, and the pristine beaches of Zanzibar. Combine your climb with a safari and you have one of the world's great adventure trips.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F98A; Serengeti National Park &amp; Great Migration</div>
+          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F9A7; Ngorongoro Crater, world's largest intact caldera</div>
+          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F418; Tarangire &amp; Lake Manyara National Parks</div>
+          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F3D6;&#xFE0F; Zanzibar Beach &amp; Island Extension</div>
+        </div>
+        <a href="/safari" class="btn-primary" style="margin-top:32px;display:inline-flex">Explore Tanzania Safaris &#x2192;</a>
+      </div>
+      <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px">
+        <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:20px">Popular Combo Trips</h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
+            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Serengeti Safari</strong>
+            <span style="color:rgba(255,255,255,.6);font-size:.82rem">Climb the mountain, then witness the Great Migration</span>
+          </div>
+          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
+            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Ngorongoro</strong>
+            <span style="color:rgba(255,255,255,.6);font-size:.82rem">Summit Africa's highest peak, descend into its greatest crater</span>
+          </div>
+          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
+            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Zanzibar Beach</strong>
+            <span style="color:rgba(255,255,255,.6);font-size:.82rem">The ultimate combination: summit glory followed by island recovery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to Reach the <em>Roof of Africa?</em></h2>
+      <p>Join the hundreds of climbers who have trusted Nelson and the Go Kilimanjaro Treks team for the adventure of a lifetime. Spots are limited each season, so reach out now and let's start planning.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Get a Free Quote &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa-lg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.558 4.14 1.535 5.878L.054 23.617c-.1.334.218.649.551.546l5.865-1.857A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.597 9.597 0 01-4.916-1.354l-.352-.21-3.658 1.158 1.175-3.557-.23-.365A9.597 9.597 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4S21.6 6.698 21.6 12 17.302 21.6 12 21.6z"/></svg>
+          WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+
+</BaseLayout>

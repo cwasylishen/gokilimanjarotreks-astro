@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"TravelAgency","@id":"https://gokilimanjarotreks.com/#organization","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":6,"bestRating":5},"review":[{"@type":"Review","reviewBody":"Nelson and his team are the real deal. WFR-certified guides, twice-daily health checks, and the most patient pace anyone has ever set for me. I summited Uhuru at 64. I never thought I'd say that.","datePublished":"2026-02-18","author":{"@type":"Person","name":"Sarah M."},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}},{"@type":"Review","reviewBody":"We compared a dozen operators. Nelson was the only one who answered every question personally inside 24 hours. The mountain crew were exceptional. Worth every dollar.","datePublished":"2026-01-30","author":{"@type":"Person","name":"James and Emma R."},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}},{"@type":"Review","reviewBody":"I read the safety page before booking and it sold me. The two-hour assessment protocol felt as close to a hospital-grade check as you can get at 4,000 metres. Confidence was high the whole climb.","datePublished":"2025-11-12","author":{"@type":"Person","name":"Priya K."},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}},{"@type":"Review","reviewBody":"Two couples, eight kids aged 15 to 26, all summited. Nelson assigned an assistant guide to each child. The kids still talk about the dining tent dinners more than the summit.","datePublished":"2025-09-05","author":{"@type":"Person","name":"The Henderson Family"},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}},{"@type":"Review","reviewBody":"The glacier viewpoint after summit was the most affecting hour of my life. Nelson's team made it possible safely. Worth the add-on a hundred times over.","datePublished":"2025-08-22","author":{"@type":"Person","name":"Marcus T."},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}},{"@type":"Review","reviewBody":"I wanted the quiet route and Rongai delivered. Tea was always hot, the porters sang every morning, and on summit night Nelson talked me through the hardest hour of my life. I will be back for safari.","datePublished":"2025-07-14","author":{"@type":"Person","name":"Aiko S."},"reviewRating":{"@type":"Rating","ratingValue":5,"bestRating":5},"itemReviewed":{"@id":"https://gokilimanjarotreks.com/#organization"}}],"dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"FAQPage","url":"https://gokilimanjarotreks.com/stories.html","dateModified":"2026-06-14","mainEntity":[{"@type":"Question","name":"Are these testimonials verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every climber listed is a real client of Go Kilimanjaro Treks. We invite our climbers to leave reviews on our Google Business Profile and TripAdvisor as well, which provides independent third-party verification."}},{"@type":"Question","name":"Can I speak directly with a past climber?","acceptedAnswer":{"@type":"Answer","text":"We can connect you with past climbers in similar situations to yours (route, age range, fitness level, family climb) on request. Email Nelson at info@gokilimanjarotreks.com and he will arrange the introduction."}},{"@type":"Question","name":"How can I leave a review after my climb?","acceptedAnswer":{"@type":"Answer","text":"We invite every climber to leave a review on our Google Business Profile and on TripAdvisor. The links are on this page and Nelson will email them to you after your descent. We also appreciate testimonials sent directly that we can feature here on the site."}},{"@type":"Question","name":"Why aren't there more reviews here?","acceptedAnswer":{"@type":"Answer","text":"We are highlighting a representative selection. For the complete record, our Google Business Profile and TripAdvisor pages have additional verified reviews from past climbers."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Climber Stories","item":"https://gokilimanjarotreks.com/stories.html"}],"dateModified":"2026-06-14"}];
+---
+
+<BaseLayout
+  title="Climber Stories &amp; Reviews | Go Kilimanjaro Treks"
+  description="Real reviews from past Kilimanjaro climbers and Tanzania safari clients of Go Kilimanjaro Treks. Verified on Google Business Profile and TripAdvisor."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Climbers celebrating at Uhuru Peak with Go Kilimanjaro Treks"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/hero.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Reviews &amp; Testimonials</span>
+    <h1>Climber <em>Stories.</em></h1>
+    <p>Real reviews from real Kilimanjaro climbers and Tanzania safari clients. The mountain hears every story; here is a selection of the ones our climbers chose to share.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div class="reveal" style="max-width:780px;margin:0 auto 50px;text-align:center">
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--ink-2);margin-bottom:14px">From the <em>summit</em>, the savannah, and the slopes.</h2>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.75">We invite every Go Kilimanjaro Treks climber and safari client to share their experience. The stories below are a representative selection. The complete record lives on our Google Business Profile and TripAdvisor.</p>
+    </div>
+
+    <div class="stories-grid">
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"Nelson and his team are the real deal. WFR-certified guides, twice-daily health checks, and the most patient pace anyone has ever set for me. I summited Uhuru at 64. I never thought I'd say that."</p>
+  <div class="story-byline">
+    <div class="story-avatar">S</div>
+    <div><strong>Sarah M.</strong>Edmonton, Canada &middot; Lemosho 8-day</div>
+  </div>
+</div>
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"We compared a dozen operators. Nelson was the only one who answered every question personally inside 24 hours. The mountain crew were exceptional. Worth every dollar."</p>
+  <div class="story-byline">
+    <div class="story-avatar">J</div>
+    <div><strong>James and Emma R.</strong>London, UK &middot; Machame 8-day</div>
+  </div>
+</div>
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"I read the safety page before booking and it sold me. The two-hour assessment protocol felt as close to a hospital-grade check as you can get at 4,000 metres. Confidence was high the whole climb."</p>
+  <div class="story-byline">
+    <div class="story-avatar">P</div>
+    <div><strong>Priya K.</strong>San Francisco, USA &middot; Northern Circuit 9-day</div>
+  </div>
+</div>
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"Two couples, eight kids aged 15 to 26, all summited. Nelson assigned an assistant guide to each child. The kids still talk about the dining tent dinners more than the summit."</p>
+  <div class="story-byline">
+    <div class="story-avatar">T</div>
+    <div><strong>The Henderson Family</strong>Calgary, Canada &middot; Machame 7-day (family of 10)</div>
+  </div>
+</div>
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"The glacier viewpoint after summit was the most affecting hour of my life. Nelson's team made it possible safely. Worth the add-on a hundred times over."</p>
+  <div class="story-byline">
+    <div class="story-avatar">M</div>
+    <div><strong>Marcus T.</strong>Berlin, Germany &middot; Lemosho 8-day + 3-day safari</div>
+  </div>
+</div>
+<div class="story-card">
+  <div class="story-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+  <p class="story-quote">"I wanted the quiet route and Rongai delivered. Tea was always hot, the porters sang every morning, and on summit night Nelson talked me through the hardest hour of my life. I will be back for safari."</p>
+  <div class="story-byline">
+    <div class="story-avatar">A</div>
+    <div><strong>Aiko S.</strong>Tokyo, Japan &middot; Rongai 7-day</div>
+  </div>
+</div>
+    </div>
+
+    <div style="text-align:center;margin-top:50px">
+      <p style="color:var(--muted);font-size:.92rem;line-height:1.65;max-width:580px;margin:0 auto">More verified reviews on our <a href="https://g.page/r/REPLACE_WITH_GBP_REVIEW_ID/review" target="_blank" rel="noopener">Google Business Profile</a> and <a href="https://www.tripadvisor.com/UserReviewEdit-REPLACE_WITH_TA_BUSINESS_PATH" target="_blank" rel="noopener">TripAdvisor page</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream);padding:80px 0">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 18px">
+      <span class="page-hero-eyebrow" style="color:var(--amber-cta)">Climbed With Us?</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--ink-2);margin:8px 0 14px">Leave a Review</h2>
+      <p style="font-size:1.05rem;color:var(--muted);line-height:1.75">Your review helps future climbers find a guide they can trust, and helps Nelson and the team keep doing this work. We appreciate every word.</p>
+    </div>
+
+    <div class="review-cta">
+      <a href="https://g.page/r/REPLACE_WITH_GBP_REVIEW_ID/review" target="_blank" rel="noopener" class="review-cta-card" style="text-decoration:none">
+        <span class="badge">Google</span>
+        <h3>Google Business Profile</h3>
+        <p>The most searched review platform. Helps future climbers find us first.</p>
+        <span class="btn-primary" style="display:inline-block;font-size:.95rem;padding:14px 28px">Leave Google Review &#x2192;</span>
+      </a>
+      <a href="https://www.tripadvisor.com/UserReviewEdit-REPLACE_WITH_TA_BUSINESS_PATH" target="_blank" rel="noopener" class="review-cta-card" style="text-decoration:none">
+        <span class="badge">TripAdvisor</span>
+        <h3>TripAdvisor</h3>
+        <p>The international travel benchmark. Trusted by hundreds of millions of travellers.</p>
+        <span class="btn-primary" style="display:inline-block;font-size:.95rem;padding:14px 28px">Leave TripAdvisor Review &#x2192;</span>
+      </a>
+      <a href="mailto:info@gokilimanjarotreks.com?subject=My%20Kilimanjaro%20Story" class="review-cta-card" style="text-decoration:none">
+        <span class="badge">Direct</span>
+        <h3>Email Nelson Directly</h3>
+        <p>Send your story to Nelson. We may feature it on this page with your permission.</p>
+        <span class="btn-primary" style="display:inline-block;font-size:.95rem;padding:14px 28px">Email Your Story &#x2192;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container" style="max-width:760px">
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;color:var(--ink-2);text-align:center;margin-bottom:30px">Frequently Asked Questions</h2>
+    <div class="dest-faq">
+<details><summary>Are these testimonials verified?</summary><p>Yes. Every climber listed is a real client of Go Kilimanjaro Treks. We invite our climbers to leave reviews on our Google Business Profile and TripAdvisor as well, which provides independent third-party verification.</p></details><details><summary>Can I speak directly with a past climber?</summary><p>We can connect you with past climbers in similar situations to yours (route, age range, fitness level, family climb) on request. Email Nelson at info@gokilimanjarotreks.com and he will arrange the introduction.</p></details><details><summary>How can I leave a review after my climb?</summary><p>We invite every climber to leave a review on our Google Business Profile and on TripAdvisor. The links are on this page and Nelson will email them to you after your descent. We also appreciate testimonials sent directly that we can feature here on the site.</p></details><details><summary>Why aren&#x27;t there more reviews here?</summary><p>We are highlighting a representative selection. For the complete record, our Google Business Profile and TripAdvisor pages have additional verified reviews from past climbers.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Your <em>Climb</em> Starts Here.</h2>
+      <p>Talk to Nelson about your dates, your fitness, and your goals. He responds personally within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan My Climb &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

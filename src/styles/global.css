@@ -1,0 +1,169 @@
+/* ============================================================
+   Go Kilimanjaro Treks - global stylesheet
+   Extracted from the inline <style> blocks that used to live on
+   every page. Edit here, applies everywhere.
+   ============================================================ */
+
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/cormorant-garamond-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-display:swap;src:url('/fonts/cormorant-garamond-latin-600-italic.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/dm-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/dm-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/dm-sans-latin-700-normal.woff2') format('woff2')}
+
+:root{
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --ink:#0b1a2e;
+  --ink-2:#111827;
+  --navy:#1d3557;
+  --gold:#fbbf24;
+  --amber-cta:#b45309;
+  --amber-hover:#92400e;
+  --forest:#166534;
+  --cream:#f9f7f4;
+  --white:#ffffff;
+  --text:#374151;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+img{max-width:100%;height:auto}
+
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ===== Header & Navigation ===== */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(11,26,46,0.08);transition:box-shadow .3s}
+.site-header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:100px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-img{height:88px;width:auto;display:block;flex-shrink:0}
+.nav-desktop{display:none}
+@media(min-width:1024px){.nav-desktop{display:flex;align-items:center;gap:4px}}
+.nav-desktop a{color:#0b1a2e;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px;transition:color .2s}
+.nav-desktop a:hover,.nav-desktop a.active{color:var(--amber-cta)}
+.nav-desktop .btn-wa{background:var(--amber-cta);color:var(--white);padding:10px 20px;border-radius:10px;font-weight:600;font-size:.875rem;transition:background .2s}
+.nav-desktop .btn-wa:hover{background:var(--amber-hover)}
+.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;color:var(--ink)}
+.nav-toggle span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px}
+@media(min-width:1024px){.nav-toggle{display:none}}
+.nav-mobile{display:none;position:fixed;top:100px;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:24px 28px 32px;border-bottom:1px solid rgba(11,26,46,.1);z-index:199}
+.nav-mobile.open{display:flex;flex-direction:column;gap:4px}
+.nav-mobile a{color:#0b1a2e;font-size:1rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(11,26,46,.07)}
+.nav-mobile .btn-wa-mob{margin-top:16px;background:var(--amber-cta);color:var(--white);padding:14px 24px;border-radius:12px;font-weight:700;font-size:1rem;text-align:center}
+
+/* ===== Plan Your Trip dropdown ===== */
+.nav-dropdown{position:relative;display:inline-block}
+.nav-dropdown-trigger{background:transparent;border:none;cursor:pointer;color:#0b1a2e;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px;display:inline-flex;align-items:center;gap:6px;transition:color .2s;font-family:inherit;line-height:1.2}
+.nav-dropdown-trigger:hover,.nav-dropdown.open .nav-dropdown-trigger{color:var(--amber-cta)}
+.nav-dropdown-trigger .arrow{display:inline-block;font-size:.65rem;transition:transform .25s;margin-top:1px;line-height:1}
+.nav-dropdown.open .nav-dropdown-trigger .arrow{transform:rotate(180deg)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(-6px);opacity:0;visibility:hidden;pointer-events:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 18px 50px rgba(0,0,0,.14);min-width:240px;display:flex;flex-direction:column;gap:2px;transition:opacity .22s,visibility 0s linear .22s,transform .22s;z-index:300}
+.nav-dropdown.open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);transition:opacity .22s,visibility 0s,transform .22s}
+.nav-dropdown-menu a{color:var(--ink-2);font-size:.9rem;font-weight:500;padding:10px 14px;border-radius:8px;transition:background .15s,color .15s;display:block;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:var(--cream);color:var(--amber-cta)}
+.nav-mobile-section{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(11,26,46,.06);border-bottom:1px solid rgba(11,26,46,.06);margin:6px 0;padding:4px 0 6px}
+.nav-mobile-heading{display:block;font-family:var(--font-display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-cta);font-weight:700;padding:10px 0 4px;border:none}
+.nav-mobile-section a{padding-left:14px;font-size:.96rem}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* ===== Hero & Page Headers ===== */
+.page-hero{padding:160px 0 80px;background:var(--ink);position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber-cta),var(--gold),var(--amber-cta))}
+.page-hero-eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;background:rgba(251,191,36,.12);padding:6px 14px;border-radius:20px;border:1px solid rgba(251,191,36,.3)}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:-.02em;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
+.page-hero h1 em{font-style:italic;color:var(--gold)}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.8);line-height:1.75;max-width:620px;margin-bottom:32px}
+.page-hero .container{position:relative;z-index:2}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ===== Buttons ===== */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--amber-cta);color:var(--white);border-radius:12px;font-weight:700;font-size:1rem;transition:background .2s,box-shadow .2s,transform .2s;box-shadow:0 4px 20px rgba(180,83,9,.35)}
+.btn-primary:hover{background:var(--amber-hover);box-shadow:0 8px 32px rgba(180,83,9,.5);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;background:rgba(255,255,255,.08);color:var(--white);border:1.5px solid rgba(255,255,255,.3);border-radius:12px;font-weight:600;font-size:.95rem;transition:background .2s,border-color .2s}
+.btn-ghost:hover{background:rgba(255,255,255,.15);border-color:var(--gold)}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#25d366;color:var(--white);border-radius:12px;font-weight:700;font-size:.95rem;transition:background .2s,transform .2s}
+.btn-wa:hover{background:#1ea353;transform:translateY(-2px)}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:var(--gold);color:var(--ink);border-radius:12px;font-weight:700;font-size:.98rem;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 8px 28px rgba(251,191,36,.32)}
+.btn-gold:hover{background:#f5b81f;transform:translateY(-2px);box-shadow:0 12px 36px rgba(251,191,36,.45)}
+
+/* ===== Sections ===== */
+.section-white{padding:96px 0;background:var(--white)}
+.section-tinted{padding:96px 0;background:var(--cream)}
+.section-dark{padding:96px 0;background:var(--ink)}
+.section-eyebrow{display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-cta);margin-bottom:14px}
+.section-eyebrow.light{color:var(--gold)}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:var(--ink-2);line-height:1.12;letter-spacing:-.02em}
+.section-title.light{color:var(--white)}
+.section-lead{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:640px}
+.section-lead.light{color:rgba(255,255,255,.78)}
+.section-header{margin-bottom:56px}
+.section-header.centered{text-align:center}
+.section-header.centered .section-lead{margin:0 auto}
+
+/* ===== CTA section block (used on most pages) ===== */
+.cta-section{padding:96px 0;background:linear-gradient(135deg,#0b1a2e 0%,#1d3557 100%);text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(251,191,36,.08) 0%,transparent 60%);z-index:0}
+.cta-section > .container{position:relative;z-index:1}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.cta-section h2 em{font-style:italic;color:var(--gold)}
+.cta-section p{font-size:1.05rem;color:rgba(255,255,255,.82);line-height:1.7;max-width:680px;margin:0 auto 36px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+/* ===== Footer ===== */
+footer{background:#060e1c;color:rgba(255,255,255,.55);padding:64px 0 28px}
+footer .footer-grid{display:grid;gap:36px;margin-bottom:48px}
+@media(min-width:768px){footer .footer-grid{grid-template-columns:1.4fr 1fr 1fr 1.2fr}}
+.footer-tagline{font-size:.93rem;line-height:1.65;color:rgba(255,255,255,.55);margin-bottom:18px}
+.footer-contact{display:flex;flex-direction:column;gap:8px;font-size:.9rem}
+.footer-contact a{color:rgba(255,255,255,.65);transition:color .2s}
+.footer-contact a:hover{color:var(--gold)}
+.footer-col h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:18px}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col a{color:rgba(255,255,255,.55);font-size:.92rem;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{padding-top:26px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.78rem}
+.social-links{display:flex;gap:12px}
+.social-links a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;font-size:.78rem;font-weight:700}
+.social-links a:hover{background:var(--amber-cta);color:#fff}
+
+/* ===== WhatsApp floating button ===== */
+.wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .25s,box-shadow .25s}
+.wa-float svg{width:32px;height:32px;fill:currentColor}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 12px 32px rgba(0,0,0,.32)}
+.wa-float.pulse{animation:waPulse 2.2s infinite}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,.45)}50%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 14px rgba(37,211,102,0)}}
+
+/* ===== Scroll-reveal default state - opacity 1 by default, transition for nice fades ===== */
+.reveal{transition:opacity .35s ease,transform .35s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ===== Reusable FAQ accordion (used on most pages) ===== */
+.dest-faq{max-width:820px;margin:24px auto 0;display:flex;flex-direction:column;gap:14px}
+.dest-faq details{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:0;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.dest-faq details:hover{border-color:rgba(180,83,9,.4);box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.dest-faq details[open]{border-color:var(--amber-cta);box-shadow:0 14px 36px rgba(180,83,9,.1)}
+.dest-faq summary{cursor:pointer;list-style:none;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--font-display);font-size:1.12rem;font-weight:700;color:var(--ink-2);line-height:1.35;transition:color .2s}
+.dest-faq summary::-webkit-details-marker{display:none}
+.dest-faq summary:hover{color:var(--amber-cta)}
+.dest-faq summary::after{content:'';flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--cream);border:1.5px solid var(--border);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b45309' stroke-width='2.5' stroke-linecap='round'><path d='M12 5v14M5 12h14'/></svg>");background-repeat:no-repeat;background-position:center;transition:transform .35s cubic-bezier(.4,0,.2,1),background-color .25s,border-color .25s}
+.dest-faq details[open] summary::after{transform:rotate(135deg);background-color:var(--amber-cta);border-color:var(--amber-cta);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round'><path d='M12 5v14M5 12h14'/></svg>")}
+.dest-faq details p{padding:0 28px 26px;margin:0 28px;font-family:var(--font-body);font-size:1rem;color:var(--text);line-height:1.78;border-top:1px solid var(--border);padding-top:20px}
+
+/* ===== Sticky Get-a-Quote pill ===== */
+.sticky-quote{position:fixed;bottom:28px;left:28px;transform:translateY(180%);background:var(--ink-2);color:var(--white);padding:12px 22px 12px 18px;border-radius:99px;font-family:var(--font-body);font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.4,.0,.2,1),background .25s,box-shadow .25s;z-index:80;border:1.5px solid rgba(251,191,36,.55);max-width:calc(100vw - 56px)}
+.sticky-quote:hover{background:var(--amber-cta);border-color:var(--amber-cta);color:#fff;box-shadow:0 16px 50px rgba(180,83,9,.45)}
+.sticky-quote.visible{transform:translateY(0)}
+.sticky-quote::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(251,191,36,.22);animation:pulseDot 1.8s infinite;flex-shrink:0}
+.sticky-quote:hover::before{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.22)}
+@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.7}}
+@media(max-width:900px){.sticky-quote{bottom:24px;left:24px}}
+@media(max-width:540px){.sticky-quote{display:none}}
+@media(prefers-reduced-motion:reduce){.sticky-quote{transition:opacity .2s}.sticky-quote::before{animation:none}}

@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Faith Vision Foundation","item":"https://gokilimanjarotreks.com/faith-vision-foundation.html"}],"dateModified":"2026-06-15"}];
+---
+
+<BaseLayout
+  title="Faith Vision Foundation: Our Giveback | Go Kilimanjaro Treks"
+  description="A portion of every Go Kilimanjaro Treks climb and Tanzania safari supports Faith Vision Foundation, the children's vision-care initiative Nelson Mushi is building in the Kilimanjaro region."
+  ogImage="https://gokilimanjarotreks.com/images/faith-stethoscope.jpg"
+  ogImageAlt="Nelson Mushi's daughter Faith examining a visitor with a stethoscope"
+  schemas={schemas}
+>
+  <main>
+<section class="fvf-hero">
+  <div class="container">
+    <span class="eyebrow">Our Giveback</span>
+    <h1>The <em>Faith Vision Foundation.</em></h1>
+    <p>A portion of every Kilimanjaro climb and Tanzania safari we run goes toward children's vision care in our region. This is the work behind the work.</p>
+  </div>
+</section>
+
+<section class="fvf-photo" aria-label="A photo of Faith">
+  <picture>
+    <source type="image/webp" srcset="images/faith-stethoscope.webp">
+    <img src="/images/faith-stethoscope.jpg" alt="Nelson's daughter Faith using a stethoscope on a visitor to the family in Moshi" width="920" height="690" loading="eager">
+  </picture>
+  <p class="fvf-photo-caption"><strong>Faith.</strong> Wearing the prescription glasses she has worn for the last two years, and practising medicine on a visitor. She wants to be a doctor.</p>
+</section>
+
+<section class="fvf-story">
+  <div class="container">
+    <span class="section-eyebrow-center">From Nelson</span>
+    <h2 class="section-title-center">In <em>His Own Words.</em></h2>
+    <p class="section-lead-center" style="margin-bottom:40px">The story behind the foundation, told plainly.</p>
+
+    <div class="fvf-quote">
+      <p>My daughter Faith has been wearing prescription glasses for two years now.</p>
+      <p>I took her to the Kilimanjaro Christian Medical Centre for her follow-up. While we were there I saw children with vision disabilities arriving for treatment with their families. Some had come a very long way. Some had no way to keep coming back.</p>
+      <p>I went home that day with a thought I could not put down. Faith has the care she needs. These children do not. And without proper vision, school is harder, work is harder, life is harder.</p>
+      <p>That day I made a promise to myself: when the time is right, I will start a foundation for children in our region who need vision care and cannot afford it. Not just one visit. Real follow-up. At their homes if that is what it takes.</p>
+      <p>The foundation will be called the Faith Vision Foundation. A portion of every Kilimanjaro climb and every Tanzania safari we run will go toward making it real.</p>
+      <div class="fvf-attrib">
+        <img src="/images/nelson.jpg" alt="Nelson Mushi, founder of Go Kilimanjaro Treks">
+        <div>
+          <div class="who">Nelson Mushi</div>
+          <div class="role">Lead Guide &amp; Founder, Go Kilimanjaro Treks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fvf-why">
+  <div class="container">
+    <span class="section-eyebrow-center">Why It Matters</span>
+    <h2 class="section-title-center">Vision Care Is Not <em>Optional.</em></h2>
+    <p class="section-lead-center">In northern Tanzania, basic vision care reaches a small share of the children who need it. The cost is not the only barrier. Distance is. Follow-up is. Glasses lost or outgrown are.</p>
+    <div class="fvf-why-grid">
+      <div class="fvf-why-card">
+        <div class="num">01</div>
+        <h3>School Outcomes</h3>
+        <p>A child who cannot see the board cannot finish primary school in the way their classmates do. Untreated vision is a quiet sorter of futures.</p>
+      </div>
+      <div class="fvf-why-card">
+        <div class="num">02</div>
+        <h3>Family Cost</h3>
+        <p>The journey to KCMC and back is its own expense for rural families. Then comes the cost of the lenses, and the cost of replacing them as a child grows.</p>
+      </div>
+      <div class="fvf-why-card">
+        <div class="num">03</div>
+        <h3>Follow-Up Gap</h3>
+        <p>Most charity vision programmes are one visit and done. The harder work is the second visit, the third visit, the trip to the home when the child stops coming back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fvf-how">
+  <div class="container">
+    <span class="section-eyebrow-center">How Your Climb Contributes</span>
+    <h2 class="section-title-center">How the <em>Giveback Works.</em></h2>
+    <p class="section-lead-center">No surcharge. No optional checkbox at booking. The contribution is built into the price we already publish, and the share grows with the trip.</p>
+    <div class="fvf-how-grid">
+      <div class="fvf-how-item">
+        <h3>A Share of Every Booking</h3>
+        <p>A defined portion of every Kilimanjaro climb, Tanzania safari, day trip, and combination booking we run goes to the foundation. The exact percentage is set quarterly and posted publicly when the foundation is fully constituted.</p>
+      </div>
+      <div class="fvf-how-item">
+        <h3>Transparency</h3>
+        <p>Once the foundation is registered, we publish annual figures: total contributed, children served, vision tests delivered, glasses fitted, follow-up visits completed. Real numbers, not promises.</p>
+      </div>
+      <div class="fvf-how-item">
+        <h3>You Can Add to It</h3>
+        <p>Climbers who want to contribute more, beyond what's already in the trip price, can do so at booking or at any time. We will set up a direct path the day the foundation is registered.</p>
+      </div>
+      <div class="fvf-how-item">
+        <h3>Follow-Up at Home</h3>
+        <p>The unusual piece of Nelson's plan: home follow-up for every child served. The team goes to the village, checks the child, replaces lenses as they grow, ensures continuity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-fvf">
+  <div class="container">
+    <h2>Climb the Mountain. <em>Move the Needle.</em></h2>
+    <p>The simplest way to support Faith Vision Foundation is to book a trip with us. Every climb and every safari we run includes a contribution to the foundation. When you bring a group, the contribution scales with the group.</p>
+    <div class="cta-options">
+      <a href="contact.html?subject=Climb%20with%20a%20giveback" class="btn-gold">Plan My Climb &#x2192;</a>
+      <a href="mailto:info@gokilimanjarotreks.com?subject=Faith%20Vision%20Foundation%20question" class="btn-line">&#x2709;&#xFE0F; Email Nelson</a>
+      <a href="https://wa.me/255677917500?text=Hi%20Nelson%2C%20I%27d%20like%20to%20talk%20about%20the%20Faith%20Vision%20Foundation." class="btn-line" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

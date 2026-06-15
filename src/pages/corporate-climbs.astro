@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{
+  "@context":"https://schema.org","@type":"Service",
+  "serviceType":"Corporate Team-Building Kilimanjaro Climbs",
+  "provider":{"@id":"https://gokilimanjarotreks.com/#organization"},
+  "url":"https://gokilimanjarotreks.com/corporate-climbs",
+  "name":"Corporate Leadership Climbs on Mount Kilimanjaro",
+  "description":"Executive-grade leadership offsites and team-building expeditions on Mount Kilimanjaro for corporate groups, HR programmes, and CSR initiatives.",
+  "areaServed":{"@type":"Country","name":"Worldwide"},
+  "audience":{"@type":"BusinessAudience","name":"Corporate HR and L&D teams"}
+}];
+---
+
+<BaseLayout
+  title="Corporate Team Climbs: Leadership Offsites on Kilimanjaro | Go Kilimanjaro Treks"
+  description="Executive-grade leadership offsites and team-building expeditions on Mount Kilimanjaro. C-suite to analyst share the same tent and the same struggle. Discreet logistics, optional coaching integration, summit-grade documentation."
+  ogImage="https://gokilimanjarotreks.com/images/gallery/summit-celebration-group.jpg"
+  ogImageAlt="Climbers celebrating at altitude on a Go Kilimanjaro Treks corporate climb"
+  schemas={schemas}
+>
+  <section class="corp-hero">
+    <img src="/images/gallery/summit-celebration-group.jpg" alt="" aria-hidden="true" class="corp-hero-bg" loading="eager" fetchpriority="high">
+    <div class="container">
+      <span class="corp-hero-eyebrow">For HR, L&amp;D and CSR Leaders</span>
+      <h1>The Offsite Where the CEO and the Analyst <em>Share the Same Tent.</em></h1>
+      <p class="lead">Executive-grade leadership expeditions on Mount Kilimanjaro. Real shared adversity at altitude. Discreet on-the-ground logistics. Optional coaching, filming, and post-climb debrief built around your team's development goals.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <a href="/contact?subject=Corporate+climb+enquiry" class="btn-gold">Plan a Team Climb &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <span class="section-eyebrow-center">Why Kilimanjaro Works for Teams</span>
+      <h2 class="section-title-center">A Leadership <em>Equaliser.</em></h2>
+      <p class="section-lead-center">Most corporate offsites manufacture team dynamics. Kilimanjaro produces them, under real conditions. The mountain does not care about title.</p>
+      <div class="corp-grid">
+        <div class="corp-card">
+          <h3>Real Shared Adversity</h3>
+          <p>Cold, altitude, sleep deprivation, the long summit night. Conditions that strip out posture and show how people actually behave when it gets hard.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Hierarchy Resets</h3>
+          <p>Every climber sleeps in the same tent type and eats the same food. The senior executive and the new hire are both walking pole pole behind the same guide.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Memorable, Not Forgettable</h3>
+          <p>Ropes courses fade in a week. The summit photo and the shared story show up in performance reviews and town halls for years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tinted">
+    <div class="container">
+      <span class="section-eyebrow-center">What's Different About a Corporate Climb</span>
+      <h2 class="section-title-center">Built for <em>Companies</em>, Not Tourists.</h2>
+      <p class="section-lead-center">Same Go Kilimanjaro Treks safety standard, plus the extra layers a corporate team needs.</p>
+      <div class="corp-grid">
+        <div class="corp-card">
+          <h3>Executive Briefing</h3>
+          <p>Pre-trip Zoom with your HR/L&amp;D lead and any sponsoring executive. We align on objectives, set the tone, and answer leadership-team-specific questions about the climb.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Scaled Crew</h3>
+          <p>Higher guide-to-climber ratio than our retail standard. Two assistant guides per six climbers. Dedicated safety lead for groups of ten or more.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Optional Coaching</h3>
+          <p>If you bring an executive coach or facilitator with the team, we integrate them: scheduling debrief time at camp, hosting evening circles, supporting their work in altitude conditions.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Documentary-Grade Filming</h3>
+          <p>Optional professional photo and short-film coverage of the climb, edited for internal communications, sponsor reports, or recruiting materials. We have the permits.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Written Debrief</h3>
+          <p>Optional written report from the senior guide observing the team across the climb. What worked, what surprised, where individuals shone. A discreet input into your post-climb people work.</p>
+        </div>
+        <div class="corp-card">
+          <h3>Single Invoice, NDA-Ready</h3>
+          <p>One contract, one invoice, full discretion. We routinely sign mutual NDAs for sensitive corporate engagements. Your team's identity is your team's identity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <span class="section-eyebrow light" style="text-align:center;display:block">Audiences We Serve</span>
+      <h2 class="section-title light" style="text-align:center;margin-top:6px">For the teams who <em>actually do the work.</em></h2>
+      <p class="section-lead light" style="margin:18px auto 50px;max-width:680px;text-align:center">From boutique consultancies to enterprise leadership programmes, the structure adapts to your team.</p>
+      <div class="corp-grid">
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">Executive Offsites</h3>
+          <p style="color:rgba(255,255,255,.72)">C-suite and senior leadership annual offsite, scaled to 4-12 climbers, often combined with a safari or Zanzibar extension for spouses.</p>
+        </div>
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">Leadership Cohorts</h3>
+          <p style="color:rgba(255,255,255,.72)">High-potential cohort programmes where the climb is the capstone of a six-month development arc. We integrate with your coaching provider.</p>
+        </div>
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">Founding-Team Climbs</h3>
+          <p style="color:rgba(255,255,255,.72)">Startups bringing their founding team or first hires for a shared cornerstone experience. Discreet, photographed for recruiting use later.</p>
+        </div>
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">Sales Incentive Trips</h3>
+          <p style="color:rgba(255,255,255,.72)">President's Club-style incentive trips where the climb is the headline experience for top performers. Spouses can stay in Moshi or join the Zanzibar leg.</p>
+        </div>
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">CSR-Linked Climbs</h3>
+          <p style="color:rgba(255,255,255,.72)">Corporate CSR programmes where the climb supports a partnered cause. We coordinate with our charity-climbs structure to make the fundraising side work properly.</p>
+        </div>
+        <div class="corp-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+          <h3 style="color:#fff">University Executive Education</h3>
+          <p style="color:rgba(255,255,255,.72)">EMBA programmes and executive education cohorts. We have hosted faculty-led groups and can scale the crew for groups up to 20 climbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Let's Talk About the <em>Climb.</em></h2>
+      <p>Half an hour on Zoom or WhatsApp video with Nelson and your HR/L&amp;D lead. We learn about the team, the development goals, and the dates. You learn what it costs, what's included, and what to expect.</p>
+      <div class="cta-actions">
+        <a href="/contact?subject=Corporate+climb+enquiry" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Schedule a Planning Call &#x2192;</a>
+        <a href="mailto:info@gokilimanjarotreks.com?subject=Corporate+climb+enquiry" class="btn-ghost">&#x2709;&#xFE0F; Email Nelson</a>
+        <a href="https://wa.me/255677917500?text=Hi%20Nelson%2C%20I%27d%20like%20to%20discuss%20a%20corporate%20team%20climb." class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

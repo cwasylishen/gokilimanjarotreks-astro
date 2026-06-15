@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Image Credits","item":"https://gokilimanjarotreks.com/credits.html"}],"dateModified":"2026-05-26"}];
+---
+
+<BaseLayout
+  title="Image Credits | Go Kilimanjaro Treks"
+  description="Attribution for photographs used on the Go Kilimanjaro Treks website. Several images are used under Creative Commons licenses from Wikimedia Commons."
+  ogImage="https://gokilimanjarotreks.com/images/og-home.jpg"
+  ogImageAlt="Go Kilimanjaro Treks"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero-eyebrow">Attribution</span>
+    <h1>Image <em>Credits.</em></h1>
+    <p>Several photographs on this site are used under Creative Commons licenses from Wikimedia Commons. Below is the full attribution list as required by the relevant licenses. Photos of Nelson, the team, and the logo are owned by Go Kilimanjaro Treks.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:8px">Photo Attributions</h2>
+    <p class="section-lead">Each photo below links back to the original file on Wikimedia Commons and to the full license text. Where the license requires it, modifications to these images (cropping and resizing for display) are noted in this acknowledgment.</p>
+    <table class="credits-table">
+      <thead>
+        <tr><th>File</th><th>Photograph Title</th><th>Photographer</th><th>License</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>daytrip-materuni.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Materuni Falls</td>
+        <td>Daniel Msirikale</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener nofollow">CC BY-SA 4.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Materuni_Falls_1.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-helicopter.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Mount Kilimanjaro (Aerial View)</td>
+        <td>Raidarmax</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener nofollow">CC BY-SA 3.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Mount_Kilimanjaro_(Aerial_View).JPG" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-chala.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Lake Chala</td>
+        <td>Joachim Huber</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener nofollow">CC BY-SA 2.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Lake_Chala.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-ndarakwai.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Zebras, Seronera Valley, Serengeti</td>
+        <td>Christoph Strassler</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener nofollow">CC BY-SA 2.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Zebras,_Seronera_Valley,_Serengeti,_Tanzania_-_33262501984.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-chemka.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Kikuletwa Hot Spring</td>
+        <td>ZuriyEyna</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener nofollow">CC BY-SA 4.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Kikuletwa_hot_spring_01.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-dayhike.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Muddy trail and dense vegetation, montane rainforest, Mount Kilimanjaro</td>
+        <td>Jorge Lascar</td>
+        <td><a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener nofollow">CC BY 2.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Lascar_Muddy_trail_and_dense_vegetation_-_Montane_rainforests_biome_(4460834130).jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>daytrip-shopping.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Maasai Market Curios and Crafts, Arusha</td>
+        <td>Bajcetic</td>
+        <td><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener nofollow">CC0 1.0 Public Domain</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:WikiAru915.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>dest-mkomazi.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Destinations</span></td>
+        <td>Mkomazi National Park</td>
+        <td>Nicola Avery</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener nofollow">CC BY-SA 2.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Mkomazi_National_Park-1.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>      <tr>
+        <td><strong>dest-meru.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Destinations</span></td>
+        <td>Afternoon view of Mount Meru, Arusha</td>
+        <td>KaizaDee</td>
+        <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener nofollow">CC BY-SA 4.0</a></td>
+        <td><a href="https://commons.wikimedia.org/wiki/File:Afternoon_view_of_Mount_Meru_in_Arusha.jpg" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>
+        <tr>
+        <td><strong>daytrip-horseback.jpg</strong><br><span style="color:var(--muted);font-size:.82rem">Day Trips</span></td>
+        <td>Riders on horseback in a grassland</td>
+        <td>Marco Gnata</td>
+        <td><a href="https://unsplash.com/license" target="_blank" rel="noopener nofollow">Unsplash License</a></td>
+        <td><a href="https://unsplash.com/photos/srnj450Rngo" target="_blank" rel="noopener nofollow">Source</a></td>
+      </tr>
+    </tbody>
+    </table>
+    <p style="margin-top:32px;font-size:.9rem;color:var(--muted);line-height:1.7">The images marked CC BY or CC BY-SA have been cropped and resized for use as cards on this site. They are made available here on the same terms as the original licenses. If you believe an attribution is incorrect or incomplete, please <a href="/contact" style="color:var(--amber-cta);font-weight:600">contact us</a> and we will correct it promptly.</p>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

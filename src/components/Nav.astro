@@ -1,0 +1,54 @@
+---
+import { NAV_MAIN, NAV_DROPDOWN, NAV_DROPDOWN_LABEL, NAV_AFTER } from '../data/nav';
+import { SITE } from '../data/site';
+
+const { pathname } = Astro.url;
+const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(href));
+const inDropdown = NAV_DROPDOWN.some((item) => isActive(item.href));
+---
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label={`${SITE.name} home`}>
+      <img src="/images/logo-header.webp" alt={SITE.name} class="logo-img" width="124" height="88" loading="eager">
+    </a>
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      {NAV_MAIN.map((item) => (
+        <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
+      ))}
+      <div class="nav-dropdown" data-nav-dropdown>
+        <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          {NAV_DROPDOWN_LABEL} <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          {NAV_DROPDOWN.map((item) => (
+            <a href={item.href} role="menuitem" class:list={{ active: isActive(item.href) }}>{item.label}</a>
+          ))}
+        </div>
+      </div>
+      {NAV_AFTER.map((item) => (
+        <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
+      ))}
+      <a href={SITE.whatsapp} class="btn-wa" target="_blank" rel="noopener">WhatsApp Us</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="nav-menu" aria-label="Mobile navigation">
+  {NAV_MAIN.map((item) => (
+    <a href={item.href}>{item.label}</a>
+  ))}
+  <div class="nav-mobile-section">
+    <span class="nav-mobile-heading">{NAV_DROPDOWN_LABEL}</span>
+    {NAV_DROPDOWN.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </div>
+  {NAV_AFTER.map((item) => (
+    <a href={item.href}>{item.label}</a>
+  ))}
+  <a href={SITE.whatsapp} class="btn-wa-mob" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+</nav>

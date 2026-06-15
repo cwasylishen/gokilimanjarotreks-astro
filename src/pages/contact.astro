@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"TravelAgency","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com","email":"info@gokilimanjarotreks.com","telephone":"+255677917500","address":{"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":"-3.3731","longitude":"37.3441"},"contactPoint":[{"@type":"ContactPoint","telephone":"+255677917500","email":"info@gokilimanjarotreks.com","contactType":"customer service","areaServed":"TZ","availableLanguage":["English","Swahili"]},{"@type":"ContactPoint","telephone":"+255713917500","contactType":"reservations","areaServed":"TZ","availableLanguage":["English","Swahili"]}],"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://gokilimanjarotreks.com/contact.html"}],"dateModified":"2026-05-26"}];
+---
+
+<BaseLayout
+  title="Book Your Kilimanjaro Trek: Contact Nelson"
+  description="Ready to climb Kilimanjaro? Contact Nelson Mushi at Go Kilimanjaro Treks for a free consultation and custom quote. WhatsApp, email, or enquiry form. Based in Moshi, Tanzania."
+  ogImage="https://gokilimanjarotreks.com/images/og-contact.jpg"
+  ogImageAlt="Contact Go Kilimanjaro Treks for Kilimanjaro climbs and Tanzania safaris"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero" style="background:var(--ink)">
+  <img src="/images/page-hero-contact.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;opacity:0.7">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Free Consultation &bull; 24hr Response</span>
+    <h1>Let's Plan Your<br><em>Kilimanjaro</em> Climb.</h1>
+    <p>Tell Nelson your dates, group size, and dream. He'll respond personally within 24 hours with honest route advice and a transparent all-inclusive quote.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM + SIDEBAR -->
+<section class="section-white">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-eyebrow">Enquiry Form</span>
+        <h2 class="section-title">Get Your Free Quote</h2>
+        <p style="font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:32px;margin-top:8px">Fill in as much detail as you have. Nelson will use this to put together a personalised route recommendation and price. No commitment required.</p>
+        <form id="enquiry-form" class="enquiry-form" action="https://formsubmit.co/ajax/info@gokilimanjarotreks.com" method="POST" aria-label="Trip enquiry form">
+          <input type="hidden" name="_subject" value="New enquiry from gokilimanjarotreks.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Thank you for your enquiry with Go Kilimanjaro Treks. Nelson Mushi will reply personally within 24 hours with route advice and a transparent quote. If you need an immediate answer, WhatsApp him at +255 677 917 500.">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" placeholder="Company">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your Name *</label>
+              <input type="text" id="f-name" name="name" required placeholder="First &amp; last name" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" name="email" required placeholder="you@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-phone">WhatsApp / Phone</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="f-country">Country</label>
+              <input type="text" id="f-country" name="country" placeholder="Your country" autocomplete="country-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-trip">What are you interested in? *</label>
+            <select id="f-trip" name="trip_type" required>
+              <option value="" disabled selected>Select trip type</option>
+              <option value="kilimanjaro-lemosho">Kilimanjaro: Lemosho Route (7 Days)</option>
+              <option value="kilimanjaro-northern">Kilimanjaro: Northern Circuit (9-10 Days)</option>
+              <option value="kilimanjaro-marangu">Kilimanjaro: Marangu Route (5-6 Days)</option>
+              <option value="kilimanjaro-rongai">Kilimanjaro: Rongai Route (7 Days)</option>
+              <option value="kilimanjaro-umbwe">Kilimanjaro: Umbwe Route (6 Days)</option>
+              <option value="kilimanjaro-machame">Kilimanjaro: Machame Route (7 Days)</option>
+              <option value="safari">Tanzania Wildlife Safari</option>
+              <option value="combo">Kilimanjaro + Safari Combo</option>
+              <option value="zanzibar">Zanzibar Beach Extension</option>
+              <option value="unsure">Not Sure, Please Advise</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-dates">Preferred Dates</label>
+              <input type="text" id="f-dates" name="dates" placeholder="e.g. July 2026 or flexible">
+            </div>
+            <div class="form-group">
+              <label for="f-group">Group Size</label>
+              <select id="f-group" name="group_size">
+                <option value="">Select size</option>
+                <option value="solo">Solo (1 person)</option>
+                <option value="couple">Couple (2 people)</option>
+                <option value="small">Small group (3-5)</option>
+                <option value="medium">Medium group (6-10)</option>
+                <option value="large">Large group (10+)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-fitness">Your Fitness Level</label>
+            <select id="f-fitness" name="fitness">
+              <option value="">Select level</option>
+              <option value="beginner">Beginner: I'm new to hiking</option>
+              <option value="moderate">Moderate: I hike regularly</option>
+              <option value="fit">Fit: I train regularly, multi-day hiking experience</option>
+              <option value="experienced">Experienced: Prior high-altitude trekking</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Tell Nelson about your trip</label>
+            <textarea id="f-message" name="message" placeholder="Any questions, special requirements, or details about your group. The more you share, the better Nelson can advise you."></textarea>
+          </div>
+          <p id="form-status" role="status" aria-live="polite" hidden style="margin-bottom:16px;padding:12px 16px;border-radius:10px;font-weight:500"></p>
+          <button type="submit" class="btn-submit">Send My Enquiry &rarr;</button>
+          <p class="form-note">Nelson responds personally within 24 hours. No bots, no automated replies.</p>
+        </form>
+      </div>
+      <div class="contact-sidebar reveal">
+        <a href="https://wa.me/255677917500" class="contact-method" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="cm-icon cm-wa">&#x1F4AC;</div>
+          <div>
+            <div class="cm-title">WhatsApp Nelson</div>
+            <div class="cm-value">+255 677 917 500</div>
+            <div class="cm-note">Fastest response &bull; Usually within minutes</div>
+          </div>
+        </a>
+        <a href="mailto:info@gokilimanjarotreks.com" class="contact-method" style="text-decoration:none">
+          <div class="cm-icon cm-email">&#x2709;&#xFE0F;</div>
+          <div>
+            <div class="cm-title">Email Us</div>
+            <div class="cm-value">info@gokilimanjarotreks.com</div>
+            <div class="cm-note">Detailed enquiries welcome &bull; 24hr response</div>
+          </div>
+        </a>
+        <a href="tel:+255677917500" class="contact-method" style="text-decoration:none">
+          <div class="cm-icon cm-phone">&#x1F4DE;</div>
+          <div>
+            <div class="cm-title">Call Nelson</div>
+            <div class="cm-value">+255 677 917 500</div>
+            <div class="cm-note">East Africa Time (EAT) &bull; UTC+3</div>
+          </div>
+        </a>
+        <div class="promise-box">
+          <h3>What Happens Next</h3>
+          <div class="promise-list">
+            <div class="promise-item">Nelson reads your enquiry personally</div>
+            <div class="promise-item">You receive a custom route recommendation within 24 hours</div>
+            <div class="promise-item">A detailed, transparent all-inclusive quote follows</div>
+            <div class="promise-item">No pressure, no hidden fees, no commitment required</div>
+            <div class="promise-item">Secure your dates with a small deposit when ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-dark">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="section-eyebrow light">The Process</span>
+      <h2 class="section-title light">Simple Steps to the Summit</h2>
+    </div>
+    <div class="steps-mini">
+      <div class="step-mini reveal"><div class="step-mini-num">1</div><h3 class="step-mini-title">Reach Out</h3><p class="step-mini-desc">WhatsApp, email, or this form. Tell Nelson about your dates and what you're looking for.</p></div>
+      <div class="step-mini reveal"><div class="step-mini-num">2</div><h3 class="step-mini-title">Get Your Plan</h3><p class="step-mini-desc">Nelson responds with a personal route recommendation and a full transparent quote within 24 hours.</p></div>
+      <div class="step-mini reveal"><div class="step-mini-num">3</div><h3 class="step-mini-title">Secure Your Dates</h3><p class="step-mini-desc">Confirm with a deposit. We handle all permits, logistics, and porter arrangements from here.</p></div>
+      <div class="step-mini reveal"><div class="step-mini-num">4</div><h3 class="step-mini-title">Reach Uhuru Peak</h3><p class="step-mini-desc">Arrive in Moshi, meet Nelson, and begin the adventure of a lifetime. We handle everything else.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <p style="color:rgba(255,255,255,.7);font-size:.97rem;max-width:560px;margin:0 auto 24px">Kilimanjaro spots fill up quickly in peak season (July-September). The sooner you reach out, the more date options we'll have for you.</p>
+      <a href="https://wa.me/255677917500" style="display:inline-flex;align-items:center;gap:12px;padding:16px 36px;background:#25d366;color:var(--white);border-radius:12px;font-weight:700;font-size:1rem;transition:background .2s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson Now</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+</BaseLayout>

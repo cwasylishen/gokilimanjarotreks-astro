@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#060e1c"/><stop offset="55%" stop-color="#0d2040"/><stop offset="80%" stop-color="#1a3a2e"/><stop offset="100%" stop-color="#0b1a2e"/></linearGradient>
+  <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a2e3a"/><stop offset="100%" stop-color="#0b1a2e"/></linearGradient>
+  <linearGradient id="snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8f4f8"/><stop offset="100%" stop-color="#c5dde8" stop-opacity="0.6"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<!-- Stars -->
+<circle cx="100" cy="60" r="1.5" fill="white" opacity="0.7"/>
+<circle cx="250" cy="40" r="1" fill="white" opacity="0.5"/>
+<circle cx="400" cy="80" r="2" fill="white" opacity="0.6"/>
+<circle cx="900" cy="50" r="1.5" fill="white" opacity="0.7"/>
+<circle cx="1050" cy="30" r="1" fill="white" opacity="0.5"/>
+<circle cx="1150" cy="90" r="2" fill="white" opacity="0.6"/>
+<!-- Glow at peak -->
+<ellipse cx="600" cy="200" rx="180" ry="60" fill="rgba(251,191,36,0.18)"/>
+<!-- Mountain body -->
+<path d="M200 630 Q300 580 400 520 Q480 470 530 400 Q560 350 580 300 Q592 250 600 200 Q608 250 620 300 Q640 350 670 400 Q720 470 800 520 Q900 580 1000 630Z" fill="url(#mtn)"/>
+<!-- Snow cap -->
+<path d="M575 260 Q588 210 600 200 Q612 210 625 260 Q618 265 610 258 Q605 250 600 248 Q595 250 590 258 Q582 265 575 260Z" fill="url(#snow)"/>
+<!-- Foothills -->
+<path d="M0 630 L0 500 Q150 460 300 490 Q450 520 600 480 Q750 440 900 490 Q1050 540 1200 500 L1200 630Z" fill="#0d2a1e" opacity="0.9"/>
+<!-- Brand text -->
+<text x="600" y="380" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white" text-anchor="middle" opacity="0.95">Go Kilimanjaro Treks</text>
+<text x="600" y="430" font-family="Arial,sans-serif" font-size="24" fill="rgba(251,191,36,0.9)" text-anchor="middle">Tanzania's Summit Experts · 5,895m</text>
+</svg>

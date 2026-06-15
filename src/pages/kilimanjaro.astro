@@ -1,0 +1,642 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"Mount Kilimanjaro Climbing Routes","description":"Guided Mount Kilimanjaro climbs on the Lemosho, Northern Circuit, Marangu, Rongai, Umbwe, and Machame routes, led by Nelson Mushi of Go Kilimanjaro Treks.","url":"https://gokilimanjarotreks.com/kilimanjaro.html","touristType":["Adventure travelers","Mountaineers","Trekkers"],"provider":{"@type":"TravelAgency","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com","telephone":"+255677917500","email":"info@gokilimanjarotreks.com","address":{"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":"-3.3731","longitude":"37.3441"}},"subjectOf":{"@type":"Mountain","name":"Mount Kilimanjaro","elevation":"5895 m"},"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Kilimanjaro Routes","item":"https://gokilimanjarotreks.com/kilimanjaro.html"}],"dateModified":"2026-05-26"}];
+---
+
+<BaseLayout
+  title="Kilimanjaro Climbing Routes &amp; Packages | Go Kilimanjaro Treks"
+  description="All Kilimanjaro trekking routes: Lemosho, Northern Circuit, Marangu, Rongai, Umbwe &amp; Machame. Expert-guided climbs with Nelson Mushi. Compare routes, days, difficulty &amp; success rates."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Mount Kilimanjaro climbing routes guided by Nelson Mushi"
+  schemas={schemas}
+>
+  <main>
+
+<section class="page-hero" style="background:var(--ink)">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;opacity:0.7">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="page-hero-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">Mount Kilimanjaro, Tanzania &bull; 5,895m</span>
+      <h1>Climb <em>Kilimanjaro.</em><br>Every Route. Every Level.</h1>
+      <p>Six routes to Uhuru Peak, Africa's highest summit. Whether you're a first-time trekker or a seasoned adventurer, Go Kilimanjaro Treks will match you with the perfect route and guide you every step of the way.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Free Quote &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE COMPARISON -->
+<section class="section-white">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">At a Glance</span>
+      <h2 class="section-title">Compare All Kilimanjaro Routes</h2>
+      <p class="section-lead" style="margin-top:12px">Not sure which route is right for you? Use this comparison and then contact Nelson and he'll give you a personal recommendation based on your fitness, schedule, and goals.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Duration</th>
+            <th>Difficulty</th>
+            <th>Success Rate</th>
+            <th>Crowds</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="#lemosho" style="color:var(--amber-cta)">Lemosho</a></strong></td>
+            <td>7 Days</td>
+            <td><span class="diff-badge diff-moderate">Moderate</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:85%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">85%</span></div></td>
+            <td>Low-Medium</td>
+            <td>Most trekkers, best all-round route</td>
+          </tr>
+          <tr>
+            <td><strong><a href="#northern" style="color:var(--amber-cta)">Northern Circuit</a></strong></td>
+            <td>9-10 Days</td>
+            <td><span class="diff-badge diff-moderate">Moderate</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:95%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">95%</span></div></td>
+            <td>Very Low</td>
+            <td>Maximum success rate, remote experience</td>
+          </tr>
+          <tr>
+            <td><strong><a href="#marangu" style="color:var(--amber-cta)">Marangu</a></strong></td>
+            <td>5-6 Days</td>
+            <td><span class="diff-badge diff-moderate">Moderate</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:65%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">65%</span></div></td>
+            <td>High</td>
+            <td>Hut accommodation, shorter trip</td>
+          </tr>
+          <tr>
+            <td><strong><a href="#rongai" style="color:var(--amber-cta)">Rongai</a></strong></td>
+            <td>7 Days</td>
+            <td><span class="diff-badge diff-moderate">Moderate</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:80%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">80%</span></div></td>
+            <td>Very Low</td>
+            <td>Quiet northern approach, wildlife views</td>
+          </tr>
+          <tr>
+            <td><strong><a href="#umbwe" style="color:var(--amber-cta)">Umbwe</a></strong></td>
+            <td>6 Days</td>
+            <td><span class="diff-badge diff-hard">Hard</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:70%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">70%</span></div></td>
+            <td>Very Low</td>
+            <td>Experienced trekkers seeking challenge</td>
+          </tr>
+          <tr>
+            <td><strong><a href="#machame" style="color:var(--amber-cta)">Machame</a></strong></td>
+            <td>7 Days</td>
+            <td><span class="diff-badge diff-challenging">Moderate+</span></td>
+            <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:80%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">80%</span></div></td>
+            <td>Medium</td>
+            <td>Scenic diversity, good acclimatization</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE DETAILS -->
+<div class="container" style="padding-top:0">
+
+<!-- LEMOSHO -->
+<section class="route-section" id="lemosho">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-moderate">Moderate</span>
+        <span style="font-size:.82rem;color:var(--muted)">7 Days &bull; Most Popular Route</span>
+      </div>
+      <h2 class="route-name-display">Lemosho Route</h2>
+      <p class="route-tagline">The gold standard Kilimanjaro experience with exceptional scenery, outstanding acclimatization, and one of the highest summit success rates among the 7-day itineraries. Approaches from the pristine western slopes, crossing the iconic Shira Plateau before joining the dramatic Southern Circuit to the summit.</p>
+      <p class="route-tagline">Lemosho was opened in the early 2000s to relieve heavy foot traffic that the Machame Route was carrying on the southern slopes. The route is named after the Lemosho Glades, a pristine area of montane forest on Kilimanjaro's western flank that few trekkers had seen before the trailhead was established. Because the climb starts from the west and traverses the Shira Plateau before joining the Southern Circuit, your first three days are far from the southern crowds. That means quieter camps, fresher rainforest, and the longest acclimatization window of any standard seven-day itinerary. When climbers ask Nelson which route to pick for a first attempt at Uhuru Peak, this is the one he points them to.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x1F333; Enters through remote, uncrowded montane rainforest on the western slopes</span></div>
+        <div class="route-highlight"><span>&#x26F0;&#xFE0F; Crosses the spectacular Shira Plateau at 3,840m</span></div>
+        <div class="route-highlight"><span>&#x1FAA8; Traverses the Great Barranco Wall, one of Kilimanjaro's most memorable sections</span></div>
+        <div class="route-highlight"><span>&#x1F31E; Summit Uhuru Peak (5,895m) via Barafu Camp at sunrise</span></div>
+        <div class="route-highlight"><span>&#x1F3D5;&#xFE0F; Excellent acclimatization profile with built-in rest day at Lava Tower (4,600m)</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>Day-by-Day Itinerary</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">A</div><div class="day-info"><strong>Arrival in Moshi</strong><span>Airport transfer, hotel check-in, pre-climb briefing &amp; gear check with Nelson</span></div></div>
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Lemosho Gate → Mti Mkubwa Camp</strong><span>2,100m → 2,650m &bull; 6 km &bull; 3-4 hours through montane rainforest</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Mti Mkubwa → Shira 1 Camp</strong><span>2,650m → 3,500m &bull; 8 km &bull; 4-5 hours crossing moorland</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Shira 1 → Lava Tower → Barranco Camp</strong><span>3,500m → 4,600m → 3,950m &bull; Acclimatization via Lava Tower</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Barranco → Karanga Camp</strong><span>3,950m → 4,035m &bull; Barranco Wall climb, stunning Southern Circuit</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Karanga → Barafu Camp</strong><span>4,035m → 4,673m &bull; Final camp before summit</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Summit Night + Mweka Camp</strong><span>4,673m → 5,895m → 3,100m &bull; Midnight start, sunrise at Uhuru Peak</span></div></div>
+          <div class="day-item"><div class="day-num">7</div><div class="day-info"><strong>Mweka Camp → Mweka Gate</strong><span>3,100m → 1,630m &bull; Descent through forest, certificate ceremony</span></div></div>
+          <div class="day-item"><div class="day-num">D</div><div class="day-info"><strong>Departure from Moshi</strong><span>Airport transfer or extension to safari/Zanzibar</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Lemosho Route</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">7 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Summit Elevation</span><span class="sidebar-stat-val">5,895m / 19,341ft</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Max Camp</span><span class="sidebar-stat-val">Barafu 4,673m</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~85%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Low-Medium</span></div>
+        </div>
+        <div style="margin-bottom:20px">
+          <div style="font-size:.8rem;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Best Months</div>
+          <div class="best-time-grid">
+            <span class="month-pill best">Jan</span><span class="month-pill best">Feb</span><span class="month-pill mixed">Mar</span><span class="month-pill mixed">Apr</span><span class="month-pill mixed">May</span><span class="month-pill best">Jun</span><span class="month-pill best">Jul</span><span class="month-pill best">Aug</span><span class="month-pill best">Sep</span><span class="month-pill good">Oct</span><span class="month-pill mixed">Nov</span><span class="month-pill good">Dec</span>
+          </div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NORTHERN CIRCUIT -->
+<section class="route-section" id="northern">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-moderate">Moderate</span>
+        <span style="font-size:.82rem;color:var(--muted)">9-10 Days &bull; Highest Success Rate</span>
+      </div>
+      <h2 class="route-name-display">Northern Circuit Route</h2>
+      <p class="route-tagline">Kilimanjaro's longest, most remote, and most successful route. The Northern Circuit circumnavigates the entire mountain, exploring the rarely-seen northern slopes before approaching the summit from the south. Extra acclimatization days and sparse crowds make this the route with the highest summit success rate of all options.</p>
+      <p class="route-tagline">The Northern Circuit is the newest route on the mountain, opened in 2014 to give trekkers an alternative to the busier southern approaches. It is also the longest at roughly 90 km of trail, which is the single biggest reason it carries the highest summit success rate of any route. Climbers start from the west like Lemosho, but instead of joining the Southern Circuit at Lava Tower, they break away and trace a wide arc across the rarely visited northern slopes. The views look down on Kenya's Amboseli plains and the elephant herds moving below. The extra days give your body the longest possible acclimatization window before the final push. This is the route Nelson recommends when budget and schedule allow a nine or ten-day climb.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x1F30D; Circles the entire mountain, the most complete Kilimanjaro experience</span></div>
+        <div class="route-highlight"><span>&#x1F947; Highest summit success rate of all Kilimanjaro routes (~95%)</span></div>
+        <div class="route-highlight"><span>&#x1F9ED; Remote northern slopes see almost no other trekkers</span></div>
+        <div class="route-highlight"><span>&#x1F1F0;&#x1F1EA; Panoramic views of Kenya's plains from the northern face</span></div>
+        <div class="route-highlight"><span>&#x1F319; Multiple nights above 4,000m for superior acclimatization</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>9-Day Itinerary Summary</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Lemosho Gate → Mti Mkubwa Camp</strong><span>2,100m → 2,650m &bull; Rainforest entry</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Mti Mkubwa → Shira 1 Camp</strong><span>2,650m → 3,500m &bull; Moorland and plateau</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Shira 1 → Shira 2 Camp</strong><span>3,500m → 3,840m &bull; High Shira Plateau</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Shira 2 → Moir Hut (Northern Circuit begins)</strong><span>3,840m → 4,200m &bull; Enter remote northern slopes</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Moir Hut → Buffalo Camp</strong><span>4,200m → 4,020m &bull; Views of Kenya's savanna</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Buffalo Camp → Third Cave Camp</strong><span>4,020m → 3,800m &bull; Eastern slopes traverse</span></div></div>
+          <div class="day-item"><div class="day-num">7</div><div class="day-info"><strong>Third Cave → School Hut</strong><span>3,800m → 4,750m &bull; Final camp approach</span></div></div>
+          <div class="day-item"><div class="day-num">8</div><div class="day-info"><strong>Summit Night + Descent to Mweka Camp</strong><span>4,750m → 5,895m → 3,100m &bull; Sunrise summit</span></div></div>
+          <div class="day-item"><div class="day-num">9</div><div class="day-info"><strong>Mweka Camp → Mweka Gate</strong><span>3,100m → 1,630m &bull; Descent and celebrations</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Northern Circuit</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">9-10 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Summit Elevation</span><span class="sidebar-stat-val">5,895m / 19,341ft</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~95%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Very Low</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Accommodation</span><span class="sidebar-stat-val">Camping</span></div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARANGU -->
+<section class="route-section" id="marangu">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-moderate">Moderate</span>
+        <span style="font-size:.82rem;color:var(--muted)">5-6 Days &bull; Only Route with Huts</span>
+      </div>
+      <h2 class="route-name-display">Marangu Route</h2>
+      <p class="route-tagline">Known as the "Coca-Cola Route," Marangu is Kilimanjaro's oldest and most traditional path. It's the only route offering permanent hut dormitories instead of camping. Each night you sleep in a real bed with blankets provided. A shorter, more structured experience for trekkers who want comfort on the mountain.</p>
+      <p class="route-tagline">Marangu is the oldest established route on Kilimanjaro and the only one of the six trails to offer permanent hut accommodation. Three roofed shelters dot the trail at Mandara (2,700 m), Horombo (3,720 m), and Kibo (4,703 m), so climbers don't carry or pitch tents. That makes Marangu the most weather-protected option during the long rains. The Coca-Cola Route nickname has been around since the 1970s. The most commonly told story is that the soft drink was sold at all three huts, giving the climb a reputation as the soft, civilized way to the summit. Its companion the Machame Route, which is more rugged and requires tent camping at every camp, picked up the contrasting nickname Whiskey Route. The truth is more nuanced. Marangu's standard five or six-day itinerary has the shortest acclimatization profile on the mountain, which is why its summit success rate sits well below the longer routes. Climbers who choose Marangu for the comfort of huts often underestimate how much that missed acclimatization day matters. Nelson recommends the seven-day Marangu itinerary, with an extra night at Horombo for proper acclimatization, whenever guests specifically want the hut experience.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x1F3E0; The only route with permanent hut accommodation (Mandara, Horombo, Kibo Huts)</span></div>
+        <div class="route-highlight"><span>&#x26F0;&#xFE0F; Uses the same trail for ascent and descent, with simpler logistics</span></div>
+        <div class="route-highlight"><span>&#x1F9BA; Blankets and basic bedding provided, so you carry a lighter pack</span></div>
+        <div class="route-highlight"><span>&#x1F305; Summit via Gilman's Point to Uhuru Peak at sunrise</span></div>
+        <div class="route-highlight"><span>&#x1F6B6; Gentler gradients make it accessible for most fitness levels</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>6-Day Itinerary</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Marangu Gate → Mandara Hut</strong><span>1,860m → 2,700m &bull; 8 km through rainforest, 4-5 hours</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Mandara Hut → Horombo Hut</strong><span>2,700m → 3,720m &bull; 12 km across moorland, 5-6 hours</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Horombo Hut → Acclimatization Day</strong><span>Short acclimatization walk to Mawenzi Tarn, rest at Horombo</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Horombo Hut → Kibo Hut</strong><span>3,720m → 4,703m &bull; 10 km across alpine desert, 5-6 hours</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Kibo Hut → Uhuru Peak → Horombo Hut</strong><span>Summit push at midnight, sunrise at Uhuru, descend to Horombo</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Horombo Hut → Marangu Gate</strong><span>Final descent through forest, certificate ceremony</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Marangu Route</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">5-6 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Accommodation</span><span class="sidebar-stat-val">Huts (Beds Included)</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~65%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">High</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Note</span><span class="sidebar-stat-val">Shorter = harder to acclimatize</span></div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RONGAI -->
+<section class="route-section" id="rongai">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-moderate">Moderate</span>
+        <span style="font-size:.82rem;color:var(--muted)">7 Days &bull; Quietest Route</span>
+      </div>
+      <h2 class="route-name-display">Rongai Route</h2>
+      <p class="route-tagline">Approaching from the north near the Kenyan border, the Rongai Route offers the quietest and most remote Kilimanjaro experience available. Vast open moorlands, stunning views into Kenya, frequent wildlife sightings, and an extra acclimatization day make this a favourite for those who want solitude without sacrificing success rates.</p>
+      <p class="route-tagline">Rongai is Kilimanjaro's only northern approach, climbing from the dry forest near the Kenya border up the leeward side of the mountain. Because the prevailing winds drop most of their moisture on the southern slopes, the Rongai trail sits in a rain shadow that gets a fraction of the rainfall of the Machame or Lemosho side. That makes it the natural choice during the long rains of March, April, and May, when the southern routes can be deep in mud. The trail starts in plantation forest on Maasai grazing land, climbs through alpine moorland past Mawenzi Tarn (a small high-altitude lake hidden beneath the jagged Mawenzi peak), and joins the Marangu route near Kibo Hut for the summit push. Crowds are light because most operators don't run Rongai outside the wet season.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x1F1F0;&#x1F1EA; Approaches from Kenya border through remote northern wilderness</span></div>
+        <div class="route-highlight"><span>&#x1F98A; Wildlife sightings common in lower sections including buffalo and elephant</span></div>
+        <div class="route-highlight"><span>&#x1F4C5; Extra acclimatization day at Mawenzi Tarn for higher success rate</span></div>
+        <div class="route-highlight"><span>&#x1F30A; Full mountain traverse, descending via the contrasting Marangu route</span></div>
+        <div class="route-highlight"><span>&#x1F91F; Near-empty trails for a truly personal summit experience</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>7-Day Itinerary</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Rongai Gate → Simba Camp</strong><span>1,950m → 2,650m &bull; Through cultivated land and forest</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Simba Camp → Second Cave Camp</strong><span>2,650m → 3,450m &bull; Moorland, open skies</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Second Cave → Kikelewa Camp</strong><span>3,450m → 3,600m &bull; Rocky alpine desert</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Kikelewa → Mawenzi Tarn Hut (Acclimatization)</strong><span>3,600m → 4,330m &bull; Dramatic Mawenzi Peak views</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Mawenzi Tarn → Kibo Hut</strong><span>4,330m → 4,703m &bull; Cross the Saddle between peaks</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Kibo Hut → Uhuru Peak → Horombo Hut</strong><span>Midnight summit push, sunrise at Uhuru, long descent</span></div></div>
+          <div class="day-item"><div class="day-num">7</div><div class="day-info"><strong>Horombo Hut → Marangu Gate</strong><span>Final descent, certificate ceremony, departure</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Rongai Route</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">7 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Approach</span><span class="sidebar-stat-val">Northern (Kenya border)</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~80%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Very Low</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Special</span><span class="sidebar-stat-val">Full mountain traverse</span></div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UMBWE -->
+<section class="route-section" id="umbwe">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-hard">Hard</span>
+        <span style="font-size:.82rem;color:var(--muted)">6 Days &bull; For Experienced Trekkers</span>
+      </div>
+      <h2 class="route-name-display">Umbwe Route</h2>
+      <p class="route-tagline">The most challenging and direct route to Kilimanjaro's summit. Steep, rugged, and barely-traveled, Umbwe is reserved for experienced trekkers who are fit, altitude-tested, and seeking an extraordinary challenge. The rewards are unparalleled solitude, dramatic ridgeline views, and the deep satisfaction of taking the hard road to the Roof of Africa.</p>
+      <p class="route-tagline">Umbwe is the shortest and steepest route on Kilimanjaro. The trail climbs almost vertically up the southern face, gaining roughly 1,300 m in the first day alone, which is more than twice the climb rate of any other route. Because of that aggressive profile, it carries the lowest summit success rate of the six routes when run as a standalone six-day climb. Strong, fit trekkers who already have proven high-altitude experience choose Umbwe for the wilderness feel. It sees a fraction of the traffic of Machame and follows a spectacular knife-edge ridge through old-growth rainforest before opening up at Barranco Camp on the third day. Nelson recommends Umbwe only for climbers who have summited a 4,000 m peak previously and understand how their own body responds to fast altitude gain.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x26A1; The most direct and demanding Kilimanjaro route. Not for beginners</span></div>
+        <div class="route-highlight"><span>&#x1F9D7; Steep ridgeline ascent through dense rainforest with dramatic exposure</span></div>
+        <div class="route-highlight"><span>&#x1F910; Virtually no other trekkers, a truly solo wilderness experience</span></div>
+        <div class="route-highlight"><span>&#x1F39E;&#xFE0F; Joins the Machame/Lemosho Southern Circuit with spectacular scenery</span></div>
+        <div class="route-highlight"><span>&#x1F4AA; Recommended for experienced hikers with prior high-altitude experience</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>6-Day Itinerary</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Umbwe Gate → Umbwe Cave Camp</strong><span>1,640m → 2,850m &bull; Steep ridge through dense forest</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Umbwe Cave → Barranco Camp</strong><span>2,850m → 3,950m &bull; Narrow ridges, open moorland views</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Barranco → Karanga Camp</strong><span>3,950m → 4,035m &bull; Barranco Wall and Southern Circuit</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Karanga → Barafu Camp</strong><span>4,035m → 4,673m &bull; Final high camp</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Barafu → Uhuru Peak → Mweka Camp</strong><span>Midnight summit push, sunrise at 5,895m, long descent</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Mweka Camp → Mweka Gate</strong><span>Final descent and departure</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Umbwe Route</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">6 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Hard</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~70%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Very Low</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Who It's For</span><span class="sidebar-stat-val">Experienced trekkers</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Prior altitude</span><span class="sidebar-stat-val">Strongly recommended</span></div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MACHAME -->
+<section class="route-section" id="machame">
+  <div class="route-layout reveal">
+    <div>
+      <div class="route-difficulty">
+        <span class="diff-badge diff-challenging">Moderate+</span>
+        <span style="font-size:.82rem;color:var(--muted)">8 Days Recommended &bull; Scenic &amp; Varied</span>
+      </div>
+      <h2 class="route-name-display">Machame Route</h2>
+      <div style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border-left:4px solid var(--amber-cta);border-radius:10px;padding:14px 18px;margin:0 0 18px 0;font-size:.92rem;color:#7c2d12;line-height:1.55"><strong>Our flagship Kilimanjaro climb:</strong> the 8-day Machame with Moir Hut acclimatization. Go Kilimanjaro Treks is the first operator to specifically feature Moir Hut's sunset hike up toward the Lent Hills, where climbers get a critical extra day of high-altitude exposure before the summit push. <strong>This is the trek Nelson recommends to most climbers</strong>, ahead of the standard 7-day variant.</div>
+      <p class="route-tagline">Called the "Whiskey Route" for its increased challenge over Marangu, Machame is a stunning all-rounder. The 8-day variant adds a dedicated acclimatization day at Moir Hut (4,200 m) on the western slopes, with an afternoon hike up toward the Lent Hills as the sun sets across the endless landscape. The result is a stronger acclimatization profile, a higher summit success rate, and a quieter day on the mountain that the 7-day version simply doesn't have.</p>
+      <p class="route-tagline">Machame is named after the village at its trailhead, the same Chagga village where Nelson grew up. The route opened to climbers in the 1980s as a more scenic alternative to Marangu and quickly became the most-walked path on the mountain. The Whiskey Route nickname is its informal counterpart to Marangu's Coca-Cola: stronger character, tougher climb, tent camping at every camp. Machame crosses the Shira Plateau and meets the Lemosho Route at the foot of Lava Tower, then traces the famous Southern Circuit past Barranco, Karanga, and Barafu camps. Its seven-day itinerary has a strong acclimatization profile, mostly because the third day climbs to 4,600 m at Lava Tower then descends to sleep low at Barranco. Summit success rate is consistently high. The trade-off against Lemosho is crowd size. Machame's camps fill quickly in peak season, and the trail can feel busy through July and August.</p>
+      <div class="route-highlights">
+        <div class="route-highlight"><span>&#x1F33F; Traverses Kilimanjaro's most diverse ecological range</span></div>
+        <div class="route-highlight"><span>&#x1F5FB; Dramatic Shira Plateau crossing with vast moorland views</span></div>
+        <div class="route-highlight"><span>&#x2728; <strong>Moir Hut (4,200 m) acclimatization day</strong> with sunset hike toward the Lent Hills</span></div>
+        <div class="route-highlight"><span>&#x1FAA8; Iconic Barranco Wall scramble, a genuine mountain adventure highlight</span></div>
+        <div class="route-highlight"><span>&#x1F4C8; Climb-high-sleep-low via Lava Tower (4,600 m) on Day 4</span></div>
+        <div class="route-highlight"><span>&#x1F305; Southern Circuit approach to summit via Barafu Camp</span></div>
+      </div>
+      <div class="itinerary">
+        <h3>8-Day Machame Itinerary (Recommended)</h3>
+        <div class="day-list">
+          <div class="day-item"><div class="day-num">1</div><div class="day-info"><strong>Machame Gate → Machame Camp</strong><span>1,800 m → 3,000 m &bull; Through montane rainforest</span></div></div>
+          <div class="day-item"><div class="day-num">2</div><div class="day-info"><strong>Machame Camp → Shira Camp</strong><span>3,000 m → 3,840 m &bull; Into moorland and the Shira Plateau</span></div></div>
+          <div class="day-item"><div class="day-num">3</div><div class="day-info"><strong>Shira → Moir Hut</strong><span>3,840 m → 4,200 m &bull; Half-day to Moir Hut, sunset acclimatization hike toward Lent Hills</span></div></div>
+          <div class="day-item"><div class="day-num">4</div><div class="day-info"><strong>Moir Hut → Lava Tower → Barranco Camp</strong><span>4,200 m → 4,600 m → 3,950 m &bull; Classic climb-high-sleep-low</span></div></div>
+          <div class="day-item"><div class="day-num">5</div><div class="day-info"><strong>Barranco → Karanga Camp</strong><span>3,950 m → 4,035 m &bull; Barranco Wall scramble, scenic Southern Circuit</span></div></div>
+          <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Karanga → Barafu Camp</strong><span>4,035 m → 4,673 m &bull; Final camp before summit</span></div></div>
+          <div class="day-item"><div class="day-num">7</div><div class="day-info"><strong>Summit Night + Mweka Camp</strong><span>Midnight start, sunrise at Uhuru Peak (5,895 m), long descent to 3,100 m</span></div></div>
+          <div class="day-item"><div class="day-num">8</div><div class="day-info"><strong>Mweka Camp → Mweka Gate</strong><span>3,100 m → 1,630 m &bull; Final descent, certificate, celebrations</span></div></div>
+        </div>
+        <p style="margin-top:16px;font-size:.88rem;color:var(--muted);line-height:1.6"><strong>Shorter 7-day Machame alternative:</strong> the route compresses Day 3 and Day 4 into a single long day from Shira straight to Barranco via Lava Tower, skipping the Moir Hut overnight. The 7-day version still summits successfully for most climbers, but the acclimatization profile is tighter and the summit success rate is measurably lower. Choose the 7-day only if your itinerary is genuinely time-constrained.</p>
+      </div>
+    </div>
+    <div>
+      <div class="route-sidebar">
+        <div class="sidebar-title">Machame Route</div>
+        <div class="sidebar-stats">
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">8 Days (or 7)</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate+</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate (8-day)</span><span class="sidebar-stat-val">~88%</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Medium</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Highlight</span><span class="sidebar-stat-val">Moir Hut Day</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Accommodation</span><span class="sidebar-stat-val">Camping</span></div>
+        </div>
+        <div class="sidebar-actions">
+          <a href="/contact" class="btn-primary" style="justify-content:center">Inquire About This Route</a>
+          <a href="https://wa.me/255677917500" class="btn-wa-s" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+
+<!-- ACCLIMATIZATION MASTERCLASS: LAVA TOWER -->
+<section class="section-tinted" id="lava-tower">
+  <div class="container">
+    <div style="max-width:920px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:36px">
+        <span class="section-eyebrow">Acclimatization Masterclass</span>
+        <h2 class="section-title">Lava Tower to Barranco Camp</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:720px">Almost every successful Kilimanjaro climb on the western and southern routes turns on a single afternoon: the descent from Lava Tower (4,600 m) down to Barranco Camp (3,800 m). This is the climb-high-sleep-low principle in action, and it's the single biggest factor in summit success on Lemosho, Machame, Umbwe, and the Northern Circuit.</p>
+      </div>
+      <div style="background:var(--white);border-radius:18px;padding:32px;border:1.5px solid var(--border)">
+        <div style="display:grid;gap:24px;font-size:.95rem;color:var(--text);line-height:1.75">
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--ink-2);margin-bottom:10px">Why the 800 m descent matters</h3>
+            <p style="margin-bottom:10px">Spending time at higher altitude (Lava Tower) and then retreating to a lower altitude for rest and sleep (Barranco Camp) stimulates the body to produce more red blood cells, improving oxygen transport without the added stress of sleeping at extreme heights. This is the most important physiological signal on the mountain, and it's the reason why route planners designed Lava Tower into the itinerary in the first place.</p>
+            <p style="margin-bottom:0">Net elevation loss is approximately 800 m. Total trekking time on this segment is typically 6 to 8 hours.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--ink-2);margin-bottom:10px">Geological wonders</h3>
+            <p style="margin-bottom:0">Lava Tower itself is a 300-foot volcanic rock formation rising from the alpine desert, a testament to Kilimanjaro's ancient volcanic activity. From Lava Tower the views extend toward the Western Breach, a dramatic volcanic collapse feature that reveals extrusive volcanic pillars and the remaining Southern Glaciers of Kibo Peak. This area gives you a unique perspective on the raw power that shaped this stratovolcano.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--ink-2);margin-bottom:10px">Ecological transition</h3>
+            <p style="margin-bottom:0">The segment showcases a remarkable ecological transition. Starting in the stark alpine desert around Lava Tower, the landscape gradually transforms as you descend into the sheltered Barranco Valley, where the environment supports high-altitude flora including the iconic Giant Groundsels (Dendrosenecio). These tree-sized plants with rosette leaves and tall flowering stalks create an otherworldly landscape, thriving in the moist, cooler conditions of the valley.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--ink-2);margin-bottom:10px">Safety on the descent</h3>
+            <p style="margin-bottom:6px">The descent involves loose gravel, rocky terrain, a river crossing, and a short uphill before the final long descent into Barranco. Your guides will brief you on the day and provide specific pacing instructions. Standard kit:</p>
+            <ul style="padding-left:24px;margin-bottom:0">
+              <li style="list-style:disc;margin-bottom:4px">Sturdy ankle-supporting hiking boots with good grip.</li>
+              <li style="list-style:disc;margin-bottom:4px">Trekking poles for stability on loose and steep sections.</li>
+              <li style="list-style:disc;margin-bottom:4px">Steady pace with close attention to foot placement.</li>
+              <li style="list-style:disc;margin-bottom:0">Continuous hydration throughout the descent.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRE-TREK BRIEFING -->
+<section class="section-white" id="pre-trek-briefing">
+  <div class="container">
+    <div style="max-width:880px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:32px">
+        <span class="section-eyebrow">Before the Mountain</span>
+        <h2 class="section-title">Pre-Trek Briefing in Moshi or Arusha</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">Every climb starts with a comprehensive briefing in Moshi or Arusha the day before you head to the gate. This is where you get the full picture, ask every question, and check that your kit is ready.</p>
+      </div>
+      <div style="display:grid;gap:18px;font-size:.95rem;color:var(--text);line-height:1.7">
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Altitude and acclimatization</h3>
+          <p>We explain how altitude affects your body and walk through the climb-high-sleep-low strategy as it applies to your specific route.</p>
+        </div>
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Summit night, hour by hour</h3>
+          <p>We walk you through exactly what to expect on summit night: the 11 PM wake-up, the long cold ascent in the dark, the crater rim at sunrise, the final push to Uhuru Peak. You leave with a clear mental model of the whole night.</p>
+        </div>
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Nutrition and hydration</h3>
+          <p>What to eat and drink throughout the trek and specifically on summit day. The team will hand you the daily ration list, the recommended snack mix, and the hydration target (3 to 4 litres per day).</p>
+        </div>
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Recognising and managing altitude sickness</h3>
+          <p>The symptoms, when to report them, what we do about them. Diamox, when it is appropriate, and what the trade-offs are. Read more on our <a href="/safety" style="color:var(--amber-cta);font-weight:600">Safety and Rescue page</a>.</p>
+        </div>
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Gear check</h3>
+          <p>Hands-on review of your clothing, headlamp, water bottles, daypack. If something is missing or inadequate, we can rent or recommend the right kit before you head to the gate.</p>
+        </div>
+        <div style="background:var(--cream);border-radius:14px;padding:22px 26px">
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Custom briefing PDF</h3>
+          <p>Once you book, you receive a detailed PDF guide for summit preparation: proven strategies, the recommended summit ration, detailed information about Diamox and altitude sickness prevention, and additional preparation tips from our experienced team.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMIT NIGHT TIMELINE -->
+<section class="section-dark" id="summit-night">
+  <div class="container">
+    <div style="max-width:980px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:32px">
+        <span class="section-eyebrow light">Hour by Hour</span>
+        <h2 class="section-title light">What Summit Night Looks Like</h2>
+        <p class="section-lead light" style="margin:14px auto 0;max-width:720px">Summit night is long, cold, and the hardest physical work of the trek. Here is what you can expect from the moment your guide wakes you to the moment you are back in your tent.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border-radius:18px;padding:28px;border:1px solid rgba(255,255,255,.1)">
+        <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.9);font-size:.93rem">
+          <thead><tr style="border-bottom:2px solid rgba(255,255,255,.2)">
+            <th style="text-align:left;padding:10px 12px;font-weight:700;color:var(--gold);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap">Time</th>
+            <th style="text-align:left;padding:10px 12px;font-weight:700;color:var(--gold);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em">Activity</th>
+            <th style="text-align:left;padding:10px 12px;font-weight:700;color:var(--gold);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em">What to Expect</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">11:00 PM</td><td style="padding:14px 12px">Wake up &amp; prepare</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">Put on all warm layers. Eat a light snack. Drink hot tea. Your guide wakes you and ensures you are ready.</td></tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">11:30 PM</td><td style="padding:14px 12px">Start hiking</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">Walk pole pole in the dark using your headlamp. Your guide sets the pace.</td></tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">2-4 AM</td><td style="padding:14px 12px">The hardest part</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">You will feel tired and cold. Keep drinking water and eating small snacks. The team sings Mt Kilimanjaro songs and local good-vibes songs to keep your energy and spirits high.</td></tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">6:00 AM</td><td style="padding:14px 12px">Crater rim</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">Arrive at Stella Point or Gilman's Point around sunrise. Short rest.</td></tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">7-8 AM</td><td style="padding:14px 12px">Uhuru Peak (5,895 m)</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">The final push. Spend 10 to 25 minutes only. Drink water, eat food, consume electrolytes, take photos, then start the descent. Time at extreme altitude depletes energy reserves quickly.</td></tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)"><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">8:30 AM</td><td style="padding:14px 12px">Start descent</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">Hike back down to base camp with a steady pace and minimal stops. The guide maintains rhythm for safety.</td></tr>
+            <tr><td style="padding:14px 12px;color:var(--gold);font-weight:700;white-space:nowrap">1:00 PM</td><td style="padding:14px 12px">Rest at base camp</td><td style="padding:14px 12px;color:rgba(255,255,255,.75)">Rest for 90 minutes. Hot meal, rehydrate, change into dry clothes. Then descend to a lower camp where the air is thicker and recovery accelerates.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div style="margin-top:28px;background:rgba(212,165,116,.12);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65">
+        <strong style="color:var(--gold)">Critical safety rule:</strong> Clients never lead to the summit or down from the summit. Always follow your guide and stay close at all times. Climbers who lead can become lost or disoriented in the dark, which puts them and the entire group at risk. If you need to rest, tell your guide and rest with the group.
+      </div>
+      <div style="margin-top:18px;color:rgba(255,255,255,.78);font-size:.93rem;line-height:1.6">
+        Three base camps serve as the launch point for summit night, depending on your route:
+        <ul style="margin-top:10px;padding-left:22px">
+          <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">Barafu Camp (4,670 m):</strong> used by Lemosho, Machame, and Umbwe. Steep hike to Stella Point, then 1 to 2 hours to Uhuru Peak.</li>
+          <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">Kibo Hut (4,700 m):</strong> used by Marangu and some Rongai itineraries. Longer hike to Gilman's Point, then 2 to 3 hours to Uhuru Peak.</li>
+          <li style="list-style:disc;margin-bottom:0"><strong style="color:var(--gold)">School Hut (4,750 m):</strong> used by the Northern Circuit and some Rongai variants. Direct and quiet path to the summit.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE SUMMIT (Glacier + Recovery) -->
+<section class="section-white" id="beyond-summit">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:36px">
+        <span class="section-eyebrow">Beyond the Summit</span>
+        <h2 class="section-title">Two More Things Worth Knowing</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">Reaching Uhuru is the goal. What happens immediately after, in the hour at the crater and in the days back in town, matters more than most climbers realise.</p>
+      </div>
+      <div style="display:grid;gap:24px" class="dest-grid-2">
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:32px;transition:transform .25s,box-shadow .25s,border-color .25s">
+          <div style="font-size:2.2rem;margin-bottom:14px">&#x1F9CA;</div>
+          <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:700;color:var(--ink-2);margin-bottom:12px">Post-Summit Glacier Tour</h3>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:16px">An optional add-on for climbers who reach Uhuru Peak: a guided detour to the Heim Glacier viewpoints, where Kilimanjaro's remaining ice walls and ancient ice towers are still close enough to touch. A window of years, not decades.</p>
+          <a href="/glacier-tour" class="dest-link" style="color:var(--amber-cta);font-weight:600;font-size:.9rem">Read the full glacier-tour guide &#x2192;</a>
+        </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:32px;transition:transform .25s,box-shadow .25s,border-color .25s">
+          <div style="font-size:2.2rem;margin-bottom:14px">&#x1F9D6;&#xFE0F;</div>
+          <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:700;color:var(--ink-2);margin-bottom:12px">Post-Climb Recovery</h3>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:16px">After your summit and the descent, your body needs proper recovery. We arrange comfortable hotels and lodges in Moshi or Arusha that have the amenities recovery needs: <strong>professional massage services</strong> for sore legs, back, and shoulders, <strong>swimming pools</strong> for gentle muscle recovery and circulation, and quality beds with hot showers. Many climbers extend with a safari or Zanzibar at this stage.</p>
+          <a href="/contact" class="dest-link" style="color:var(--amber-cta);font-weight:600;font-size:.9rem">Talk to Nelson about recovery options &#x2192;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section-tinted">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Full Transparency</span>
+      <h2 class="section-title">What's Included in Every Package</h2>
+      <p class="section-lead" style="margin-top:12px">No hidden fees. No surprises. Every Go Kilimanjaro Treks package is all-inclusive from gate to gate.</p>
+    </div>
+    <div style="display:grid;gap:20px;max-width:900px;margin:0 auto" class="reveal">
+      <div style="display:grid;gap:20px" class="">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1F3D5;&#xFE0F;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Equipment &amp; Camping</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">4-season tents, sleeping pads, dining tent, toilet tent. Everything you need on the mountain.</p>
+          </div>
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1F37D;&#xFE0F;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">All Meals</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">3 meals per day plus snacks and drinks throughout the climb. Our cook team is legendary.</p>
+          </div>
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1F465;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Expert Team</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">Lead guide, assistant guide(s), certified porters and cook. Ratio of at least 1 guide per 2 climbers.</p>
+          </div>
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1FA7A;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Safety Equipment</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">First aid kits, pulse oximeters for daily health monitoring, supplemental oxygen available.</p>
+          </div>
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1F3AB;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Park Fees &amp; Permits</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">All TANAPA park entrance fees, conservation levies, and rescue fees fully included.</p>
+          </div>
+          <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
+            <div style="font-size:1.5rem;margin-bottom:10px">&#x1F697;</div>
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Transfers &amp; Briefing</h3>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">Airport transfers, hotel accommodation in Moshi (B&amp;B), pre-climb briefing and gear check.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Choose Your Route.<br>Reach the <em>Summit.</em></h2>
+      <p>Tell Nelson your dates, group size, and fitness level. He'll respond personally with the ideal route recommendation and a transparent quote within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Get Your Free Quote &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+</BaseLayout>

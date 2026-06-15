@@ -1,0 +1,260 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"About Us","item":"https://gokilimanjarotreks.com/about.html"}],"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"Person","name":"Nelson Mushi","jobTitle":"Lead Kilimanjaro Guide","description":"Machame-born Tanzanian Kilimanjaro guide with 22+ years on the mountain and over 270 personal summits to Uhuru Peak.","image":"https://gokilimanjarotreks.com/images/nelson.jpg","url":"https://gokilimanjarotreks.com/about.html","worksFor":{"@type":"TravelAgency","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com"},"knowsAbout":["Mount Kilimanjaro","High-altitude trekking","Tanzania safari","Lemosho route","Northern Circuit route","Machame route","Marangu route","Rongai route","High-altitude medicine","Tanzania tourism","Chagga culture","Mountain rescue coordination","Pulse oximetry on the mountain"],"homeLocation":{"@type":"Place","name":"Machame, Kilimanjaro, Tanzania"},"nationality":{"@type":"Country","name":"Tanzania"},"dateModified":"2026-05-26","memberOf":[{"@type":"Organization","name":"Kilimanjaro Guides Association","description":"Founding member. Professional body for licensed Kilimanjaro lead guides."},{"@type":"Organization","name":"Mountain Guides Medical Association"},{"@type":"Organization","name":"Mount Kilimanjaro Helicopter Evacuation Network"}],"alumniOf":[{"@type":"Organization","name":"Wilderness Medical Society","url":"https://wms.org"},{"@type":"Organization","name":"Kilimanjaro Christian Medical Centre","url":"https://www.kcmuco.ac.tz"},{"@type":"Organization","name":"Kenya Red Cross Society","url":"https://www.redcross.or.ke"}],"knowsLanguage":["English","Swahili","Chagga"]}];
+---
+
+<BaseLayout
+  title="About Us: Nelson Mushi & Go Kilimanjaro Treks"
+  description="Meet Nelson Mushi, a Machame-born Kilimanjaro guide with 22+ years on the mountain, 270+ personal summits to Uhuru Peak, and a rare discovery to his name. Go Kilimanjaro Treks."
+  ogImage="https://gokilimanjarotreks.com/images/og-about.jpg"
+  ogImageAlt="Nelson Mushi, lead Kilimanjaro guide of Go Kilimanjaro Treks"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero" style="background:var(--ink)">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;opacity:0.6">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Moshi, Tanzania &bull; Since 2008</span>
+    <h1>Your Guide to<br><em>Uhuru Peak.</em></h1>
+    <p>Go Kilimanjaro Treks was built on one simple promise: to get you to the top of Africa safely, expertly, and with an experience you'll never forget. That promise starts with Nelson Mushi.</p>
+  </div>
+</section>
+
+<!-- NELSON STORY -->
+<section class="section-white">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="section-eyebrow">The Guide Behind Every Summit</span>
+        <h2 class="section-title">Nelson Mushi</h2>
+        <div class="prose" style="margin-top:20px">
+          <p>Nelson Mushi didn't discover Kilimanjaro. Kilimanjaro discovered him. He was born and raised in the Machame ward, the community that sits directly below the mountain's southern base. The same slopes he hiked as a boy became the routes he would spend the next two decades mastering as one of Tanzania's most experienced senior lead guides.</p>
+          <p>That route to becoming a senior lead guide started long before his first paid expedition. Through the late 1980s, Nelson's parents would take him to the Arusha International Conference Centre on weekends to watch documentary films about Tanzania's wildlife and the country's young tourism industry. One memory has stayed with him: a giraffe model the Tanzania Tourist Board would parade through the streets of Arusha as a tourism promotion. Sitting alongside that was the obvious gap with neighbouring Kenya, which was clearly pulling further ahead in safari marketing and infrastructure. That gap planted the ambition that would eventually become Go Kilimanjaro Treks. Nelson decided early he wanted to play a part in growing Tanzania's place in the world.</p>
+          <p>The turning point came in 2002, when Nelson climbed Kilimanjaro alongside the legendary Tanzanian guide Jacob Kiungai. Kiungai was working on the IMAX film <em>Kilimanjaro: To the Roof of Africa</em> under American mountaineer and filmmaker David Breashears, the same Breashears who had filmed the IMAX Everest documentary three years earlier. Watching that international team work the mountain at the highest standard of guiding clarified everything for Nelson. The dream of running a Tanzanian-owned operation that could meet that level of professionalism stopped being a dream and became a working plan.</p>
+          <p>Two decades on, that plan is the business you're reading about now. In more than 22 years on the mountain, Nelson has personally reached Uhuru Peak over 270 times. That isn't a marketing number. It's a body of work built one climb at a time, in every season, on every route. Few guides on the continent carry that kind of accumulated knowledge.</p>
+          <h3>A Guide Who Changed the Mountain</h3>
+          <p>Nelson was among the small group of guides who discovered and pioneered the shortcut route from Karanga Camp directly to Barafu Camp, a navigational refinement now used by guides across the mountain. It's the kind of contribution that only comes from years of close observation and deep familiarity with the terrain.</p>
+          <p>Beyond his own climbs, Nelson is committed to building the next generation. He spends significant time teaching younger guides the leadership, safety, and mountain-reading skills that took him years to develop. He doesn't treat this as an obligation. It's how he gives back to a community that gave him the mountain.</p>
+          <h3>What You Get With Nelson</h3>
+          <p>Go Kilimanjaro Treks is not an agency that books random guides. Nelson personally leads the majority of climbs and oversees every expedition. His team are people he's worked alongside for years, paid fairly, equipped properly, and held to the same standards he holds himself. That culture of care is visible at every campsite, on every acclimatization day, at every turnaround decision.</p>
+        </div>
+        <div class="cred-list">
+          <div class="cred-item"><div class="cred-icon">&#x1F4DC;</div><div class="cred-text"><strong>TANAPA Certified Lead Guide</strong><span>Tanzania National Parks Authority, with full certification renewed annually</span></div></div>
+          <div class="cred-item"><div class="cred-icon">&#x1FA7A;</div><div class="cred-text"><strong>Wilderness First Responder (WFR) Certified</strong><span>Every Go Kilimanjaro Treks guide holds WFR certification, the recognised global standard for wilderness medicine. Altitude sickness, emergency response, stretcher evacuation</span></div></div>
+          <div class="cred-item"><div class="cred-icon">&#x1F3D4;&#xFE0F;</div><div class="cred-text"><strong>Porter Welfare Standards</strong><span>Above-minimum porter wages, safe load limits, proper kit and sleeping conditions on every climb</span></div></div>
+          <div class="cred-item"><div class="cred-icon">&#x1F5FA;&#xFE0F;</div><div class="cred-text"><strong>Route Pioneer</strong><span>Among the guides who discovered the Karanga to Barafu direct route, now used across the mountain</span></div></div>
+          <div class="cred-item"><div class="cred-icon">&#x1F310;</div><div class="cred-text"><strong>Multi-lingual</strong><span>English, Swahili, and Chagga, for clear communication with every climber</span></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="nelson-card">
+          <div class="nelson-portrait">
+            <img src="/images/nelson.jpg" alt="Nelson Mushi, lead Kilimanjaro guide, Go Kilimanjaro Treks" width="400" height="533" loading="lazy">
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:16px">Nelson at a Glance</h3>
+          <div class="nelson-stats">
+            <div class="nelson-stat"><span class="nelson-stat-label">Years Guiding</span><span class="nelson-stat-val">22+</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Personal Summits</span><span class="nelson-stat-val">270+</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Routes Expertise</span><span class="nelson-stat-val">All 6 Routes</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Countries Represented</span><span class="nelson-stat-val">40+</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Safety Record</span><span class="nelson-stat-val">100% Safe</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Hometown</span><span class="nelson-stat-val">Machame, Tanzania</span></div>
+            <div class="nelson-stat"><span class="nelson-stat-label">Base</span><span class="nelson-stat-val">Moshi, Tanzania</span></div>
+          </div>
+          <a href="/contact" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px">Plan My Climb with Nelson</a>
+          <a href="https://wa.me/255677917500" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;background:#25d366;color:var(--white);border-radius:12px;font-weight:700;font-size:.9rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson Directly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING & MEDICAL -->
+<section class="section-tinted">
+  <div class="container">
+    <div style="max-width:820px;margin:0 auto" class="reveal">
+      <span class="section-eyebrow">High-Altitude Medical Training</span>
+      <h2 class="section-title">Trained for the Mountain's Real Risks</h2>
+      <p class="section-lead" style="margin-top:14px">Kilimanjaro doesn't hurt climbers with technical difficulty. It hurts them with altitude sickness, dehydration, hypothermia, and slow decision-making at the wrong moment. Nelson has spent years training specifically for that part of the job.</p>
+      <div class="prose" style="margin-top:24px">
+        <p>His ongoing professional development covers high-altitude medical skills and mountain emergency response, wilderness medical awareness, altitude sickness recognition and climber support, and rescue coordination. The training comes from organisations that set the global standard:</p>
+        <ul class="org-list">
+          <li><a href="https://wms.org" target="_blank" rel="noopener nofollow">Wilderness Medical Society</a>, the leading international body for wilderness and expedition medicine.</li>
+          <li>Munro Medical Solutions, expedition medicine specialists who train guides on dealing with high-altitude emergencies in the field.</li>
+          <li>PubMed and other peer-reviewed altitude medicine literature, used for ongoing self-directed study.</li>
+          <li><a href="https://www.kcmuco.ac.tz" target="_blank" rel="noopener nofollow">Kilimanjaro Christian Medical Centre (KCMC)</a>, the regional referral hospital in Moshi that handles real Kilimanjaro emergencies and trains Tanzanian medical personnel.</li>
+          <li><a href="https://www.redcross.or.ke" target="_blank" rel="noopener nofollow">Kenya Red Cross Society</a>, for cross-border first aid and emergency response training.</li>
+        </ul>
+        <p>That medical depth is the difference between a guide who notices a climber slowing down and a guide who reads the pulse oximeter, asks the right three questions, and either keeps the climb moving or calls the descent. Nelson treats it as the most important part of the job, well above anything to do with the summit photo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OUR MOUNTAIN CREW -->
+<section class="section-white" id="mountain-crew">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:36px">
+        <span class="section-eyebrow">Every Climb, Every Camp</span>
+        <h2 class="section-title">Our Mountain Crew</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:720px">A successful Kilimanjaro climb is never a one-person operation. Behind every climber is a team that runs from before sunrise to after sunset. Each role is filled by professionals Nelson has worked with for years, paid fairly, and held to the same standard he holds himself.</p>
+      </div>
+      <div style="display:grid;gap:18px;grid-template-columns:1fr">
+        <div style="display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Senior Guide</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">The cornerstone of every expedition. Oversees all climbing activities, ensures client safety, manages daily mountain operations, makes the medical and route-decision calls. WFR certified.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Assistant Guides</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Support the senior guide and scale to the group size, so every climber gets personalised attention and expert guidance throughout the climb.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Cook and Assistant Cook</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Prepare nutritious meals at every camp, plus refreshing tea or lunch before reaching the destined camp. High hygiene standards from gate to summit.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Camping Master and Assistant</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Orchestrate every aspect of camp operations: efficient tent setup, maintaining the comfort and organisation of the campsite, breaking down and moving the whole rig between camps.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Waiters</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Morning breakfast service, hot drinks along the trail, table service for lunch and dinner, special requests delivered directly to your tent.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Toilet Helpers</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Setup and maintenance of mobile toilets and showers (available on request). Clean, discreet, and hygienic so this part of camp life is never the problem.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Dishwashers</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">Every cooking utensil and piece of dining ware thoroughly cleaned and sanitised. Food-safety basics done properly, every day.</p></div>
+          <div style="background:var(--cream);border-radius:14px;padding:22px 26px"><h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Crew Cook (larger groups)</h3><p style="font-size:.93rem;color:var(--muted);line-height:1.65">For groups larger than seven climbers, a dedicated crew cook joins the team to handle the food and provisions for the crew itself. A well-fed crew is a strong crew.</p></div>
+        </div>
+      </div>
+      <p style="margin-top:32px;font-size:.95rem;color:var(--text);line-height:1.7;text-align:center;max-width:680px;margin-left:auto;margin-right:auto">Our porters earn above-minimum rates, carry loads within safe weight limits, and sleep in proper conditions on every climb. Read our full <a href="/safety" style="color:var(--amber-cta);font-weight:600">safety and rescue protocols</a> for how every climb is run.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIPPING -->
+<section class="section-tinted" id="tipping">
+  <div class="container">
+    <div style="max-width:780px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:24px">
+        <span class="section-eyebrow">After the Summit</span>
+        <h2 class="section-title">Tipping the Mountain Crew</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">Tipping at the end of a Kilimanjaro climb is a strong tradition, and the way it is handled tells you a lot about how an operator treats its crew. Here is exactly how we do it.</p>
+      </div>
+      <div style="background:var(--white);border-radius:18px;padding:32px;border:1.5px solid var(--border)">
+        <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">We pay our crews wages at the rates recommended by the annual meetings of the porter, cook, and guide associations. We are proud to be among the few operators who actually do this.</p>
+        <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px">For tipping at the end of the climb, our guidance to clients is <strong>USD 250 to USD 300 per climber for the entire crew</strong>. This amount is per climbing group, distributed across all crew members (senior guide, assistant guides, cook, waiters, camping masters, toilet helpers, summit assistant porters). The total is at your discretion and should reflect your satisfaction with the service. Many climbers go higher.</p>
+        <p style="font-size:1rem;color:var(--text);line-height:1.78;margin-bottom:14px"><strong>The transparent part:</strong> all tips go directly to the crew at the certificate ceremony in Moshi at the end of your climb. We do not withhold or manipulate crew tips through rogue exchange rates. The ceremony is also the moment you get to personally thank and recognise each member of the team.</p>
+        <p style="font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:0;font-style:italic">If you want a full pre-climb breakdown of the recommended tip per role, just ask Nelson and he will send it through with your booking confirmation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section-dark">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px" class="reveal">
+      <span class="section-eyebrow light">How We Operate</span>
+      <h2 class="section-title light">Our Values on the Mountain</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal"><div class="value-icon">&#x1F9ED;</div><h3 class="value-title">Safety Above All</h3><p class="value-desc">We will always choose safety over summit. If the mountain says no, we listen. Oxygen, pulse oximetry, and conservative turnaround decisions are non-negotiable.</p></div>
+      <div class="value-card reveal"><div class="value-icon">&#x1F91D;</div><h3 class="value-title">Porter Ethics</h3><p class="value-desc">Our porters earn above-minimum rates, carry loads within safe weight limits, and sleep in proper conditions on every climb. Good ethics isn't optional.</p></div>
+      <div class="value-card reveal"><div class="value-icon">&#x1F331;</div><h3 class="value-title">Environmental Stewardship</h3><p class="value-desc">Pack it in, pack it out. We enforce a strict no-trace policy and actively participate in Kilimanjaro clean-up initiatives. The mountain deserves protection.</p></div>
+      <div class="value-card reveal"><div class="value-icon">&#x2702;&#xFE0F;</div><h3 class="value-title">Tailored Experiences</h3><p class="value-desc">No two groups are the same. We design every itinerary around your team: your pace, your goals, your needs. Never a one-size-fits-all approach.</p></div>
+      <div class="value-card reveal"><div class="value-icon">&#x1F4AC;</div><h3 class="value-title">Radical Transparency</h3><p class="value-desc">You get a detailed breakdown of exactly what's included in your price. No hidden fees. No surprise surcharges. What we quote is what you pay.</p></div>
+      <div class="value-card reveal"><div class="value-icon">&#x2764;&#xFE0F;</div><h3 class="value-title">Local Pride</h3><p class="value-desc">Nelson is from Moshi. This mountain is his home. He takes profound pride in sharing its majesty with the world while protecting its community and environment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIPS & PARTNERS -->
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:36px">
+        <span class="section-eyebrow">Recognised in the Industry</span>
+        <h2 class="section-title">Memberships and Partner Operators</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">Nelson sits inside the Tanzanian guiding community and has built long-running relationships with international travel companies that send their clients to climb Kilimanjaro and safari with Go Kilimanjaro Treks.</p>
+      </div>
+      <div class="memberships-grid">
+        <div class="mem-card">
+          <h3>Memberships &amp; Roles</h3>
+          <ul>
+            <li><strong>Kilimanjaro Guides Association</strong>: founding member. The professional body for licensed Kilimanjaro lead guides in Tanzania, set up to raise standards across the industry.</li>
+            <li><strong>Mountain Guides Medical Association</strong>: member, focused on high-altitude medicine, climber safety standards, and rescue coordination.</li>
+            <li><strong>Mount Kilimanjaro Helicopter Evacuation Network</strong>: member, with active radio coordination on every climb so a medevac chopper can reach a climber on the mountain inside the standard response window.</li>
+          </ul>
+        </div>
+        <div class="mem-card">
+          <h3>International Partner Operators</h3>
+          <p style="font-size:.9rem;color:var(--muted);margin-bottom:14px">Nelson and the Go Kilimanjaro Treks team have led climbs and safaris on behalf of, or in partnership with, these international travel companies:</p>
+          <ul>
+            <li><a href="https://www.mountainguides.com" target="_blank" rel="noopener nofollow">International Mountain Guides (IMG)</a>, United States</li>
+            <li><a href="https://www.wildfrontierstravel.com" target="_blank" rel="noopener nofollow">Wild Frontiers</a>, South Africa</li>
+            <li><a href="https://www.peregrineadventures.com" target="_blank" rel="noopener nofollow">Peregrine Adventures</a>, Australia</li>
+            <li><a href="https://7summits-club.com" target="_blank" rel="noopener nofollow">7 Summits Club</a>, Russia</li>
+            <li><a href="https://www.travelbag.co.uk" target="_blank" rel="noopener nofollow">TravelBag</a>, United Kingdom</li>
+            <li>Earth Treks, United States</li>
+            <li><a href="https://www.childreach.org.uk" target="_blank" rel="noopener nofollow">Childreach International</a>, United Kingdom</li>
+            <li>International Campsites, United Kingdom</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-tinted">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="section-eyebrow">From the Climbers</span>
+      <h2 class="section-title">What Our Climbers Say</h2>
+    </div>
+    <div style="display:grid;gap:24px;max-width:900px;margin:0 auto">
+      <div class="testi-card reveal" style="background:var(--white);border:1.5px solid var(--border)">
+        <div class="stars" style="color:var(--amber-cta)">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testi-text" style="color:var(--muted)">"We had an amazing Kilimanjaro climb led by Nelson Mushi. My husband and I and another couple took our 8 kids ages 15-26 and ALL summited. Nelson and his team were checking in on all of us regularly to make sure we were drinking enough fluid and feeling well. It was an incredible experience for two Canadian families to share. We have recommended Nelson to others who have climbed Kili with him and always had positive feedback."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--amber-cta)">C</div>
+          <div><div class="testi-name" style="color:var(--ink-2)">Cathryn B.</div><div class="testi-meta" style="color:var(--muted)">Verified &bull; Two Canadian Families &bull; Kilimanjaro 6-Day Climb &bull; All 10 Summited</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="background:var(--white);border:1.5px solid var(--border)">
+        <div class="stars" style="color:var(--amber-cta)">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <p class="testi-text" style="color:var(--muted)">"I hired Nelson to take me onto Mount Kilimanjaro for a day trip while my husband hiked to the top. Nelson was well prepared and informative. He even lent me heavier duty rain gear when the skies opened on us. He arranged an outing for a second day to expose me to the Chagga culture and coffee making process. I thoroughly enjoyed my time with Nelson."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--amber-cta)">N</div>
+          <div><div class="testi-name" style="color:var(--ink-2)">NJ-PQ</div><div class="testi-meta" style="color:var(--muted)">Verified &bull; Kilimanjaro Day Trek &amp; Chagga Cultural Tour</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="section-dark">
+  <div class="container">
+    <div style="max-width:780px;margin:0 auto;text-align:center" class="reveal">
+      <span class="section-eyebrow light">Our Mission</span>
+      <h2 class="section-title light">Why We Do This</h2>
+      <p class="mission-text">Every trip we run should leave a climber with a story worth telling for the rest of their life. Whether you're standing on Uhuru Peak at sunrise, watching elephants on the Tarangire River, or sitting around a coffee fire in a Chagga village, our job is to make the moment safe, well organised, and authentically Tanzanian. We do it as a locally owned, locally staffed Tanzanian company. We do it because the mountain and the country deserve to be shared properly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-tinted" style="background:var(--ink)" aria-label="Our Giveback">
+  <div class="container">
+    <div class="reveal" style="max-width:880px;margin:0 auto;text-align:center">
+      <span class="section-eyebrow light">Our Giveback</span>
+      <h2 class="section-title light" style="margin-top:6px"><em>Faith Vision Foundation</em></h2>
+      <p class="section-lead light" style="margin:18px auto 0;max-width:760px;text-align:center">A portion of every Kilimanjaro climb and Tanzania safari we run goes toward children's vision care in our region. The foundation, named for Nelson's daughter Faith, is currently being constituted. Read the story behind it.</p>
+      <div style="margin-top:32px"><a href="/faith-vision-foundation" class="btn-primary" style="display:inline-flex">Read the Story &#x2192;</a></div>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Ready to Climb with <em>Nelson?</em></h2>
+      <p>Reach out directly. Nelson responds personally within 24 hours with honest advice, a route recommendation, and a transparent quote.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan My Kilimanjaro Trip &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

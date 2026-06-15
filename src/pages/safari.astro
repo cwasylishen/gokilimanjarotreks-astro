@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"Tanzania Wildlife Safaris","description":"Tanzania safari packages from Go Kilimanjaro Treks visiting the Serengeti, Ngorongoro Crater, Tarangire, Lake Manyara, and Zanzibar. Custom itineraries from Moshi and Arusha with expert guides.","url":"https://gokilimanjarotreks.com/safari.html","touristType":["Wildlife enthusiasts","Photographers","Families"],"provider":{"@type":"TravelAgency","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com","telephone":"+255677917500","email":"info@gokilimanjarotreks.com","address":{"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":"-3.3731","longitude":"37.3441"}},"itinerary":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Serengeti National Park","addressCountry":"TZ"}},{"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Ngorongoro Crater","addressCountry":"TZ"}},{"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Tarangire National Park","addressCountry":"TZ"}},{"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Lake Manyara National Park","addressCountry":"TZ"}},{"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Arusha National Park","addressCountry":"TZ"}},{"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Zanzibar","addressCountry":"TZ"}}]},"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Tanzania Safari","item":"https://gokilimanjarotreks.com/safari.html"}],"dateModified":"2026-05-26"}];
+---
+
+<BaseLayout
+  title="Tanzania Wildlife Safaris | Go Kilimanjaro Treks"
+  description="Tanzania safari packages from Go Kilimanjaro Treks. Serengeti, Ngorongoro Crater, Tarangire, Lake Manyara, and Zanzibar. Custom itineraries from Moshi &amp; Arusha with expert guides."
+  ogImage="https://gokilimanjarotreks.com/images/og-safari.jpg"
+  ogImageAlt="Tanzania wildlife safari destinations including Serengeti and Ngorongoro"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero" style="background:var(--ink)">
+  <img src="/images/page-hero-safari.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;opacity:0.7">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Northern Tanzania &bull; East Africa</span>
+    <h1>Tanzania Wildlife<br><em>Safaris.</em></h1>
+    <p>The Serengeti. The Ngorongoro Crater. Tarangire's elephant herds. Zanzibar's turquoise coast. Tanzania is home to some of the world's greatest natural wonders, and Go Kilimanjaro Treks will take you there in style.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Plan My Safari &#x2192;</a>
+      <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section-white" id="destinations">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Tanzania's Greatest Parks</span>
+      <h2 class="section-title">Explore the Destinations</h2>
+      <p class="section-lead" style="margin-top:12px">Northern Tanzania is one of the world's most biodiverse regions. Our safari routes connect the parks that matter most, each with its own distinct character, wildlife, and magic. <a href="/destinations" style="color:var(--amber-cta);font-weight:600">Read the full destination guide &#x2192;</a></p>
+    </div>
+    <div class="dest-grid">
+      <article class="dest-card reveal" id="serengeti">
+        <div class="dest-visual dv-serengeti"><img src="/images/dest-serengeti.jpg" alt="Serengeti National Park, wildebeest migration" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Serengeti National Park</h3>
+          <div class="dest-tags"><span class="dest-tag">14,763 km&sup2;</span><span class="dest-tag">Great Migration</span><span class="dest-tag">Big Five</span></div>
+          <p class="dest-desc">The world's most famous safari destination. Home to the Great Migration, the annual movement of over 1.5 million wildebeest and 500,000 zebras across the endless plains. Year-round Big Five sightings, dramatic predator-prey interactions, and some of Africa's finest game viewing make the Serengeti the crown jewel of any Tanzania safari.</p>
+          <a href="/contact" class="dest-link">Plan a Serengeti Safari &#x2192;</a>
+        </div>
+      </article>
+      <article class="dest-card reveal" id="ngorongoro">
+        <div class="dest-visual dv-ngorongoro"><img src="/images/dest-ngorongoro.jpg" alt="Ngorongoro Crater, Africa's wildlife arena" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Ngorongoro Crater</h3>
+          <div class="dest-tags"><span class="dest-tag">UNESCO World Heritage</span><span class="dest-tag">Highest Wildlife Density</span><span class="dest-tag">Rhino</span></div>
+          <p class="dest-desc">The world's largest intact volcanic caldera, a natural enclosure of 260 km&sup2; that supports one of Africa's densest concentrations of wildlife. Lions, elephants, hippos, flamingos, and one of Tanzania's last remaining populations of black rhino all live within its rim. A single day here is among the most wildlife-packed experiences on the planet.</p>
+          <a href="/contact" class="dest-link">Plan a Ngorongoro Visit &#x2192;</a>
+        </div>
+      </article>
+      <article class="dest-card reveal" id="tarangire">
+        <div class="dest-visual dv-tarangire"><img src="/images/dest-tarangire.jpg" alt="Tarangire National Park, elephants and baobab trees" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Tarangire National Park</h3>
+          <div class="dest-tags"><span class="dest-tag">Elephant Country</span><span class="dest-tag">Baobab Trees</span><span class="dest-tag">Year-Round</span></div>
+          <p class="dest-desc">Tanzania's elephant sanctuary. During the dry season, Tarangire sees some of Africa's largest elephant concentrations, with herds of 200-300 animals gathering at the Tarangire River. The park's ancient baobab trees, diverse birdlife (550+ species), and lower tourist numbers make it a favourite for those who want an authentic, uncrowded safari experience.</p>
+          <a href="/contact" class="dest-link">Plan a Tarangire Safari &#x2192;</a>
+        </div>
+      </article>
+      <article class="dest-card reveal" id="manyara">
+        <div class="dest-visual dv-manyara"><img src="/images/dest-manyara.jpg" alt="Lake Manyara National Park, flamingos and tree-climbing lions" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Lake Manyara National Park</h3>
+          <div class="dest-tags"><span class="dest-tag">Tree-Climbing Lions</span><span class="dest-tag">Flamingos</span><span class="dest-tag">Forest Elephants</span></div>
+          <p class="dest-desc">Famous for its tree-climbing lions and vast flocks of flamingos on the alkaline lake. Lake Manyara packs extraordinary diversity into a compact park: groundwater forest, acacia woodland, open floodplains, and the lake shore. Its proximity to Arusha makes it an ideal first or last stop on a northern circuit safari.</p>
+          <a href="/contact" class="dest-link">Plan a Lake Manyara Visit &#x2192;</a>
+        </div>
+      </article>
+      <article class="dest-card reveal" id="zanzibar">
+        <div class="dest-visual dv-zanzibar"><img src="/images/dest-zanzibar.jpg" alt="Zanzibar, white sand beaches and turquoise Indian Ocean" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Zanzibar Island</h3>
+          <div class="dest-tags"><span class="dest-tag">Beach Extension</span><span class="dest-tag">Spice Island</span><span class="dest-tag">UNESCO Old Town</span></div>
+          <p class="dest-desc">The perfect post-safari or post-summit reward. Zanzibar's white sand beaches and turquoise Indian Ocean waters are legendary. Stone Town, a UNESCO World Heritage Site, offers spice tours, historic Arab and Portuguese architecture, and incredible seafood. A 3-5 day Zanzibar extension turns a great trip into an unforgettable one.</p>
+          <a href="/contact" class="dest-link">Plan a Zanzibar Extension &#x2192;</a>
+        </div>
+      </article>
+      <article class="dest-card reveal" id="arusha">
+        <div class="dest-visual dv-arusha"><img src="/images/dest-arusha.jpg" alt="Arusha National Park, Mount Meru and Momella Lakes" width="800" height="500" loading="lazy"></div>
+        <div class="dest-body">
+          <h3 class="dest-name">Arusha National Park</h3>
+          <div class="dest-tags"><span class="dest-tag">Day Trip</span><span class="dest-tag">Canoe Safari</span><span class="dest-tag">Mt. Meru</span></div>
+          <p class="dest-desc">Often overlooked but genuinely beautiful. Arusha National Park sits in the shadow of Mount Meru and offers one of Tanzania's only canoe safaris on Momella Lakes. Flamingos, hippos, giraffes, and colobus monkeys in a fraction of the time. Perfect as a day trip before or after Kilimanjaro.</p>
+          <a href="/contact" class="dest-link">Plan an Arusha Day Trip &#x2192;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DAY TRIPS & EXCURSIONS -->
+<section class="section-tinted" id="day-trips">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Short Getaways</span>
+      <h2 class="section-title">Day Trips &amp; Excursions</h2>
+      <p class="section-lead" style="margin-top:12px;margin:12px auto 0">Not ready to commit to a full safari? Each of these day trips runs out of Moshi or Arusha and gives you a genuine wildlife or cultural experience in a single day. Great add-ons before or after a Kilimanjaro climb.</p>
+    </div>
+    <div style="display:grid;gap:28px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
+
+      <!-- Tarangire -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-tarangire.jpg" alt="Elephant herd at Tarangire National Park" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Tarangire National Park</h3>
+          <p class="dest-desc">Tanzania's elephant capital. During the dry season, hundreds of elephants gather at the Tarangire River, making this one of the most reliable big-game sightings in East Africa. Ancient baobab trees, 550+ bird species, and far fewer crowds than the Serengeti.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+      <!-- Ngorongoro -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-ngorongoro.jpg" alt="Wildlife in Ngorongoro Crater" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Ngorongoro Crater</h3>
+          <p class="dest-desc">Descend into the world's largest intact volcanic caldera for a full-day game drive. Lions, elephants, hippos, and one of Africa's last black rhino populations all live within its 260 km² rim. The concentration of wildlife here is genuinely unlike anywhere else on earth.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+      <!-- Lake Manyara -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-manyara.jpg" alt="Lake Manyara National Park" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Lake Manyara National Park</h3>
+          <p class="dest-desc">A compact park that punches well above its weight. Famous for its tree-climbing lions (a behaviour found almost nowhere else), massive flocks of flamingos on the lake shore, and over 400 bird species. The forested escarpment makes for beautiful, varied driving.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+      <!-- Arusha -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-arusha.jpg" alt="Arusha National Park with Mount Meru" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Arusha National Park</h3>
+          <p class="dest-desc">Right on Arusha's doorstep. Giraffes, zebras, buffalo, colobus monkeys, and Mount Meru as your backdrop. The Momella Lakes offer an optional canoe safari (paddling quietly past hippos is something else). The most accessible wildlife day out in northern Tanzania.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+      <!-- Lake Eyasi -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-eyasi.jpg" alt="Lake Eyasi - Hadzabe cultural experience" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Cultural Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Lake Eyasi &amp; Hadzabe Bushmen</h3>
+          <p class="dest-desc">One of Nelson's most requested cultural experiences. Visit the Hadzabe, one of the last hunter-gatherer tribes on earth, and join them on a morning hunt. Also meet the Datoga blacksmiths nearby. The lake itself draws flamingos and creates a striking volcanic landscape.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+      <!-- Lake Natron -->
+      <div class="dest-card reveal">
+        <div class="dest-visual">
+          <img src="/images/daytrip-natron.jpg" alt="Wildlife near Lake Natron" width="800" height="500" loading="lazy">
+        </div>
+        <div class="dest-body">
+          <span class="dest-tag">Day Trip &middot; 1 Day</span>
+          <h3 class="dest-name">Lake Natron</h3>
+          <p class="dest-desc">A surreal, otherworldly destination. The caustic red soda lake is the world's primary breeding ground for lesser flamingos, with up to 2.5 million birds nesting here. Ol Doinyo Lengai, an active volcano sacred to the Maasai, looms above the lake and is an iconic sight.</p>
+          <a href="/contact" class="dest-cta">Book This Trip &#x2192;</a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="/daytrips" class="btn-primary">See All 11 Day Trips &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- SAFARI PACKAGES -->
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow light">Popular Itineraries</span>
+      <h2 class="section-title light">Safari Packages</h2>
+      <p class="section-lead light" style="margin-top:12px">All packages are fully customizable. These are starting frameworks, so tell us your interests and we'll build the perfect itinerary around you.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card reveal">
+        <div class="pkg-badge">Best Seller</div>
+        <h3 class="pkg-name">Classic Northern Tanzania Safari</h3>
+        <p class="pkg-desc">The definitive Tanzania experience. Hit all the major northern parks in one well-paced itinerary. Big cats, elephant herds, flamingos, and the crater.</p>
+        <div class="pkg-details">
+          <span class="pkg-detail">&#x1F4C5; 4-6 Days</span>
+          <span class="pkg-detail">&#x1F697; 4WD Safari Vehicle</span>
+          <span class="pkg-detail">&#x1F3D5;&#xFE0F; Camping or Lodges</span>
+        </div>
+        <div class="pkg-highlights">
+          <div class="pkg-hl">Tarangire National Park: elephants and baobabs</div>
+          <div class="pkg-hl">Lake Manyara: tree-climbing lions and flamingos</div>
+          <div class="pkg-hl">Ngorongoro Crater: highest wildlife density in Africa</div>
+          <div class="pkg-hl">Optional Serengeti extension for Great Migration</div>
+        </div>
+        <a href="/contact" class="pkg-cta">Get a Quote &#x2192;</a>
+      </div>
+      <div class="package-card reveal">
+        <div class="pkg-badge">Great Migration</div>
+        <h3 class="pkg-name">Serengeti Migration Safari</h3>
+        <p class="pkg-desc">Time your visit with one of nature's greatest spectacles. Witness the Great Migration of 1.5 million wildebeest crossing the Serengeti plains.</p>
+        <div class="pkg-details">
+          <span class="pkg-detail">&#x1F4C5; 5-8 Days</span>
+          <span class="pkg-detail">&#x1F697; 4WD Safari Vehicle</span>
+          <span class="pkg-detail">&#x26FA; Luxury or Budget Camps</span>
+        </div>
+        <div class="pkg-highlights">
+          <div class="pkg-hl">Serengeti National Park: multiple nights, diverse zones</div>
+          <div class="pkg-hl">River crossings in July to October (most dramatic)</div>
+          <div class="pkg-hl">Ngorongoro Crater full-day descent included</div>
+          <div class="pkg-hl">Hot air balloon option available</div>
+        </div>
+        <a href="/contact" class="pkg-cta">Get a Quote &#x2192;</a>
+      </div>
+      <div class="package-card reveal">
+        <div class="pkg-badge">Summit + Safari</div>
+        <h3 class="pkg-name">Kilimanjaro + Tanzania Safari Combo</h3>
+        <p class="pkg-desc">The ultimate East Africa adventure. Climb the Roof of Africa, then descend into one of the world's greatest wildlife experiences. Two bucket-list items in one trip.</p>
+        <div class="pkg-details">
+          <span class="pkg-detail">&#x1F4C5; 12-18 Days</span>
+          <span class="pkg-detail">&#x26F0;&#xFE0F; Kilimanjaro + Safari</span>
+          <span class="pkg-detail">&#x1F3D6;&#xFE0F; Zanzibar Optional</span>
+        </div>
+        <div class="pkg-highlights">
+          <div class="pkg-hl">7-day Lemosho or Rongai Kilimanjaro trek</div>
+          <div class="pkg-hl">2-3 day decompression in Moshi before safari</div>
+          <div class="pkg-hl">4-5 day northern circuit safari: Tarangire, Ngorongoro, Serengeti</div>
+          <div class="pkg-hl">Optional Zanzibar beach extension</div>
+        </div>
+        <a href="/contact" class="pkg-cta">Get a Quote &#x2192;</a>
+      </div>
+      <div class="package-card reveal">
+        <div class="pkg-badge">Romantic</div>
+        <h3 class="pkg-name">Honeymoon Safari &amp; Zanzibar</h3>
+        <p class="pkg-desc">Romance meets adventure. Intimate game drives with private vehicles, luxury lodge accommodation, and a stunning Zanzibar beach finale for honeymooners and couples.</p>
+        <div class="pkg-details">
+          <span class="pkg-detail">&#x1F4C5; 8-12 Days</span>
+          <span class="pkg-detail">&#x1F3E8; Luxury Lodges</span>
+          <span class="pkg-detail">&#x1F491; Couples</span>
+        </div>
+        <div class="pkg-highlights">
+          <div class="pkg-hl">Private vehicle for exclusive game drive experience</div>
+          <div class="pkg-hl">Hand-picked luxury lodges with romantic setups</div>
+          <div class="pkg-hl">Ngorongoro Crater and Serengeti included</div>
+          <div class="pkg-hl">5-day Zanzibar stay with water sports and spa</div>
+        </div>
+        <a href="/contact" class="pkg-cta">Get a Quote &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="section-tinted">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Experiences</span>
+      <h2 class="section-title">Tanzania Safari Activities</h2>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card reveal"><div class="act-icon">&#x1F698;</div><h3 class="act-name">Game Drives</h3><p class="act-desc">Morning and evening drives in custom 4WD vehicles with pop-up roofs for unobstructed photography and wildlife viewing.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F388;</div><h3 class="act-name">Hot Air Balloon</h3><p class="act-desc">Drift over the Serengeti at sunrise watching the plains come alive below. One of Africa's most magical experiences.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F43E;</div><h3 class="act-name">Great Migration</h3><p class="act-desc">Witness 1.5 million wildebeest thunder across the Serengeti and attempt dramatic Mara River crossings watched by crocodiles.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F6F6;</div><h3 class="act-name">Canoe Safari</h3><p class="act-desc">Paddle silently through Momella Lakes in Arusha National Park, surrounded by hippos, flamingos, and forest wildlife.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F60E;</div><h3 class="act-name">Night Game Drive</h3><p class="act-desc">Spot nocturnal predators, bushbabies, and other creatures that emerge after dark with expert spotlight guides.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F333;</div><h3 class="act-name">Cultural Village Tours</h3><p class="act-desc">Visit Maasai communities and Chagga villages for authentic cultural exchange, traditional music, and local food.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x2615;</div><h3 class="act-name">Coffee Farm Tour</h3><p class="act-desc">Nelson's personal favourite. Explore a Chagga coffee farm on Kilimanjaro's slopes and learn the full bean-to-cup process.</p></div>
+      <div class="activity-card reveal"><div class="act-icon">&#x1F3C4;</div><h3 class="act-name">Zanzibar Water Sports</h3><p class="act-desc">Snorkelling, diving, kite surfing, and dhow cruises on the pristine Indian Ocean waters surrounding Zanzibar island.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Design Your <em>Tanzania Adventure.</em></h2>
+      <p>Every safari is built around you. Tell Nelson what excites you most and he'll put together an itinerary that exceeds every expectation.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan My Safari &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Safety","item":"https://gokilimanjarotreks.com/safety.html"}],"dateModified":"2026-06-14"},{"@context":"https://schema.org","@type":"FAQPage","url":"https://gokilimanjarotreks.com/safety.html","dateModified":"2026-06-14","mainEntity":[{"@type":"Question","name":"Is travel insurance really mandatory to climb with Go Kilimanjaro Treks?","acceptedAnswer":{"@type":"Answer","text":"Yes. Climbers who cannot provide proof of comprehensive travel insurance covering helicopter rescue and emergency medical evacuation will not be permitted to begin their climb. This is non-negotiable. Without insurance, the personal cost of a helicopter evacuation plus hospital treatment can exceed USD 7,500, and uninsured climbers may face delays in receiving emergency care."}},{"@type":"Question","name":"What does my travel insurance need to cover?","acceptedAnswer":{"@type":"Answer","text":"Your policy must explicitly cover: helicopter evacuation from any altitude on Mount Kilimanjaro, emergency medical transport to KCMC Hospital in Moshi, high-altitude trekking up to at least 6,000 m above sea level, medical treatment at KCMC and other medical facilities, and potential repatriation to your home country if required."}},{"@type":"Question","name":"How much does helicopter rescue cost on Kilimanjaro?","acceptedAnswer":{"@type":"Answer","text":"Helicopter rescue services are provided by KiliMedAir. The cost is USD 3,500 for a helicopter rescue without direct hospital transport, or USD 4,000 with direct transport to KCMC Hospital. Hospital stays typically add USD 2,000 or more depending on the severity and length of treatment. With proper insurance, these costs are covered. The Kilimanjaro National Park ground ambulance is included in your park fees at no extra charge."}},{"@type":"Question","name":"How often do guides check on my health?","acceptedAnswer":{"@type":"Answer","text":"Formal assessments happen every two hours throughout the trek. Guides ask you to rate your wellbeing on a 1-to-10 scale, then combine that with objective data: pulse oximetry, heart rate, lung sound checks with a stethoscope to listen for HAPE warning signs. If anything concerning shows up, we initiate 24-hour continuous pulse oximetry and adjust the climb accordingly."}},{"@type":"Question","name":"What is a WFR-certified guide?","acceptedAnswer":{"@type":"Answer","text":"Wilderness First Responder (WFR) is a recognised wilderness medicine certification. Every Go Kilimanjaro Treks guide holds it. The training covers high-altitude physiology, pharmacological management of altitude sickness, patient assessment, and the technical skills required for stretcher evacuation in steep terrain. The certification is what gives a guide the authority and competence to make life-saving decisions under pressure."}},{"@type":"Question","name":"How do you communicate with base in an emergency?","acceptedAnswer":{"@type":"Answer","text":"Lead Guides communicate directly with our Operations and Rescue Manager at the Moshi base office. The southern routes have reliable mobile coverage; the Northern Circuit uses satellite phones as the primary mode of communication. Every team carries satellite as a backup regardless of route. Emergency calls follow a standardised format: location, situation, patient status, interventions already taken, and the specific support requested."}},{"@type":"Question","name":"Do you carry oxygen on every climb?","acceptedAnswer":{"@type":"Answer","text":"Yes. Supplemental oxygen is the primary response to stabilise a climber showing signs of altitude stress. We also maintain emergency oxygen cylinders on summit night at a ratio of one tank per two climbers, which significantly exceeds the standard most operators run."}},{"@type":"Question","name":"Where will I be evacuated to if I need a hospital?","acceptedAnswer":{"@type":"Answer","text":"Kilimanjaro Christian Medical Centre (KCMC) in Moshi. KCMC is one of the largest and best-equipped medical centres in the region. Its staff have extensive experience treating altitude-related conditions including HAPE, HACE, severe dehydration, and traumatic injuries. The hospital maintains intensive care, diagnostic imaging, and surgical services."}},{"@type":"Question","name":"Can the guide override my wish to keep climbing?","acceptedAnswer":{"@type":"Answer","text":"Yes. If a guide determines that severe symptoms require descent or evacuation, the decision is final and supersedes any summit ambition. We will always choose your safety over the summit. The guide's training and the mutual-confirmation protocol with our Moshi base ensure that this decision is made carefully and quickly, never lightly."}},{"@type":"Question","name":"What if it's the middle of the night or the weather is bad for a helicopter?","acceptedAnswer":{"@type":"Answer","text":"We use a tiered evacuation approach. Helicopter rescue is the fastest method for severe emergencies, but it's not the only option. When weather rules out aerial extraction or it's night, we descend the climber using a portable stretcher carried by our trained porter and guide teams. At lower altitudes we can use the KINAPA wheel stretcher provided by the park. From Horombo Hut on Marangu or Mweka Gate, ambulance ground transport is available."}}]},{"@context":"https://schema.org","@type":"Service","name":"Kilimanjaro Mountain Rescue and Medical Support","serviceType":"Mountain rescue and altitude medicine support","provider":{"@id":"https://gokilimanjarotreks.com/#organization"},"areaServed":{"@type":"Mountain","name":"Mount Kilimanjaro"},"description":"Two-hour wellness assessments, pulse oximetry, supplemental oxygen, satellite-phone backup communications, helicopter evacuation coordination with KiliMedAir, transport to KCMC Hospital, and WFR-certified lead guides on every climb.","dateModified":"2026-06-14"}];
+---
+
+<BaseLayout
+  title="Kilimanjaro Safety, Rescue and Evacuation Protocols | Go Kilimanjaro Treks"
+  description="Complete safety and rescue protocols for Mount Kilimanjaro climbs with Go Kilimanjaro Treks: two-hour health assessments, WFR-certified guides, per-route helicopter evacuation points, KCMC hospital partnership, and mandatory insurance requirements."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Kilimanjaro guides monitoring climber wellness during a high-altitude trek"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Comprehensive Protocols</span>
+    <h1>Safety on <em>Kilimanjaro.</em></h1>
+    <p>At Go Kilimanjaro Treks, client safety is not an afterthought. It is the foundation we build every climb on. This page lays out exactly how we monitor your health, how we communicate with our Moshi base, how we evacuate if something goes wrong, and what we require of you before you start climbing.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Plan a Safe Climb &#x2192;</a>
+      <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; Ask About Safety</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:840px;margin:0 auto" class="reveal prose-section">
+      <span class="section-eyebrow">Our Philosophy</span>
+      <h2 class="section-title">Proactive, Not Reactive</h2>
+      <p style="margin-top:14px">Mount Kilimanjaro doesn't hurt climbers with technical difficulty. It hurts them with altitude sickness, dehydration, hypothermia, and slow decision-making at the wrong moment. The way you keep climbers safe is not by being ready to react when something goes wrong. It is by spotting trouble in its earliest stages and resolving it before it becomes a crisis.</p>
+      <p>Every Go Kilimanjaro Treks guide holds Wilderness First Responder (WFR) certification, the recognised global standard for wilderness medicine. They are trained to monitor trends rather than isolated symptoms. Our equipment, our communication infrastructure, and our evacuation infrastructure are all built around the same principle: catch problems early, intervene fast, and never gamble with a climber's life.</p>
+
+      <h3>The Two-Hour Assessment Protocol</h3>
+      <p>Our guides conduct formal health assessments of every client every two hours throughout the trek. During each assessment, you rate your general wellbeing on a scale of 1 to 10. We combine that subjective self-report with objective physiological data to build a real-time health profile of every climber on the team.</p>
+      <p>When a climber reports a low score or shows signs of suspected altitude sickness, we initiate enhanced monitoring. This includes deployment of a 24-hour continuous pulse oximeter to track oxygen saturation and heart rate trends, plus stethoscope evaluation of lung sounds to catch the early fluid accumulation that signals High-Altitude Pulmonary Edema (HAPE).</p>
+
+      <h3>Medical Interventions on the Trail</h3>
+      <p>When early signs of altitude stress are detected, our guides respond with targeted interventions. Supplemental oxygen is the primary first response to stabilise the climber's condition. We also provide specialised electrolyte solutions to maintain hydration and physiological balance, which is critical at altitudes where fluid loss accelerates dramatically.</p>
+      <p>These early interventions are usually enough to stabilise a climber and allow the climb to continue at adjusted pace. If symptoms persist or worsen, our guides have the authority and training to initiate descent or evacuation immediately. We carry emergency oxygen cylinders on summit night at a ratio of one tank per two climbers, which exceeds the standard most operators run.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:32px">
+        <span class="section-eyebrow">Always Connected</span>
+        <h2 class="section-title">Communication Systems and Chain of Command</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">Effective communication is the link between the mountain teams and our Moshi base office. The infrastructure is built to keep us in contact regardless of weather or location.</p>
+      </div>
+      <div class="protocol-grid">
+        <div class="protocol-card">
+          <h3>Equipment and Coverage</h3>
+          <p>Mobile phones provide excellent coverage on the southern routes. Mountain weather is unpredictable and standard cellular networks become unreliable in heavy rain or thick fog, so every team also carries satellite phones as backup. On the Northern Circuit, where cellular coverage is sparse, satellite phones serve as the primary mode.</p>
+        </div>
+        <div class="protocol-card">
+          <h3>Chain of Command</h3>
+          <p>All mountain communication flows directly from the Lead Guide to the Operations and Rescue Manager at our Moshi base. That direct line eliminates delays and ensures critical decisions are made rapidly by authorised personnel, not by whoever happens to be available.</p>
+        </div>
+        <div class="protocol-card">
+          <h3>Routine Check-Ins</h3>
+          <p>Guides check in with the Moshi office at arrivals at every camp and during major rest stops. Each check-in covers current location, weather conditions, the 1-to-10 wellness scale summary for every climber, and any anticipated deviations from the itinerary.</p>
+        </div>
+        <div class="protocol-card">
+          <h3>Mutual Confirmation Protocol</h3>
+          <p>The decision to initiate a rapid evacuation, particularly by helicopter, requires mutual confirmation between the Lead Guide and the Operations Manager. The guide assesses, calls Moshi, the manager reviews, and the manager explicitly confirms the evacuation order. Only after that mutual confirmation does the helicopter or ground rescue team dispatch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:24px">
+        <span class="section-eyebrow">Four Methods</span>
+        <h2 class="section-title">How We Evacuate Climbers</h2>
+        <p class="section-lead" style="margin:14px auto 0;max-width:680px">When evacuation becomes necessary, we use a tiered approach. The method depends on the climber's condition, the altitude, and the weather.</p>
+      </div>
+      <table class="safety-table"><thead><tr><th>Method</th><th>Description</th><th>Primary Use</th></tr></thead><tbody><tr><td>Helicopter Rescue</td><td>Rapid aerial extraction directly to medical facilities.</td><td>Severe medical emergencies (HAPE, HACE, severe trauma) and time-critical situations.</td></tr><tr><td>Portable Stretcher</td><td>Manual transport by our trained porter and guide teams.</td><td>Non-ambulatory climbers when weather precludes helicopter access or at night.</td></tr><tr><td>KINAPA Wheel Stretcher</td><td>Specially designed wheeled stretcher provided by Kilimanjaro National Park (KINAPA) for mountain terrain.</td><td>Lower altitudes where trails permit wheeled access for non-ambulatory climbers.</td></tr><tr><td>Ambulance Transfer</td><td>Ground transport from designated trailhead access points.</td><td>Final transfer from Horombo Hut (Marangu route) or Mweka Gate to local hospitals.</td></tr></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container">
+    <div style="max-width:980px;margin:0 auto" class="reveal prose-section">
+      <span class="section-eyebrow">Route-Specific</span>
+      <h2 class="section-title">Helicopter Evacuation Points by Route</h2>
+      <p class="section-lead" style="margin-top:14px">We maintain multiple helicopter evacuation points strategically positioned across each route's geography. Regardless of where an emergency occurs, our teams have access to rapid aerial extraction.</p>
+
+      <h3>Western Routes (Machame, Lemosho, Umbwe)</h3>
+      <table class="safety-table"><thead><tr><th>Evacuation Point</th><th>Altitude</th><th>Primary Use</th></tr></thead><tbody><tr><td>Kosovo Camp</td><td>4,800 m</td><td>High-altitude emergencies prior to the summit push</td></tr><tr><td>Barafu Camp</td><td>4,600 m</td><td>Base camp for summit attempt and critical staging area</td></tr><tr><td>Karanga Camp</td><td>4,000 m</td><td>Mid-altitude emergency evacuation</td></tr><tr><td>Baranco Camp</td><td>3,800 m</td><td>Lower-altitude emergency access</td></tr></tbody></table>
+
+      <h3>Northern Circuit Route</h3>
+      <table class="safety-table"><thead><tr><th>Evacuation Point</th><th>Altitude</th><th>Primary Use</th></tr></thead><tbody><tr><td>Kosovo Camp</td><td>4,800 m</td><td>High-altitude emergencies prior to the summit push</td></tr><tr><td>Barafu Camp</td><td>4,600 m</td><td>Base camp for summit attempt and critical staging area</td></tr><tr><td>Kibo Hut</td><td>4,740 m</td><td>High-altitude emergency evacuation point</td></tr><tr><td>Millennium Camp</td><td>3,900 m</td><td>Lower-altitude emergency access</td></tr></tbody></table>
+
+      <h3>Marangu Route (Eastern Route)</h3>
+      <p>The Marangu route has distinct evacuation infrastructure because of its unique hut system, including the ability to drive National Park ambulance services as high as Horombo Hut.</p>
+      <table class="safety-table"><thead><tr><th>Evacuation Point</th><th>Altitude</th><th>Available Services</th></tr></thead><tbody><tr><td>Kibo Hut</td><td>4,740 m</td><td>Primary high-altitude helicopter rescue point</td></tr><tr><td>Horombo Hut</td><td>3,840 m</td><td>Secondary helicopter rescue point and access for National Park ambulance services</td></tr></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div style="max-width:880px;margin:0 auto" class="reveal prose-section">
+      <span class="section-eyebrow">Hospital Partnership</span>
+      <h2 class="section-title">Kilimanjaro Christian Medical Centre</h2>
+      <p style="margin-top:14px">All evacuated clients are transported to the Kilimanjaro Christian Medical Centre (KCMC) in Moshi. KCMC is one of the largest and best-equipped medical centres in the region. The medical staff have extensive experience treating altitude-related conditions including HAPE, HACE, severe dehydration, and traumatic injuries. The hospital maintains intensive care facilities, diagnostic imaging capabilities, and surgical services.</p>
+
+      <div class="insurance-banner">
+        <h2>Mandatory Travel Insurance</h2>
+        <p>All clients climbing with Go Kilimanjaro Treks must obtain comprehensive travel insurance that specifically covers helicopter rescue and emergency medical evacuation. <strong>This is not optional. Climbers who cannot provide proof of adequate insurance will not be permitted to begin their climb.</strong></p>
+        <p style="margin-top:12px">Your policy must explicitly cover:</p>
+        <ul>
+          <li>Helicopter evacuation from any altitude on Mount Kilimanjaro</li>
+          <li>Emergency medical transport to KCMC Hospital in Moshi</li>
+          <li>High-altitude trekking up to at least 6,000 m above sea level</li>
+          <li>Medical treatment at KCMC and other medical facilities</li>
+          <li>Potential repatriation to your home country if required</li>
+        </ul>
+      </div>
+
+      <h3>Rescue Service Costs</h3>
+      <p>Understanding the financial side is critical for every climber. Here is the cost structure that applies to evacuations on Kilimanjaro:</p>
+      <ul>
+        <li><strong>Kilimanjaro National Park ground ambulance:</strong> included in your park fees, no extra charge. Available for lower-altitude evacuations.</li>
+        <li><strong>Helicopter rescue (KiliMedAir), no direct hospital transport:</strong> USD 3,500.</li>
+        <li><strong>Helicopter rescue with direct KCMC transport:</strong> USD 4,000.</li>
+        <li><strong>Hospital stays:</strong> typically USD 2,000 or more depending on severity and length.</li>
+      </ul>
+      <p>Without insurance, total uninsured costs can exceed USD 7,500. With proper insurance, you focus on recovery, not paperwork.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <div style="max-width:1000px;margin:0 auto" class="reveal">
+      <div style="text-align:center;margin-bottom:24px">
+        <span class="section-eyebrow light">Non-Negotiable</span>
+        <h2 class="section-title light">Emergency Triggers for Immediate Evacuation</h2>
+        <p class="section-lead light" style="margin:14px auto 0;max-width:680px">Certain medical conditions require immediate, non-negotiable evacuation. Our WFR-certified guides are trained to recognise them and initiate extraction without delay. In these scenarios, the guide's decision is final and supersedes any summit ambition.</p>
+      </div>
+      <div class="triggers-grid">
+        <div class="trigger-card"><h4>High-Altitude Pulmonary Edema (HAPE)</h4><p>Extreme breathlessness, persistent coughing, chest tightness, fluid accumulation in the lungs.</p></div><div class="trigger-card"><h4>High-Altitude Cerebral Edema (HACE)</h4><p>Confusion, loss of coordination, impaired speech, altered mental status from brain swelling.</p></div><div class="trigger-card"><h4>Severe Trauma</h4><p>Major fractures, spinal cord injuries, or incapacitating physical injuries from falls or accidents.</p></div><div class="trigger-card"><h4>Anaphylactic Shock</h4><p>Severe allergic reactions requiring immediate advanced medical intervention.</p></div><div class="trigger-card"><h4>Severe Systemic Infections</h4><p>Dangerously high body temperatures and systemic deterioration.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container">
+    <div style="max-width:840px;margin:0 auto" class="reveal prose-section">
+      <span class="section-eyebrow">Common Questions</span>
+      <h2 class="section-title">Safety FAQ</h2>
+      <p class="section-lead" style="margin-top:14px">Practical answers to the questions climbers ask most often about safety, insurance, and what happens if something goes wrong.</p>
+      <div class="dest-faq" style="margin-top:24px">
+<details><summary>Is travel insurance really mandatory to climb with Go Kilimanjaro Treks?</summary><p>Yes. Climbers who cannot provide proof of comprehensive travel insurance covering helicopter rescue and emergency medical evacuation will not be permitted to begin their climb. This is non-negotiable. Without insurance, the personal cost of a helicopter evacuation plus hospital treatment can exceed USD 7,500, and uninsured climbers may face delays in receiving emergency care.</p></details><details><summary>What does my travel insurance need to cover?</summary><p>Your policy must explicitly cover: helicopter evacuation from any altitude on Mount Kilimanjaro, emergency medical transport to KCMC Hospital in Moshi, high-altitude trekking up to at least 6,000 m above sea level, medical treatment at KCMC and other medical facilities, and potential repatriation to your home country if required.</p></details><details><summary>How much does helicopter rescue cost on Kilimanjaro?</summary><p>Helicopter rescue services are provided by KiliMedAir. The cost is USD 3,500 for a helicopter rescue without direct hospital transport, or USD 4,000 with direct transport to KCMC Hospital. Hospital stays typically add USD 2,000 or more depending on the severity and length of treatment. With proper insurance, these costs are covered. The Kilimanjaro National Park ground ambulance is included in your park fees at no extra charge.</p></details><details><summary>How often do guides check on my health?</summary><p>Formal assessments happen every two hours throughout the trek. Guides ask you to rate your wellbeing on a 1-to-10 scale, then combine that with objective data: pulse oximetry, heart rate, lung sound checks with a stethoscope to listen for HAPE warning signs. If anything concerning shows up, we initiate 24-hour continuous pulse oximetry and adjust the climb accordingly.</p></details><details><summary>What is a WFR-certified guide?</summary><p>Wilderness First Responder (WFR) is a recognised wilderness medicine certification. Every Go Kilimanjaro Treks guide holds it. The training covers high-altitude physiology, pharmacological management of altitude sickness, patient assessment, and the technical skills required for stretcher evacuation in steep terrain. The certification is what gives a guide the authority and competence to make life-saving decisions under pressure.</p></details><details><summary>How do you communicate with base in an emergency?</summary><p>Lead Guides communicate directly with our Operations and Rescue Manager at the Moshi base office. The southern routes have reliable mobile coverage; the Northern Circuit uses satellite phones as the primary mode of communication. Every team carries satellite as a backup regardless of route. Emergency calls follow a standardised format: location, situation, patient status, interventions already taken, and the specific support requested.</p></details><details><summary>Do you carry oxygen on every climb?</summary><p>Yes. Supplemental oxygen is the primary response to stabilise a climber showing signs of altitude stress. We also maintain emergency oxygen cylinders on summit night at a ratio of one tank per two climbers, which significantly exceeds the standard most operators run.</p></details><details><summary>Where will I be evacuated to if I need a hospital?</summary><p>Kilimanjaro Christian Medical Centre (KCMC) in Moshi. KCMC is one of the largest and best-equipped medical centres in the region. Its staff have extensive experience treating altitude-related conditions including HAPE, HACE, severe dehydration, and traumatic injuries. The hospital maintains intensive care, diagnostic imaging, and surgical services.</p></details><details><summary>Can the guide override my wish to keep climbing?</summary><p>Yes. If a guide determines that severe symptoms require descent or evacuation, the decision is final and supersedes any summit ambition. We will always choose your safety over the summit. The guide's training and the mutual-confirmation protocol with our Moshi base ensure that this decision is made carefully and quickly, never lightly.</p></details><details><summary>What if it's the middle of the night or the weather is bad for a helicopter?</summary><p>We use a tiered evacuation approach. Helicopter rescue is the fastest method for severe emergencies, but it's not the only option. When weather rules out aerial extraction or it's night, we descend the climber using a portable stretcher carried by our trained porter and guide teams. At lower altitudes we can use the KINAPA wheel stretcher provided by the park. From Horombo Hut on Marangu or Mweka Gate, ambulance ground transport is available.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <h2>Climb With <em>Confidence.</em></h2>
+      <p>Talk to Nelson about your insurance, your route, and the way we keep climbers safe. He responds personally within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan My Climb &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa" style="font-size:1rem" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>

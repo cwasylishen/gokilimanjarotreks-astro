@@ -1,0 +1,25 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Go Kilimanjaro Treks logo">
+  <defs>
+    <clipPath id="hexclip">
+      <path d="M 182 100 L 141 173 L 59 173 L 18 100 L 59 27 L 141 27 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Outer hex - lime green border -->
+  <path d="M 191 100 L 148.5 178 L 51.5 178 L 9 100 L 51.5 22 L 148.5 22 Z"
+        fill="none" stroke="#76B82A" stroke-width="3.5"/>
+  <!-- Inner hex - dark brown fill -->
+  <path d="M 182 100 L 141 173 L 59 173 L 18 100 L 59 27 L 141 27 Z" fill="#3A1608"/>
+  <!-- Mountain silhouette — Kilimanjaro profile (flat-topped, Kibo centre, Mawenzi right) -->
+  <path d="M 18 108 L 44 70 L 65 84 L 100 42 L 120 60 L 140 50 L 160 68 L 182 108 Z"
+        fill="#1A0804" clip-path="url(#hexclip)"/>
+  <!-- Banner / lower panel -->
+  <rect x="18" y="108" width="164" height="65" fill="#5A2710" clip-path="url(#hexclip)"/>
+  <!-- Subtle divider line between mountain and banner -->
+  <line x1="30" y1="108" x2="170" y2="108" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- "Gokilimanjaro" — white bold -->
+  <text x="100" y="132" font-family="'Arial Black','Impact',Arial,sans-serif" font-weight="900"
+        font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.3">Gokilimanjaro</text>
+  <!-- "Treks" — lime green italic -->
+  <text x="100" y="158" font-family="Georgia,'Palatino Linotype',serif" font-style="italic"
+        font-size="23" fill="#76B82A" text-anchor="middle">Treks</text>
+</svg>

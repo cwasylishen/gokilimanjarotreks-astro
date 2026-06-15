@@ -1,0 +1,198 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, ORG_LD } from '../data/site';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  canonical?: string;
+  ogType?: string;
+  /** Extra <head> JSON-LD or meta tags */
+  schemas?: object[];
+  /** Hide nav (rarely useful, kept for 404 or campaign pages) */
+  noNav?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage = `${SITE.baseUrl}/images/og-home.jpg`,
+  ogImageAlt = 'Mount Kilimanjaro at sunrise',
+  canonical = SITE.baseUrl + Astro.url.pathname.replace(/\/$/, '') + (Astro.url.pathname === '/' ? '' : ''),
+  ogType = 'website',
+  schemas = [],
+  noNav = false,
+} = Astro.props;
+
+// Combine site-wide Organization schema with page-specific schemas
+const allSchemas = [ORG_LD, ...schemas];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/images/logo-full.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0b1a2e">
+  <meta name="geo.region" content="TZ-25">
+  <meta name="geo.placename" content="Moshi, Tanzania">
+  <meta name="geo.position" content={`${SITE.address.lat};${SITE.address.lng}`}>
+  <meta name="ICBM" content={`${SITE.address.lat}, ${SITE.address.lng}`}>
+
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-latin-400-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-latin-700-normal.woff2" crossorigin>
+
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={canonical}>
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:image:alt" content={ogImageAlt}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content={SITE.name}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+  <meta name="twitter:image:alt" content={ogImageAlt}>
+
+  {allSchemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
+  <slot name="head" />
+</head>
+<body>
+  {!noNav && <Nav />}
+  <slot />
+  <Footer />
+
+  <script>
+    (function () {
+      'use strict';
+      const yr = document.getElementById('year');
+      if (yr) yr.textContent = String(new Date().getFullYear());
+
+      const header = document.querySelector('.site-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          header.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+      }
+
+      // Mobile nav toggle
+      const btn = document.getElementById('nav-toggle');
+      const menu = document.getElementById('nav-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const open = menu.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(open));
+        });
+        document.addEventListener('click', (e) => {
+          const target = e.target as Node;
+          if (!btn.contains(target) && !menu.contains(target)) {
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        menu.querySelectorAll('a').forEach((a) => {
+          a.addEventListener('click', () => {
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Plan Your Trip dropdown
+      const dropdowns = document.querySelectorAll('.nav-dropdown');
+      if (dropdowns.length) {
+        dropdowns.forEach((dd) => {
+          const trigger = dd.querySelector('.nav-dropdown-trigger') as HTMLElement | null;
+          if (!trigger) return;
+          trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const wasOpen = dd.classList.contains('open');
+            dropdowns.forEach((o) => {
+              o.classList.remove('open');
+              const t = o.querySelector('.nav-dropdown-trigger') as HTMLElement | null;
+              t?.setAttribute('aria-expanded', 'false');
+            });
+            if (!wasOpen) {
+              dd.classList.add('open');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+        document.addEventListener('click', (e) => {
+          const target = e.target as HTMLElement;
+          if (!target.closest('.nav-dropdown')) {
+            dropdowns.forEach((o) => {
+              o.classList.remove('open');
+              const t = o.querySelector('.nav-dropdown-trigger') as HTMLElement | null;
+              t?.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            dropdowns.forEach((o) => {
+              o.classList.remove('open');
+              const t = o.querySelector('.nav-dropdown-trigger') as HTMLElement | null;
+              t?.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      }
+
+      // Reveal animation
+      const reveals = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
+      const sweep = () => {
+        for (let i = reveals.length - 1; i >= 0; i--) {
+          const el = reveals[i];
+          const r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight - 40 && r.bottom > 0) {
+            el.classList.add('visible');
+          }
+          if (el.classList.contains('visible')) reveals.splice(i, 1);
+        }
+      };
+      sweep();
+      window.addEventListener('scroll', sweep, { passive: true });
+      window.addEventListener('resize', sweep, { passive: true });
+
+      // WhatsApp float pulse
+      const wa = document.querySelector('.wa-float');
+      if (wa) setTimeout(() => wa.classList.add('pulse'), 2000);
+
+      // Sticky quote pill
+      const quote = document.querySelector('.sticky-quote');
+      if (quote) {
+        const toggleQuote = () => {
+          quote.classList.toggle('visible', window.scrollY > 700);
+        };
+        window.addEventListener('scroll', toggleQuote, { passive: true });
+        toggleQuote();
+      }
+    })();
+  </script>
+
+  <slot name="end-of-body" />
+</body>
+</html>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Charity Climbs","item":"https://gokilimanjarotreks.com/charity-climbs.html"}],"dateModified":"2026-06-15"},{"@context":"https://schema.org","@type":"FAQPage","url":"https://gokilimanjarotreks.com/charity-climbs.html","dateModified":"2026-06-15","mainEntity":[{"@type":"Question","name":"How much does a charity climb actually cost per climber?","acceptedAnswer":{"@type":"Answer","text":"Discussed in the intro call so we can price against group size and your preferred route. Headline: per-climber rates drop as the group grows, and we publish the route inclusions in writing so your trustees know exactly what is and is not in the price."}},{"@type":"Question","name":"How much do climbers typically raise?","acceptedAnswer":{"@type":"Answer","text":"UK and US charity climbers commonly raise \u00a34,000 to \u00a38,000 ($5,000 to $10,000) per person on a sponsored Kilimanjaro climb. Some structured group campaigns raise multiples of that. The number depends entirely on how the campaign is built and run, not on Kilimanjaro itself."}},{"@type":"Question","name":"Do you handle the fundraising platform?","acceptedAnswer":{"@type":"Answer","text":"No, but we make it easy. You run your JustGiving, GoFundMe, or charity-specific platform. We supply the fundraising toolkit (photos, copy, route info, fundraising-page templates) so your climbers can launch quickly and update consistently."}},{"@type":"Question","name":"What is the smallest group you will run?","acceptedAnswer":{"@type":"Answer","text":"We will run a charity climb for as few as two committed climbers, but the per-climber pricing improves at four-plus and again at eight-plus. Most of our charity climbs sit in the 6 to 12 climber range, which fits a single supported group well."}},{"@type":"Question","name":"Can supporters and family come along without climbing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spouses and supporters can join the safari portion before or after the climb, or stay in Moshi at a partner hotel during the climb itself. Some larger campaigns bring a non-climbing fundraising coordinator who travels with the group and handles social updates from base camp altitude."}},{"@type":"Question","name":"Can climbers wear our charity's branded gear on the mountain?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We encourage it for fundraising photos. Branded t-shirts, banners for summit shots, and pre-printed flags all work. We will photograph the moments your campaign team needs without making it a corporate photoshoot."}},{"@type":"Question","name":"What happens to climbers who can't summit?","acceptedAnswer":{"@type":"Answer","text":"Our policy is the same as on any climb: if a climber cannot continue, our team brings them down safely. Fundraising-wise, supporters who pledged based on a summit attempt almost always still pay, and many sponsor the next attempt. We tell every charity client this upfront so the campaign is built around the attempt, not the outcome."}},{"@type":"Question","name":"Is Kilimanjaro safe enough that we can recommend it to supporters?","acceptedAnswer":{"@type":"Answer","text":"Yes, with the right operator. We are Moshi-based, have WFR-certified senior guides, established KCMC hospital and KiliMedAir helicopter rescue partnerships, twice-daily pulse oximetry, and mandatory climber travel insurance covering high-altitude rescue. Our full <a href='safety.html'>safety and rescue protocols</a> are public and your trustees can review them."}}]},{"@context":"https://schema.org","@type":"Service","serviceType":"Charity Fundraising Climb on Mount Kilimanjaro","provider":{"@id":"https://gokilimanjarotreks.com/#organization"},"url":"https://gokilimanjarotreks.com/charity-climbs.html","name":"Charity Fundraising Kilimanjaro Climbs","description":"Sponsored Kilimanjaro climbs for registered charities, school and university groups, corporate CSR programmes, in-memory climbs, and self-funded fundraisers. Group pricing, fundraising toolkit, summit-day photo and video coverage.","areaServed":{"@type":"Country","name":"Worldwide"},"audience":{"@type":"PeopleAudience","name":"Charity fundraisers and supporters"},"dateModified":"2026-06-15"}];
+---
+
+<BaseLayout
+  title="Charity Climbs: Fundraise on Mount Kilimanjaro | Go Kilimanjaro Treks"
+  description="Raise serious money for your cause on Mount Kilimanjaro. Group-friendly per-climber rates, full fundraising toolkit, summit photo and video coverage. Moshi-based operator with WFR-certified guides."
+  ogImage="https://gokilimanjarotreks.com/images/gallery/summit-celebration-group.jpg"
+  ogImageAlt="Climbers celebrating at altitude on a Go Kilimanjaro Treks fundraising climb"
+  schemas={schemas}
+>
+  <main>
+<section class="charity-hero">
+  <img src="/images/gallery/summit-celebration-group.jpg" alt="" aria-hidden="true" class="charity-hero-bg" loading="eager" fetchpriority="high">
+  <div class="container">
+    <span class="charity-hero-eyebrow">For Charity Fundraisers</span>
+    <h1>Climb Kilimanjaro. Raise <em>Serious Money</em> for Your Cause.</h1>
+    <p class="lead">Sponsored Kilimanjaro climbs that consistently outperform other event fundraisers. Group-friendly per-climber rates so more of the total reaches the cause. Run by a Moshi-based operator with WFR-certified senior guides and a 100 percent safety record.</p>
+    <div class="charity-hero-cta">
+      <a href="contact.html?subject=Charity%20climb%20enquiry" class="btn-gold">Plan a Charity Climb &#x2192;</a>
+      <a href="https://wa.me/255677917500?text=Hi%20Nelson%2C%20I%27d%20like%20to%20discuss%20a%20charity%20climb." class="btn-line" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+    </div>
+  </div>
+</section>
+
+<section class="charity-stats">
+  <div class="container">
+    <div class="charity-stats-grid">
+      <div class="charity-stat"><div class="charity-stat-num">22+</div><div class="charity-stat-label">Years On The Mountain</div></div>
+      <div class="charity-stat"><div class="charity-stat-num">270+</div><div class="charity-stat-label">Personal Summits</div></div>
+      <div class="charity-stat"><div class="charity-stat-num">100%</div><div class="charity-stat-label">Safety Record</div></div>
+      <div class="charity-stat"><div class="charity-stat-num">24h</div><div class="charity-stat-label">Quote Turnaround</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section-c">
+  <div class="container">
+    <span class="section-eyebrow-center">Why Kilimanjaro Works</span>
+    <h2 class="section-title-center">A Challenge That <em>Earns Donations</em>.</h2>
+    <p class="section-lead-center">Most charity fundraising events ask supporters to give five pounds because someone ran five kilometres. Kilimanjaro asks the question differently, and supporters answer differently.</p>
+    <div class="why-grid-c">
+<div class="why-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg></div><h3>Raise Serious Money</h3><p>Charity climbs consistently outperform other event fundraisers. The challenge is real, supporters know it, and they sponsor accordingly. Many UK and US charities raise five-figure totals per climber, six-figure totals per group.</p></div>
+<div class="why-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5z"/></svg></div><h3>A Story Sponsors Sponsor</h3><p>Sponsors back people, not amounts. The pre-climb journey, summit photos, and post-climb story create months of authentic content that fundraising platforms reward and supporters share.</p></div>
+<div class="why-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></div><h3>Recovery Built Around the Cause</h3><p>Optional charity-themed extensions: a school visit to a Chagga village near the mountain, a meeting with a local cause-aligned organisation, a brief presentation at Moshi. Brings the cause and the climb together for participants.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="what-c">
+  <div class="container">
+    <span class="section-eyebrow-center">What You Get</span>
+    <h2 class="section-title-center">Everything Built Around <em>The Cause</em>.</h2>
+    <p class="section-lead-center">A turnkey operation that lets your climbers focus on fundraising and your team focus on the campaign. We handle Tanzania.</p>
+    <div class="what-grid-c">
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9z"/></svg></div><h3>Fundraising Toolkit</h3><p>Itinerary one-pagers, photo library, brand-safe copy for fundraising pages, sponsorship form templates. Everything your climbers need to launch a JustGiving, GoFundMe, or charity-specific campaign in an afternoon.</p></div>
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg></div><h3>Group-Friendly Pricing</h3><p>Per-climber rates that drop as group size grows, so more of your fundraised total stays with the cause. Discussed in the planning call once we know your group size and route.</p></div>
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div><h3>Pre-Climb Briefings</h3><p>Optional Zoom briefings for your climbers and any supporters who want to know how the climb actually runs. We answer the safety, gear, and training questions before fundraising kickoff.</p></div>
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"/></svg></div><h3>Summit-Day Coverage</h3><p>Photo and short video coverage from the climb itself, branded with your charity's logo when permitted. Built for fundraising campaign updates, social shares, and the post-climb thank-you.</p></div>
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.142-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div><h3>Verified Reach Logo Use</h3><p>Use of the Go Kilimanjaro Treks operator name and our safety credentials on your fundraising materials, so your supporters know exactly which Tanzania-based operator is running the climb.</p></div>
+<div class="what-card-c"><div><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div><h3>Full Safety + Documentation</h3><p>WFR-certified senior guides, KCMC hospital partnership, KiliMedAir helicopter rescue. The same safety standard every Go Kilimanjaro Treks climber gets, with all documentation your trustees may want to see.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="who-c">
+  <div class="container">
+    <span class="section-eyebrow-center" style="color:var(--gold)">Who We Work With</span>
+    <h2 class="section-title-center" style="color:#fff">A Range of <em>Fundraisers</em>.</h2>
+    <p class="lead">From individual sponsored climbers to charity-led group expeditions, the structure adapts to the cause and the campaign.</p>
+    <div class="who-grid-c">
+<div class="who-card-c"><h3>Registered Charities</h3><p>Cause-aligned organisations running flagship fundraising challenges. From small UK charities to national US 501(c)(3)s. Discreet handling and trustee-friendly documentation.</p></div>
+<div class="who-card-c"><h3>School &amp; University Groups</h3><p>Sixth-form charity weeks, university RAG groups, faculty-led service trips. Family-style group structure, scaled crew, age-appropriate route selection.</p></div>
+<div class="who-card-c"><h3>Corporate CSR Programmes</h3><p>Companies whose CSR partner cause runs annual challenges. Combine an executive-grade climb with measurable fundraising and authentic post-climb content.</p></div>
+<div class="who-card-c"><h3>In-Memory Climbs</h3><p>Individuals or family groups raising money for a cause connected to a person they have lost. Handled with the discretion the moment deserves.</p></div>
+<div class="who-card-c"><h3>Self-Funded Fundraisers</h3><p>Individuals who choose Kilimanjaro as the challenge for their personal fundraising goal. Could be JustGiving, GoFundMe, Crowdfunder, or directly to the cause.</p></div>
+<div class="who-card-c"><h3>Religious &amp; Community Groups</h3><p>Parish or community-led charity climbs raising for partnered cause or international mission. Group rates and a relationship that lasts beyond the climb.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how-c">
+  <div class="container">
+    <span class="section-eyebrow-center">How It Works</span>
+    <h2 class="section-title-center">Four Steps to a <em>Live Campaign</em>.</h2>
+    <p class="section-lead-center">From intro call to summit-day photo handover, the path is direct. The fundraising platform stays yours; we handle the climb.</p>
+    <div class="how-steps-c">
+<div class="how-step-c"><div class="num">1</div><h3>Tell Us About the Cause</h3><p>Half-hour intro call. We learn about the charity, your fundraising target, expected group size, and dates. You learn whether Kilimanjaro is the right fit and which route makes sense.</p></div>
+<div class="how-step-c"><div class="num">2</div><h3>Confirm Route &amp; Numbers</h3><p>We send a costed proposal with per-climber pricing tied to group size. You confirm the route, dates, and approximate number of climbers.</p></div>
+<div class="how-step-c"><div class="num">3</div><h3>Launch the Fundraising Push</h3><p>You publish the fundraising campaign. We deliver the fundraising toolkit, brief your climbers on training, and answer their gear and fitness questions throughout the build-up.</p></div>
+<div class="how-step-c"><div class="num">4</div><h3>We Run the Climb</h3><p>Your climbers land in Tanzania and we take over: airport transfer, briefing, the climb, post-summit logistics, and any cause-themed extensions. You receive trip updates and final summit content for the campaign.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="charity-faq">
+  <div class="container">
+    <span class="section-eyebrow-center">Charity Climb FAQs</span>
+    <h2 class="section-title-center">Common <em>Questions</em>.</h2>
+    <p class="section-lead-center">Answers to the questions charities and fundraisers ask before they sign. For anything not covered here, talk to Nelson directly.</p>
+    <div class="dest-faq">
+<details><summary>How much does a charity climb actually cost per climber?</summary><p>Discussed in the intro call so we can price against group size and your preferred route. Headline: per-climber rates drop as the group grows, and we publish the route inclusions in writing so your trustees know exactly what is and is not in the price.</p></details><details><summary>How much do climbers typically raise?</summary><p>UK and US charity climbers commonly raise £4,000 to £8,000 ($5,000 to $10,000) per person on a sponsored Kilimanjaro climb. Some structured group campaigns raise multiples of that. The number depends entirely on how the campaign is built and run, not on Kilimanjaro itself.</p></details><details><summary>Do you handle the fundraising platform?</summary><p>No, but we make it easy. You run your JustGiving, GoFundMe, or charity-specific platform. We supply the fundraising toolkit (photos, copy, route info, fundraising-page templates) so your climbers can launch quickly and update consistently.</p></details><details><summary>What is the smallest group you will run?</summary><p>We will run a charity climb for as few as two committed climbers, but the per-climber pricing improves at four-plus and again at eight-plus. Most of our charity climbs sit in the 6 to 12 climber range, which fits a single supported group well.</p></details><details><summary>Can supporters and family come along without climbing?</summary><p>Yes. Spouses and supporters can join the safari portion before or after the climb, or stay in Moshi at a partner hotel during the climb itself. Some larger campaigns bring a non-climbing fundraising coordinator who travels with the group and handles social updates from base camp altitude.</p></details><details><summary>Can climbers wear our charity&#x27;s branded gear on the mountain?</summary><p>Absolutely. We encourage it for fundraising photos. Branded t-shirts, banners for summit shots, and pre-printed flags all work. We will photograph the moments your campaign team needs without making it a corporate photoshoot.</p></details><details><summary>What happens to climbers who can&#x27;t summit?</summary><p>Our policy is the same as on any climb: if a climber cannot continue, our team brings them down safely. Fundraising-wise, supporters who pledged based on a summit attempt almost always still pay, and many sponsor the next attempt. We tell every charity client this upfront so the campaign is built around the attempt, not the outcome.</p></details><details><summary>Is Kilimanjaro safe enough that we can recommend it to supporters?</summary><p>Yes, with the right operator. We are Moshi-based, have WFR-certified senior guides, established KCMC hospital and KiliMedAir helicopter rescue partnerships, twice-daily pulse oximetry, and mandatory climber travel insurance covering high-altitude rescue. Our full <a href='safety.html'>safety and rescue protocols</a> are public and your trustees can review them.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-c">
+  <div class="container">
+    <h2>Let's Plan the <em>Climb</em>.</h2>
+    <p>Half an hour on Zoom or WhatsApp video. We learn about the cause, the team, the dates. You learn what the climb actually costs, what we provide, and the realistic fundraising potential for your group. No pitch deck, no commitment.</p>
+    <div class="cta-options">
+      <a href="contact.html?subject=Charity%20climb%20enquiry" class="btn-gold">Schedule a Planning Call &#x2192;</a>
+      <a href="mailto:info@gokilimanjarotreks.com?subject=Charity%20climb%20enquiry" class="btn-line">&#x2709;&#xFE0F; Email Nelson</a>
+      <a href="https://wa.me/255677917500?text=Hi%20Nelson%2C%20I%27d%20like%20to%20discuss%20a%20charity%20climb." class="btn-line" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Now</a>
+    </div>
+  </div>
+</section>
+</main>
+
+</BaseLayout>
