@@ -499,6 +499,128 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
 
 <!-- ── FOOTER ── -->
 
+<!-- Packing-list lead-magnet popup -->
+<div class="pkmd" id="pkmd" role="dialog" aria-modal="true" aria-labelledby="pkmd-title" aria-hidden="true">
+  <div class="pkmd-card">
+    <button class="pkmd-close" id="pkmd-close" aria-label="Close">&#x2715;</button>
+    <div class="pkmd-left">
+      <span class="pkmd-badge">Free PDF Guide</span>
+      <h2 id="pkmd-title">Nelson's <em>Kilimanjaro Packing List.</em></h2>
+      <p>The same print-ready PDF every Go Kilimanjaro Treks climber gets at the pre-trek briefing. Saves you a research afternoon and one bad gear decision.</p>
+      <div class="pkmd-checks">
+        <span class="pkmd-check">Nine kit categories covered</span>
+        <span class="pkmd-check">What to rent in Moshi</span>
+        <span class="pkmd-check">What NOT to bring</span>
+        <span class="pkmd-check">Ten-page print-ready PDF</span>
+      </div>
+    </div>
+    <div class="pkmd-right">
+      <form id="pkmd-form" class="pkmd-form" novalidate>
+        <input type="text" name="_company" class="pkmd-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Home page popup - Packing List PDF download">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="source" value="home-popup">
+        <div>
+          <label for="pkmd-name">First Name</label>
+          <input type="text" id="pkmd-name" name="name" placeholder="Nelson" required minlength="2">
+        </div>
+        <div>
+          <label for="pkmd-email">Email</label>
+          <input type="email" id="pkmd-email" name="email" placeholder="you@example.com" required>
+        </div>
+        <button type="submit" id="pkmd-btn"><span id="pkmd-btn-text">Send Me the PDF &#x2192;</span></button>
+        <p class="pkmd-fine">No spam. Nelson may follow up about your climb. Unsubscribe anytime.</p>
+        <div id="pkmd-error" class="pkmd-error"></div>
+      </form>
+      <div id="pkmd-success" class="pkmd-success">
+        <h3>Asante! Check your email.</h3>
+        <p>Your download is starting now. If it does not, <a href="/downloads/kilimanjaro-packing-list.pdf" download>click here to grab the PDF</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  /* Packing-list popup: 25s delay or desktop exit-intent, once per session, remembers dismissal */
+  (function () {
+    var KEY = 'gkt-pkmd-dismissed-v1';
+    var DELAY_MS = 25000;
+    if (localStorage.getItem(KEY)) return;
+    var modal = document.getElementById('pkmd');
+    var form = document.getElementById('pkmd-form');
+    var closeBtn = document.getElementById('pkmd-close');
+    var btn = document.getElementById('pkmd-btn');
+    var btnText = document.getElementById('pkmd-btn-text');
+    var success = document.getElementById('pkmd-success');
+    var errBox = document.getElementById('pkmd-error');
+    if (!modal || !form) return;
+    function open() {
+      if (sessionStorage.getItem(KEY + '-shown')) return;
+      sessionStorage.setItem(KEY + '-shown', '1');
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      var n = document.getElementById('pkmd-name');
+      if (n) n.focus();
+    }
+    function dismiss() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      localStorage.setItem(KEY, String(Date.now()));
+    }
+    setTimeout(open, DELAY_MS);
+    /* exit intent on desktop */
+    var exitArmed = false;
+    setTimeout(function () { exitArmed = true; }, 4000);
+    document.addEventListener('mouseout', function (e) {
+      if (!exitArmed) return;
+      if (e.relatedTarget) return;
+      if (e.clientY > 12) return;
+      if (sessionStorage.getItem(KEY + '-shown')) return;
+      open();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', dismiss);
+    modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) dismiss(); });
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      errBox.classList.remove('show');
+      if (form.elements._company.value) return;
+      if (!form.elements.email.value.includes('@')) {
+        errBox.textContent = 'Please enter a valid email address.';
+        errBox.classList.add('show');
+        return;
+      }
+      btn.disabled = true;
+      btnText.textContent = 'Sending...';
+      try {
+        var res = await fetch('https://formsubmit.co/ajax/info@gokilimanjarotreks.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (!res.ok) throw new Error('submit failed');
+        form.style.display = 'none';
+        success.classList.add('show');
+        localStorage.setItem(KEY, String(Date.now()));
+        setTimeout(function () {
+          var a = document.createElement('a');
+          a.href = '/downloads/kilimanjaro-packing-list.pdf';
+          a.download = 'gokilimanjarotreks-packing-list.pdf';
+          document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        }, 700);
+      } catch (err) {
+        btn.disabled = false;
+        btnText.textContent = 'Send Me the PDF →';
+        errBox.textContent = 'Something went wrong. Please try again or email info@gokilimanjarotreks.com.';
+        errBox.classList.add('show');
+      }
+    });
+  })();
+</script>
+
 <script is:inline>
   /* Moshi live time + weather widget (open-meteo, no API key) */
   (function () {
