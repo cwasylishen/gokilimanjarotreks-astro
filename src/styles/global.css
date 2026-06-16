@@ -27,15 +27,15 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 @media(min-width:1024px){.nav-desktop{display:flex;align-items:center;gap:4px}}
 .nav-desktop a{color:#0b1a2e;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px;transition:color .2s}
 .nav-desktop a:hover,.nav-desktop a.active{color:var(--amber-cta)}
-.nav-desktop .btn-wa{background:var(--amber-cta);color:var(--white);padding:10px 20px;border-radius:10px;font-weight:600;font-size:.875rem;transition:background .2s}
-.nav-desktop .btn-wa:hover{background:var(--amber-hover)}
+.nav-desktop .btn-cta{background:var(--amber-cta);color:var(--white);padding:10px 20px;border-radius:10px;font-weight:600;font-size:.875rem;transition:background .2s}
+.nav-desktop .btn-cta:hover{background:var(--amber-hover)}
 .nav-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;color:var(--ink)}
 .nav-toggle span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px}
 @media(min-width:1024px){.nav-toggle{display:none}}
 .nav-mobile{display:none;position:fixed;top:100px;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:24px 28px 32px;border-bottom:1px solid rgba(11,26,46,.1);z-index:199}
 .nav-mobile.open{display:flex;flex-direction:column;gap:4px}
 .nav-mobile a{color:#0b1a2e;font-size:1rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(11,26,46,.07)}
-.nav-mobile .btn-wa-mob{margin-top:16px;background:var(--amber-cta);color:var(--white);padding:14px 24px;border-radius:12px;font-weight:700;font-size:1rem;text-align:center}
+.nav-mobile .btn-cta-mob{margin-top:16px;background:var(--amber-cta);color:var(--white);padding:14px 24px;border-radius:12px;font-weight:700;font-size:1rem;text-align:center}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
 .page-hero{padding:160px 0 80px;background:var(--ink);position:relative;overflow:hidden}
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber-cta),var(--gold),var(--amber-cta))}
@@ -617,8 +617,8 @@ img{display:block;max-width:100%}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(11,26,46,0.08);transition:box-shadow .3s}
 .nav-desktop a{color:#0b1a2e;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px;transition:color .2s,background .2s}
 .nav-desktop a:hover{color:var(--amber-cta);background:rgba(11,26,46,0.05)}
-.nav-desktop .btn-wa{background:var(--amber-cta);color:var(--white);padding:10px 20px;border-radius:10px;font-weight:600;font-size:.875rem;transition:background .2s,transform .2s}
-.nav-desktop .btn-wa:hover{background:var(--amber-hover);transform:translateY(-1px)}
+.nav-desktop .btn-cta{background:var(--amber-cta);color:var(--white);padding:10px 20px;border-radius:10px;font-weight:600;font-size:.875rem;transition:background .2s,transform .2s}
+.nav-desktop .btn-cta:hover{background:var(--amber-hover);transform:translateY(-1px)}
 .nav-toggle span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s,opacity .25s}
 .nav-mobile a{color:#0b1a2e;font-size:1rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(11,26,46,.07);transition:color .2s}
 .nav-mobile a:hover{color:var(--amber-cta)}

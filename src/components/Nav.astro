@@ -29,7 +29,7 @@ const inDropdown = NAV_DROPDOWN.some((item) => isActive(item.href));
       {NAV_AFTER.map((item) => (
         <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
       ))}
-      <a href={SITE.whatsapp} class="btn-wa" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a href="/contact" class="btn-cta">Contact Us</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span><span></span><span></span>
@@ -50,5 +50,5 @@ const inDropdown = NAV_DROPDOWN.some((item) => isActive(item.href));
   {NAV_AFTER.map((item) => (
     <a href={item.href}>{item.label}</a>
   ))}
-  <a href={SITE.whatsapp} class="btn-wa-mob" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+  <a href="/contact" class="btn-cta-mob">Contact Us</a>
 </nav>
