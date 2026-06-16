@@ -28,7 +28,6 @@ export const NAV_DROPDOWN: NavItem[] = [
 export const NAV_AFTER: NavItem[] = [
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About Us' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export const FOOTER_KILIMANJARO: NavItem[] = [

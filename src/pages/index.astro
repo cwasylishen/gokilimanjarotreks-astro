@@ -499,4 +499,63 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
 
 <!-- ── FOOTER ── -->
 
+<script is:inline>
+  /* Moshi live time + weather widget (open-meteo, no API key) */
+  (function () {
+    var moshi = document.getElementById('moshi-now');
+    if (!moshi) return;
+    var tEl = document.getElementById('mn-time');
+    var tempEl = document.getElementById('mn-temp');
+    var iconEl = document.getElementById('mn-icon');
+    var condEl = document.getElementById('mn-cond');
+
+    /* Africa/Nairobi == EAT (UTC+3), same as Moshi */
+    var fmtTime = new Intl.DateTimeFormat('en-GB', {
+      hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Nairobi'
+    });
+    var updateTime = function () { if (tEl) tEl.textContent = fmtTime.format(new Date()); };
+    updateTime();
+    setInterval(updateTime, 30000);
+
+    /* WMO weather code -> emoji + label */
+    var wmo = function (code) {
+      var m = {
+        0: ['☀️', 'Clear sky'], 1: ['☀️', 'Mostly clear'],
+        2: ['⛅', 'Partly cloudy'], 3: ['☁️', 'Overcast'],
+        45: ['🌫️', 'Fog'], 48: ['🌫️', 'Freezing fog'],
+        51: ['🌦️', 'Light drizzle'], 53: ['🌦️', 'Drizzle'],
+        55: ['🌧️', 'Heavy drizzle'], 61: ['🌧️', 'Light rain'],
+        63: ['🌧️', 'Rain'], 65: ['🌧️', 'Heavy rain'],
+        66: ['🌧️', 'Freezing rain'], 67: ['🌧️', 'Freezing rain'],
+        71: ['🌨️', 'Light snow'], 73: ['🌨️', 'Snow'],
+        75: ['🌨️', 'Heavy snow'], 77: ['🌨️', 'Snow grains'],
+        80: ['🌦️', 'Rain showers'], 81: ['🌦️', 'Rain showers'],
+        82: ['🌧️', 'Heavy showers'], 85: ['🌨️', 'Snow showers'],
+        86: ['🌨️', 'Heavy snow showers'], 95: ['⛈️', 'Thunderstorm'],
+        96: ['⛈️', 'Thunderstorm, hail'], 99: ['⛈️', 'Severe thunderstorm']
+      };
+      return m[code] || ['🌤️', 'Variable'];
+    };
+
+    var url = 'https://api.open-meteo.com/v1/forecast?latitude=-3.3731&longitude=37.3441&current=temperature_2m,weather_code&timezone=Africa%2FNairobi';
+    var fetchWx = function () {
+      fetch(url, { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          var c = d && d.current;
+          if (!c || c.temperature_2m == null) return;
+          var tc = Math.round(c.temperature_2m);
+          var tf = Math.round(tc * 9 / 5 + 32);
+          if (tempEl) tempEl.textContent = tc + '°C / ' + tf + '°F';
+          var wx = wmo(c.weather_code);
+          if (iconEl) iconEl.textContent = wx[0];
+          if (condEl) condEl.textContent = wx[1];
+        })
+        .catch(function () { /* keep skeleton, no error noise */ });
+    };
+    fetchWx();
+    setInterval(fetchWx, 600000);
+  })();
+</script>
+
 </BaseLayout>
