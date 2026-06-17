@@ -19,6 +19,8 @@ export const NAV_DROPDOWN: NavItem[] = [
   { href: '/travel-guide', label: 'Travel Guide' },
   { href: '/packing-list', label: 'Packing List' },
   { href: '/training-plan', label: 'Training Plan' },
+  { href: '/food-on-the-mountain', label: 'Food on the Mountain' },
+  { href: '/hygiene', label: 'Hygiene & Cleanliness' },
   { href: '/compare-routes', label: 'Compare Routes' },
   { href: '/choose-operator', label: 'Choose an Operator' },
   { href: '/glacier-tour', label: 'Glacier Tour' },
