@@ -9,6 +9,9 @@ export const SITE = {
   phoneIntl: '+255677917500',
   email: 'info@gokilimanjarotreks.com',
   whatsapp: 'https://wa.me/255677917500',
+  // Google Apps Script web-app URL for logging leads to a Sheet. Leave '' to
+  // disable; paste the deployed /exec URL here to switch lead logging on.
+  sheetEndpoint: '',
   address: {
     locality: 'Moshi',
     region: 'Kilimanjaro',

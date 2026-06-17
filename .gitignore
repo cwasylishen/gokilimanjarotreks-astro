@@ -19,3 +19,7 @@ pnpm-debug.log*
 .idea/
 .env
 .env.*
+
+# Python
+__pycache__/
+*.pyc
