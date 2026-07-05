@@ -60,6 +60,7 @@ export const FOOTER_COMPANY: NavItem[] = [
   { href: '/faith-vision-foundation', label: 'Faith Vision Foundation' },
   { href: '/charity-climbs', label: 'Charity Climbs' },
   { href: '/corporate-climbs', label: 'Corporate Team Climbs' },
+  { href: '/weddings', label: 'Kilimanjaro Weddings' },
   { href: '/partners', label: 'Travel Agency Partners' },
   { href: '/contact', label: 'Contact' },
 ];

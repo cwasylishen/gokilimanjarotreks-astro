@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Kilimanjaro Weddings", "item": "https://gokilimanjarotreks.com/weddings" } ] },
+  { "@context": "https://schema.org", "@type": "Service",
+    "name": "Kilimanjaro Wedding and Event Planning",
+    "serviceType": "Mountain wedding ceremonies, engagements, and celebrations on Mount Kilimanjaro",
+    "description": "Bespoke wedding ceremonies, engagements, birthdays, and family celebrations on Mount Kilimanjaro. Two arrangements: an accessible Shira Plateau ceremony at 3,600 to 3,840 m for up to 40 guests, or a full summit wedding at Uhuru Peak (5,895 m). Legal Tanzanian marriages or symbolic ceremonies, Maasai cultural blessings, luxury glamping, professional catering, photography and videography.",
+    "provider": { "@id": "https://gokilimanjarotreks.com/#organization" },
+    "areaServed": "Mount Kilimanjaro, Tanzania",
+    "url": "https://gokilimanjarotreks.com/weddings" },
+  { "@context": "https://schema.org", "@type": "FAQPage", "url": "https://gokilimanjarotreks.com/weddings", "mainEntity": [
+    { "@type": "Question", "name": "Can you legally get married on Mount Kilimanjaro?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A licensed Tanzanian government registrar can travel to your ceremony site on the mountain and conduct a legally binding marriage, with a Tanzanian Marriage Certificate issued on completion. You need a Certificate of No Impediment from your home country and either a 21-day notice period or a Special Marriage License waiver. Tanzanian marriages are recognized internationally, including in the United States. Many couples instead choose a symbolic ceremony with no legal paperwork and complete creative freedom." } },
+    { "@type": "Question", "name": "Can older family members attend a Kilimanjaro wedding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, that is exactly what our Shira Plateau arrangement is for. The ceremony takes place at Shira Camp 1 (3,600 m) or Shira Camp 2 (3,840 m), reached over 2 to 3 gentle days via the Lemosho Route with a Morum Barrier drop-off. Guests who cannot manage demanding trekking are supported by our guides and crew the whole way, so grandparents and less active family members can be there for the ceremony. We host up to 40 guests." } },
+    { "@type": "Question", "name": "Can we get married at the summit of Kilimanjaro?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Full Summit arrangement holds the ceremony at Uhuru Peak itself, 5,895 m above sea level, the highest point in Africa. It is designed for adventurous couples who are comfortable with the physical demands of a full climb, with our guides supporting you the entire way." } },
+    { "@type": "Question", "name": "How much does a Kilimanjaro wedding cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every celebration is quoted individually because the price depends on group size, ceremony type (legal or symbolic), catering and cocktail choices, glamping level, hotels and transport, trip length (3 to 7 days), the size of the celebration crew, and park fees for your group. Contact Nelson with your vision and guest count for a personalized proposal. A deposit of 25 to 30 percent secures your date." } },
+    { "@type": "Question", "name": "Can we have a photographer and drone at our Kilimanjaro wedding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We coordinate professional mountain wedding photographers and videographers, including cinematic editing and a same-day highlight reel. Drone and professional filming on Kilimanjaro requires an official permit from Tanzania's Ministry of Natural Resources and Tourism, which we arrange in advance so your day is documented without interruption." } } ] }
+];
+---
+
+<BaseLayout
+  title="Kilimanjaro Weddings: Get Married on the Roof of Africa | Go Kilimanjaro Treks"
+  description="Exchange vows on Mount Kilimanjaro. An accessible Shira Plateau ceremony your whole family can attend (up to 40 guests), or a full summit wedding at Uhuru Peak. Legal or symbolic ceremonies, Maasai blessings, luxury glamping, and professional planning."
+  ogImage="https://gokilimanjarotreks.com/images/gallery/kilimanjaro-dawn-pink-flowers.jpg"
+  ogImageAlt="Mount Kilimanjaro at dawn framed by wildflowers, the setting for mountain weddings"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/gallery/kilimanjaro-dawn-pink-flowers.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Weddings &bull; Engagements &bull; Celebrations</span>
+    <h1>Married on the<br><em>Roof of Africa.</em></h1>
+    <p>Exchange vows at sunrise on Africa's highest mountain, with your family gathered on the Shira Plateau and Kilimanjaro's peak as your witness. Legal or symbolic, intimate or forty guests strong, we plan and run the whole celebration so you only have to say yes. Again.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Plan Our Ceremony &#x2192;</a>
+      <a href="https://wa.me/255677917500" class="btn-ghost" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Two Ways to Say I Do</span>
+      <h2 class="section-title">Choose Your Ceremony</h2>
+      <p class="section-lead" style="margin-top:12px">One arrangement brings the whole family, the other takes your vows to the highest point in Africa. Both are private, fully catered, and run by the same mountain crew that has guided climbers here for over a decade.</p>
+    </div>
+    <div class="packages-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));display:grid;gap:26px">
+      <div class="package-card reveal" style="background:var(--ink);border-radius:20px;padding:34px;color:#fff">
+        <div class="pkg-badge">Most Popular &bull; Family Friendly</div>
+        <h3 class="pkg-name" style="font-family:var(--font-display);font-size:1.45rem;font-weight:700;margin:14px 0 10px">The Shira Plateau Ceremony</h3>
+        <p class="pkg-desc" style="color:rgba(255,255,255,.78);line-height:1.7">Two to three days on the Lemosho Route with a Morum Barrier drop-off, and a ceremony at Shira Camp 1 (3,600 m) or Shira Camp 2 (3,840 m). The plateau is a natural amphitheater of wildflowers and volcanic rock with the peak as your backdrop, and the gentle approach means grandparents and less active guests can be standing beside you when it matters.</p>
+        <div class="pkg-highlights" style="margin:16px 0">
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Up to 40 guests, every age and fitness level supported</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Ceremony day on the plateau, celebration dinner under the stars</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Moderate altitude, comfortable for most healthy guests</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85)">Perfect for weddings, engagements, birthdays, and family milestones</div>
+        </div>
+        <a href="/contact" class="pkg-cta" style="display:inline-block;background:var(--amber-cta);color:#fff;padding:13px 28px;border-radius:10px;font-weight:700">Plan a Shira Ceremony &#x2192;</a>
+      </div>
+      <div class="package-card reveal" style="background:var(--ink);border-radius:20px;padding:34px;color:#fff">
+        <div class="pkg-badge">For the Bold</div>
+        <h3 class="pkg-name" style="font-family:var(--font-display);font-size:1.45rem;font-weight:700;margin:14px 0 10px">The Uhuru Peak Summit Wedding</h3>
+        <p class="pkg-desc" style="color:rgba(255,255,255,.78);line-height:1.7">A full climb, and a ceremony at the very top: Uhuru Peak, 5,895 metres, the highest point on the African continent. For couples who want their wedding day to be a genuine test of spirit, climbed together and sealed above the clouds. Our guides support you every step to the summit and back.</p>
+        <div class="pkg-highlights" style="margin:16px 0">
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Vows at the summit sign, the most iconic backdrop in Africa</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Full expedition support, acclimatization-first itinerary</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85);margin-bottom:8px">Flexible 5 to 7 day routes matched to your experience</div>
+          <div class="pkg-hl" style="color:rgba(255,255,255,.85)">A story no other couple at the dinner party will ever top</div>
+        </div>
+        <a href="/contact" class="pkg-cta" style="display:inline-block;background:var(--amber-cta);color:#fff;padding:13px 28px;border-radius:10px;font-weight:700">Plan a Summit Wedding &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container" style="max-width:840px">
+    <div class="reveal prose-section">
+      <h2><span class="num">1.</span> Three Days, One Unforgettable Ceremony</h2>
+      <p>The signature Shira celebration runs like this:</p>
+      <h3>Day 1: Londorossi Gate to Shira Camp 1 (3,600 m)</h3>
+      <p>Permits are finalized at Londorossi Gate and the trail climbs through rainforest alive with colobus monkeys and exotic birds, opening onto moorland past the Morum Barrier (3,480 m), where guests who prefer to skip the trekking are dropped off. By late afternoon the whole party is at Shira Camp 1 with the snowy peak ahead, and a welcome dinner under the stars sets the tone.</p>
+      <h3>Day 2: Across the Plateau to Shira Camp 2 (3,840 m). Ceremony day.</h3>
+      <p>A short, scenic walk hand in hand across the plateau, wildflowers and volcanic rock in every direction. Arriving early leaves the afternoon for final preparations, then the ceremony: a government registrar for a legal marriage, or a symbolic ceremony written entirely on your terms. Dinner that night is the celebration meal, with champagne, a custom cake, and a few thousand stars.</p>
+      <h3>Day 3: Descent and Departure</h3>
+      <p>A gentle morning, certificates of achievement at the gate, and a transfer back to Moshi or Arusha. Many couples continue straight into a <a href="/safari">safari</a> or a Zanzibar beach escape; we arrange both.</p>
+
+      <h2><span class="num">2.</span> Legal Marriage or Symbolic Ceremony</h2>
+      <p><strong>Legal:</strong> a licensed Tanzanian registrar travels to your mountain ceremony site and conducts an officially recognized marriage, with a Tanzanian Marriage Certificate issued on completion. You will need a Certificate of No Impediment from home and either the standard 21-day notice or a Special Marriage License waiver. The certificate is recognized internationally, including in the United States, with no further registration needed.</p>
+      <p><strong>Symbolic:</strong> no paperwork, no constraints. Write your own vows, include your own rituals and traditions, and design the ceremony you actually want. Ideal for couples already legally married at home, and for elopements. It carries every bit of the meaning with none of the bureaucracy.</p>
+      <p><strong>Either way, we can bring Tanzania into the ceremony:</strong> a Maasai blessing performed in traditional dress, Maasai dancing, the songs of Kilimanjaro that have echoed on these slopes for generations, African rhumba to get everyone moving, and a menu of Tanzanian dishes and cocktails.</p>
+
+      <h2><span class="num">3.</span> Luxury Camping, Properly Done</h2>
+      <p>We use private camping exclusively, never shared huts, so your celebration has the mountain to itself. Private sleeping tents with quality furnishings, a large mess tent with professional table settings for dining and dancing, a shower tent with hot water service, private toilets at one per two to three guests, and a lounge area to gather in. Your ceremony space is dressed with seasonal flowers, fabric draping, lighting, and an altar designed around your vision, with sound systems and weather contingency planning handled by our crew.</p>
+
+      <h2><span class="num">4.</span> Food, Photos, and the Details</h2>
+      <p>Our chefs cook every meal fresh on the mountain and handle vegetarian, vegan, gluten-free, and allergy-specific diets as standard. Ceremony day brings a custom celebration menu planned with the chef, champagne toasts, wine service, and a custom cake.</p>
+      <p>Professional mountain wedding photographers and videographers document the day, with cinematic editing, high-resolution galleries, and a same-day highlight reel if you want to relive it that evening. Drone filming is available and spectacular here; it requires an official permit from the Ministry of Natural Resources and Tourism, which we coordinate in advance.</p>
+
+      <h2><span class="num">5.</span> How Planning Works</h2>
+      <ul>
+        <li><strong>6 months out:</strong> consultation, package and date confirmed, deposit (25 to 30 percent) secures your date.</li>
+        <li><strong>4 months out:</strong> guest list, dietary requirements, photography preferences, and legal paperwork if applicable.</li>
+        <li><strong>2 months out:</strong> ceremony design, menu finalized, decor planned, guest communications begin.</li>
+        <li><strong>4 weeks out:</strong> final confirmations, equipment ordered, guides and crew assigned, weather contingencies set.</li>
+        <li><strong>2 weeks out:</strong> guest briefing, health questionnaires, packing guidance, logistics locked.</li>
+        <li><strong>The day:</strong> our coordinators run everything. You get married.</li>
+      </ul>
+
+      <h2><span class="num">6.</span> Pricing</h2>
+      <p>Every celebration is quoted individually, because a ten-person symbolic elopement and a forty-guest legal wedding with a glamping setup are different events. Your proposal is built from group size, ceremony type, catering and cocktail choices, comfort level, hotels and transport, trip length (3 to 7 days), the celebration crew you want, and park fees for your group, all itemized clearly. Tell Nelson your vision and guest count and he will come back within 24 hours with a personalized proposal.</p>
+      <div class="callout"><strong>Make a honeymoon of it:</strong> most couples pair the ceremony with a <a href="/safaris">Serengeti safari</a> or a Zanzibar beach week. Booked together, the logistics simply flow on from the mountain.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Where Love Meets the <em>Roof of Africa.</em></h2>
+      <p>Above the clouds, where the air is thin and the world falls silent, the human spirit finds its truest connection. Tell Nelson about your day and he will design the celebration around it. Personal reply within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Start Planning Our Wedding &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa-lg" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</BaseLayout>
