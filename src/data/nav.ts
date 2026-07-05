@@ -15,6 +15,7 @@ export const NAV_MAIN: NavItem[] = [
 export const NAV_DROPDOWN_LABEL = 'Plan Your Trip';
 
 export const NAV_DROPDOWN: NavItem[] = [
+  { href: '/prices', label: 'Climb Prices' },
   { href: '/safety', label: 'Safety & Rescue' },
   { href: '/travel-guide', label: 'Travel Guide' },
   { href: '/packing-list', label: 'Packing List' },
@@ -34,7 +35,9 @@ export const NAV_AFTER: NavItem[] = [
 
 export const FOOTER_KILIMANJARO: NavItem[] = [
   { href: '/kilimanjaro', label: 'All Routes' },
+  { href: '/prices', label: 'Prices & Group Rates' },
   { href: '/compare-routes', label: 'Compare Routes' },
+  { href: '/kosovo-camp', label: 'Kosovo Camp Upgrade' },
   { href: '/packing-list', label: 'Packing List' },
   { href: '/training-plan', label: 'Training Plan' },
   { href: '/glacier-tour', label: 'Glacier Tour' },

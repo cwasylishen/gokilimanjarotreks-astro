@@ -178,6 +178,19 @@ const schemas = [{"@context":"https://schema.org","@type":"TravelAgency","name":
     var form = document.getElementById('enquiry-form');
     var status = document.getElementById('form-status');
     if (!form || !status) return;
+    /* Pre-fill from the price calculator (/prices?trip=...&group=N) */
+    try {
+      var q = new URLSearchParams(location.search);
+      var trip = q.get('trip'); var group = q.get('group');
+      if (trip && form.elements.message && !form.elements.message.value) {
+        form.elements.message.value = 'I used the price calculator and I\'m interested in the ' + trip
+          + (group ? ' for ' + group + (group === '1' ? ' person' : ' people') : '') + '. Please send me a quote.';
+      }
+      if (group && form.elements.group_size) {
+        var map = { 1: 'solo', 2: 'couple', 3: 'small', 4: 'small', 5: 'small', 6: 'medium', 7: 'medium', 8: 'medium' };
+        if (map[group]) form.elements.group_size.value = map[group];
+      }
+    } catch (_) {}
     function show(msg, ok) {
       status.hidden = false;
       status.style.background = ok ? '#dcfce7' : '#fee2e2';

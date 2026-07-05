@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Official Go Kilimanjaro Treks price list (per person, USD, all-inclusive),
+// by group size 1-8. Source: Nelson's 2026 price sheet.
+const PRICES = [
+  { days: 5, route: 'Marangu Route', slug: 'marangu', anchor: '/kilimanjaro#marangu', p: [2140, 1910, 1860, 1800, 1710, 1670, 1520, 1470] },
+  { days: 5, route: 'Umbwe Route', slug: 'umbwe', anchor: '/kilimanjaro#umbwe', p: [2220, 2160, 2105, 2020, 1890, 1710, 1660, 1540] },
+  { days: 6, route: 'Machame Route', slug: 'machame-6', anchor: '/kilimanjaro#machame', p: [2770, 2600, 2550, 2470, 2370, 2290, 2200, 2000] },
+  { days: 6, route: 'Marangu Route', slug: 'marangu-6', anchor: '/kilimanjaro#marangu', p: [2480, 2310, 2200, 2110, 2050, 1990, 1920, 1850] },
+  { days: 6, route: 'Rongai Route', slug: 'rongai-6', anchor: '/kilimanjaro#rongai', p: [2570, 2490, 2420, 2360, 2300, 2210, 2120, 2060] },
+  { days: 6, route: 'Umbwe Route', slug: 'umbwe-6', anchor: '/kilimanjaro#umbwe', p: [2510, 2405, 2390, 2305, 2210, 2120, 2060, 1985] },
+  { days: 6, route: 'Lemosho Route', slug: 'lemosho-6', anchor: '/kilimanjaro#lemosho', p: [2690, 2600, 2490, 2400, 2290, 2170, 2120, 2020] },
+  { days: 7, route: 'Machame Route', slug: 'machame-7', anchor: '/kilimanjaro#machame', p: [2860, 2510, 2460, 2380, 2300, 2200, 2120, 2090] },
+  { days: 7, route: 'Rongai Route', slug: 'rongai-7', anchor: '/kilimanjaro#rongai', p: [2905, 2680, 2500, 2430, 2380, 2305, 2190, 2140] },
+  { days: 7, route: 'Lemosho Route (Morum Drop Off)', slug: 'lemosho-7', anchor: '/kilimanjaro#lemosho', p: [2950, 2590, 2470, 2410, 2370, 2290, 2200, 2105] },
+  { days: 8, route: 'Machame Route (Moir Camp)', slug: 'machame-8', anchor: '/kilimanjaro#machame', flagship: true, p: [3050, 2900, 2820, 2750, 2610, 2520, 2470, 2325] },
+  { days: 8, route: 'Lemosho Route (Big Tree)', slug: 'lemosho-8', anchor: '/kilimanjaro#lemosho', p: [3120, 2940, 2850, 2790, 2685, 2610, 2500, 2410] },
+  { days: 8, route: 'Northern Circuit', slug: 'northern-8', anchor: '/kilimanjaro#northern', p: [3120, 2940, 2850, 2790, 2685, 2610, 2500, 2410] },
+  { days: 9, route: 'Northern Circuit', slug: 'northern-9', anchor: '/kilimanjaro#northern', p: [3510, 3400, 3290, 3210, 3160, 3100, 2990, 2940] },
+];
+
+const DURATIONS = [...new Set(PRICES.map((r) => r.days))];
+const fmt = (n) => '$' + n.toLocaleString('en-US');
+
+const offers = PRICES.map((r) => ({
+  '@type': 'Product',
+  name: `${r.days}-Day ${r.route} Kilimanjaro Climb`,
+  description: `All-inclusive ${r.days}-day guided Kilimanjaro climb on the ${r.route} with Go Kilimanjaro Treks. Per-person price varies by group size (1 to 8 climbers).`,
+  brand: { '@type': 'Brand', name: 'Go Kilimanjaro Treks' },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: r.p[7],
+    highPrice: r.p[0],
+    offerCount: 8,
+    url: 'https://gokilimanjarotreks.com/prices',
+    availability: 'https://schema.org/InStock',
+  },
+}));
+
+const schemas = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gokilimanjarotreks.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Climb Kilimanjaro', item: 'https://gokilimanjarotreks.com/kilimanjaro' },
+    { '@type': 'ListItem', position: 3, name: 'Prices', item: 'https://gokilimanjarotreks.com/prices' } ] },
+  { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Kilimanjaro Climb Prices by Route and Group Size',
+    url: 'https://gokilimanjarotreks.com/prices', numberOfItems: PRICES.length,
+    itemListElement: offers.map((o, i) => ({ '@type': 'ListItem', position: i + 1, item: o })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', url: 'https://gokilimanjarotreks.com/prices', mainEntity: [
+    { '@type': 'Question', name: 'How much does it cost to climb Kilimanjaro with Go Kilimanjaro Treks?', acceptedAnswer: { '@type': 'Answer', text: 'Between $1,470 and $3,510 per person, all-inclusive, depending on route, number of days, and group size. A 5-day Marangu climb in a group of 8 is $1,470 per person. The 9-day Northern Circuit as a solo climber is $3,510. Our flagship 8-day Machame with the Moir Camp acclimatization day runs $2,325 to $3,050 per person.' } },
+    { '@type': 'Question', name: 'What is included in the price?', acceptedAnswer: { '@type': 'Answer', text: 'Everything on the mountain: national park entrance and conservation fees, all camping equipment including 4-season tents, three fresh-cooked meals a day plus snacks, professional guides and porters, a cook, first aid equipment with supplemental oxygen, pre-climb briefing and gear check, airport transfers, and hotel accommodation in Moshi before and after the climb.' } },
+    { '@type': 'Question', name: 'Why does the price drop as the group gets bigger?', acceptedAnswer: { '@type': 'Answer', text: 'Fixed costs like vehicles, guides, and camp logistics are shared across the group. A climber in a group of 8 typically pays $500 to $700 less than a solo climber on the same route. Bring friends or family and everyone saves.' } },
+    { '@type': 'Question', name: 'Are there hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. Park fees, which make up the largest share of any legitimate Kilimanjaro price, are included. The only things not covered are international flights, travel insurance, your Tanzania visa, personal gear, and tips for the mountain crew.' } },
+    { '@type': 'Question', name: 'What is the Kosovo Camp upgrade?', acceptedAnswer: { '@type': 'Answer', text: 'Kosovo Camp (4,870 m) is the highest summit base camp on Kilimanjaro, 220 metres above the standard Barafu Camp. Sleeping there shortens summit night by 1 to 2 hours and avoids the steep rocky section in the dark. It needs a special permit and extra logistics, typically $150 to $200 per person on top of the standard price, and we recommend it for well-acclimatized climbers on 7 to 9 day itineraries.' } },
+    { '@type': 'Question', name: 'Why not just book the cheapest operator?', acceptedAnswer: { '@type': 'Answer', text: 'Park fees alone cost every operator roughly the same, so a rock-bottom price can only come from cutting guide quality, porter welfare, food, safety equipment, or all four. Our prices are transparent and our safety record is 100 percent. See our guide on how to choose a Kilimanjaro operator for the questions to ask anyone quoting you less.' } } ] },
+];
+---
+
+<BaseLayout
+  title="Kilimanjaro Climb Prices 2026: All Routes &amp; Group Rates | Go Kilimanjaro Treks"
+  description="Transparent Kilimanjaro climb prices for every route: Machame, Lemosho, Marangu, Rongai, Umbwe, and the Northern Circuit. All-inclusive per-person rates for groups of 1 to 8. From $1,470."
+  ogImage="https://gokilimanjarotreks.com/images/og-kilimanjaro.jpg"
+  ogImageAlt="Kilimanjaro climb prices for all routes with Go Kilimanjaro Treks"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/page-hero-kilimanjaro.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Transparent &bull; All-Inclusive &bull; No Hidden Fees</span>
+    <h1>Kilimanjaro Climb <em>Prices.</em></h1>
+    <p>Every route, every group size, every price on one page. What you see here is what you pay: park fees, guides, porters, fresh meals, equipment, transfers, and hotel nights in Moshi are all included. The only surprises on your climb should be the views.</p>
+    <div class="hero-ctas">
+      <a href="#calculator" class="btn-primary">Find My Price &#x2192;</a>
+      <a href="/contact" class="btn-ghost">Get an Exact Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white" id="calculator">
+  <div class="container" style="max-width:840px">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Price Calculator</span>
+      <h2 class="section-title">What Would Your Climb Cost?</h2>
+      <p class="section-lead" style="margin-top:12px">Pick a route and your group size. Prices are per person in USD and include everything listed below. Larger groups pay less per person because vehicles, guides, and camp logistics are shared.</p>
+    </div>
+    <div class="reveal" style="background:var(--ink);border-radius:20px;padding:34px 30px;color:#fff">
+      <div style="display:grid;gap:18px;grid-template-columns:1fr;margin-bottom:22px">
+        <div>
+          <label for="pc-route" style="display:block;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:8px">Route &amp; Duration</label>
+          <select id="pc-route" style="width:100%;padding:13px 14px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:1rem">
+            {PRICES.map((r) => (
+              <option value={r.slug} selected={r.flagship}>{r.days}-Day {r.route}{r.flagship ? ' (our flagship)' : ''}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:8px">Group Size</label>
+          <div id="pc-group" style="display:flex;flex-wrap:wrap;gap:8px">
+            {[1,2,3,4,5,6,7,8].map((n) => (
+              <button type="button" data-n={n} style={`min-width:44px;padding:11px 0;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);background:${n===2?'var(--amber-cta)':'rgba(255,255,255,.08)'};color:#fff;font-weight:700;font-size:1rem;cursor:pointer`}>{n}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));text-align:center;background:rgba(255,255,255,.06);border-radius:14px;padding:22px">
+        <div>
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px">Per Person</div>
+          <div id="pc-pp" style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--gold)">$2,900</div>
+        </div>
+        <div>
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px">Saved vs Climbing Solo</div>
+          <div id="pc-save" style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:#fff">$150</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:22px">
+        <a href="/contact" id="pc-cta" class="btn-primary" style="font-size:1.02rem;padding:15px 34px">Lock In This Price &#x2192;</a>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.55);margin-top:12px">Groups of 9 or more: message Nelson for a custom group rate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tinted">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Full 2026 Price List</span>
+      <h2 class="section-title">Every Route, Every Group Size</h2>
+      <p class="section-lead" style="margin-top:12px">All prices are per person in USD. Group columns show the per-person rate when that many climbers book together. Click any route name for its full day-by-day itinerary.</p>
+    </div>
+    {DURATIONS.map((d) => (
+      <div class="reveal" style="margin-bottom:38px">
+        <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--ink-2);margin:26px 0 12px">{d}-Day Routes</h3>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Route</th>
+                {[1,2,3,4,5,6,7,8].map((n) => <th>{n === 1 ? 'Solo' : `Group of ${n}`}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {PRICES.filter((r) => r.days === d).map((r) => (
+                <tr style={r.flagship ? 'background:rgba(212,160,90,.09)' : undefined}>
+                  <td><strong><a href={r.anchor} style="color:var(--amber-cta)">{r.route}</a></strong>{r.flagship && <span style="display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--amber-cta);color:#10243f;border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle">Recommended</span>}</td>
+                  {r.p.map((v) => <td>{fmt(v)}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    ))}
+    <p class="reveal" style="text-align:center;color:var(--muted);font-size:.95rem">Not sure which route fits you? <a href="/compare-routes" style="color:var(--amber-cta);font-weight:600">Compare all routes side by side</a> or <a href="/contact" style="color:var(--amber-cta);font-weight:600">ask Nelson for a recommendation</a>.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container" style="max-width:840px">
+    <div class="reveal prose-section">
+      <h2><span class="num">1.</span> What Your Price Includes</h2>
+      <p>Roughly 70 percent of any honest Kilimanjaro price goes straight to Tanzania National Parks as entrance, camping, and conservation fees. The rest covers the team and equipment that get you up and down safely. Every price on this page includes:</p>
+      <ul>
+        <li>All national park entrance, camping, and conservation fees</li>
+        <li>Professional English-speaking lead guide and assistant guides</li>
+        <li>Full porter team and mountain cook</li>
+        <li>All camping equipment: 4-season tents, sleeping pads, dining tent, toilet tent</li>
+        <li>Three fresh-cooked meals a day plus snacks, with unlimited purified water</li>
+        <li>First aid equipment, pulse oximeter checks, and supplemental oxygen</li>
+        <li>Pre-climb briefing and personal gear check with Nelson</li>
+        <li>Airport transfers and hotel accommodation in Moshi before and after the climb</li>
+      </ul>
+      <h2><span class="num">2.</span> What Is Not Included</h2>
+      <p>International flights, travel insurance (must cover trekking to 6,000 m), your Tanzania visa, personal trekking gear, and tips for the mountain crew. No other extras, no surprise invoices.</p>
+      <h2><span class="num">3.</span> The Kosovo Camp Upgrade</h2>
+      <p>On 7 to 9 day southern-route climbs, well-acclimatized climbers can upgrade from Barafu Camp to <strong>Kosovo Camp (4,870 m)</strong>, the highest summit base camp on the mountain. Sleeping 220 metres higher shortens summit night by 1 to 2 hours, skips the steep rocky scramble in the dark, and trades the crowds for a quiet camp. The upgrade typically adds $150 to $200 per person for the special permit and extra logistics.</p>
+      <div class="callout"><strong>Worth reading:</strong> <a href="/kosovo-camp">Kosovo Camp vs Barafu Camp, the honest comparison</a>, including who should take the upgrade and who should not.</div>
+      <h2><span class="num">4.</span> A Word on Cheap Operators</h2>
+      <p>Every licensed operator pays the same park fees, so a quote far below the market can only be built on underpaid porters, inexperienced guides, thin meals, or missing safety equipment. If a price looks too good to be true on Kilimanjaro, it is. Here is <a href="/choose-operator">how to vet any operator</a>, including us.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to Put a Date on <em>the Summit?</em></h2>
+      <p>Send Nelson your route, dates, and group size. He replies personally within 24 hours with a firm quote and an honest recommendation. Peak season (July to September) fills first.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Get My Exact Quote &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa-lg" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script define:vars={{ prices: PRICES.map((r) => ({ slug: r.slug, days: r.days, route: r.route, p: r.p })) }}>
+  (function () {
+    var sel = document.getElementById('pc-route');
+    var grp = document.getElementById('pc-group');
+    var pp = document.getElementById('pc-pp');
+    var save = document.getElementById('pc-save');
+    var cta = document.getElementById('pc-cta');
+    if (!sel || !grp) return;
+    var n = 2;
+    function fmt(v) { return '$' + v.toLocaleString('en-US'); }
+    function update() {
+      var r = prices.find(function (x) { return x.slug === sel.value; });
+      if (!r) return;
+      var price = r.p[n - 1];
+      pp.textContent = fmt(price);
+      save.textContent = n === 1 ? '$0' : fmt(r.p[0] - price);
+      cta.href = '/contact?trip=' + encodeURIComponent(r.days + '-day ' + r.route) + '&group=' + n;
+      Array.prototype.forEach.call(grp.querySelectorAll('button'), function (b) {
+        b.style.background = Number(b.dataset.n) === n ? 'var(--amber-cta)' : 'rgba(255,255,255,.08)';
+      });
+    }
+    grp.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      n = Number(b.dataset.n);
+      update();
+    });
+    sel.addEventListener('change', update);
+    update();
+  })();
+</script>
+
+</BaseLayout>

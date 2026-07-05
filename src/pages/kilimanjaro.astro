@@ -43,6 +43,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <th>Route</th>
             <th>Duration</th>
+            <th>From (per person)</th>
             <th>Difficulty</th>
             <th>Success Rate</th>
             <th>Crowds</th>
@@ -53,6 +54,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#lemosho" style="color:var(--amber-cta)">Lemosho</a></strong></td>
             <td>7 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $2,105</strong></td>
             <td><span class="diff-badge diff-moderate">Moderate</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:85%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">85%</span></div></td>
             <td>Low-Medium</td>
@@ -61,6 +63,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#northern" style="color:var(--amber-cta)">Northern Circuit</a></strong></td>
             <td>9-10 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $2,940</strong></td>
             <td><span class="diff-badge diff-moderate">Moderate</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:95%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">95%</span></div></td>
             <td>Very Low</td>
@@ -69,6 +72,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr style="background:rgba(212,160,90,.09)">
             <td><strong><a href="#machame" style="color:var(--amber-cta)">Machame (8-day)</a></strong> <span style="display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--amber-cta);color:#10243f;border-radius:999px;padding:2px 9px;vertical-align:middle">Recommended</span></td>
             <td>8 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $2,325</strong></td>
             <td><span class="diff-badge diff-challenging">Moderate+</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:88%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">88%</span></div></td>
             <td>Medium</td>
@@ -77,6 +81,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#machame" style="color:var(--amber-cta)">Machame (7-day)</a></strong></td>
             <td>7 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $2,090</strong></td>
             <td><span class="diff-badge diff-challenging">Moderate+</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:78%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">78%</span></div></td>
             <td>Medium-High</td>
@@ -85,6 +90,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#marangu" style="color:var(--amber-cta)">Marangu</a></strong></td>
             <td>5-6 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $1,470</strong></td>
             <td><span class="diff-badge diff-moderate">Moderate</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:65%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">65%</span></div></td>
             <td>High</td>
@@ -93,6 +99,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#rongai" style="color:var(--amber-cta)">Rongai</a></strong></td>
             <td>7 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $2,140</strong></td>
             <td><span class="diff-badge diff-moderate">Moderate</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:80%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">80%</span></div></td>
             <td>Very Low</td>
@@ -101,6 +108,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <tr>
             <td><strong><a href="#umbwe" style="color:var(--amber-cta)">Umbwe</a></strong></td>
             <td>6 Days</td>
+            <td><strong style="color:var(--amber-cta)">From $1,985</strong></td>
             <td><span class="diff-badge diff-hard">Hard</span></td>
             <td><div class="success-bar"><div class="success-bg"><div class="success-fill" style="width:70%"></div></div><span style="font-size:.82rem;font-weight:600;color:var(--amber-cta)">70%</span></div></td>
             <td>Very Low</td>
@@ -154,6 +162,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Lemosho Route</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">7 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $2,105 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Summit Elevation</span><span class="sidebar-stat-val">5,895m / 19,341ft</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Max Camp</span><span class="sidebar-stat-val">Barafu 4,673m</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~85%</span></div>
@@ -214,6 +223,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Northern Circuit</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">9-10 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $2,940 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Summit Elevation</span><span class="sidebar-stat-val">5,895m / 19,341ft</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~95%</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
@@ -265,6 +275,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Marangu Route</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">5-6 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $1,470 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Accommodation</span><span class="sidebar-stat-val">Huts (Beds Included)</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~65%</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
@@ -317,6 +328,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Rongai Route</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">7 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $2,140 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Approach</span><span class="sidebar-stat-val">Northern (Kenya border)</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~80%</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate</span></div>
@@ -368,6 +380,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Umbwe Route</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">6 Days</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $1,985 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Hard</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate</span><span class="sidebar-stat-val">~70%</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Very Low</span></div>
@@ -394,6 +407,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
       <h2 class="route-name-display">Machame Route</h2>
       <div style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border-left:4px solid var(--amber-cta);border-radius:10px;padding:14px 18px;margin:0 0 18px 0;font-size:.92rem;color:#7c2d12;line-height:1.55"><strong>Our flagship Kilimanjaro climb:</strong> the 8-day Machame with Moir Hut acclimatization. Go Kilimanjaro Treks is the first operator to specifically feature Moir Hut's sunset hike up toward the Lent Hills, where climbers get a critical extra day of high-altitude exposure before the summit push. <strong>This is the trek Nelson recommends to most climbers</strong>, ahead of the standard 7-day variant.</div>
       <p class="route-tagline">Called the "Whiskey Route" for its increased challenge over Marangu, Machame is a stunning all-rounder. The 8-day variant adds a dedicated acclimatization day at Moir Hut (4,200 m) on the western slopes, with an afternoon hike up toward the Lent Hills as the sun sets across the endless landscape. The result is a stronger acclimatization profile, a higher summit success rate, and a quieter day on the mountain that the 7-day version simply doesn't have.</p>
+      <p class="route-tagline">Well-acclimatized climbers can also upgrade the final night to <a href="/kosovo-camp" style="color:var(--amber-cta);font-weight:600">Kosovo Camp (4,870 m)</a>, the highest summit base camp on the mountain. It cuts 1 to 2 hours off summit night and trades the Barafu crowds for a quiet camp.</p>
       <p class="route-tagline">Machame is named after the village at its trailhead, the same Chagga village where Nelson grew up. The route opened to climbers in the 1980s as a more scenic alternative to Marangu and quickly became the most-walked path on the mountain. The Whiskey Route nickname is its informal counterpart to Marangu's Coca-Cola: stronger character, tougher climb, tent camping at every camp. Machame crosses the Shira Plateau and meets the Lemosho Route at the foot of Lava Tower, then traces the famous Southern Circuit past Barranco, Karanga, and Barafu camps. Its seven-day itinerary has a strong acclimatization profile, mostly because the third day climbs to 4,600 m at Lava Tower then descends to sleep low at Barranco. Summit success rate is consistently high. The trade-off against Lemosho is crowd size. Machame's camps fill quickly in peak season, and the trail can feel busy through July and August.</p>
       <div class="route-highlights">
         <div class="route-highlight"><span>&#x1F33F; Traverses Kilimanjaro's most diverse ecological range</span></div>
@@ -424,6 +438,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <div class="sidebar-title">Machame Route</div>
         <div class="sidebar-stats">
           <div class="sidebar-stat"><span class="sidebar-stat-label">Duration</span><span class="sidebar-stat-val">8 Days (or 7)</span></div>
+          <div class="sidebar-stat"><span class="sidebar-stat-label">Price</span><span class="sidebar-stat-val" style="color:var(--gold)">From $2,325 <a href="/prices" style="color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem">(all rates)</a></span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Difficulty</span><span class="sidebar-stat-val">Moderate+</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Success Rate (8-day)</span><span class="sidebar-stat-val">~88%</span></div>
           <div class="sidebar-stat"><span class="sidebar-stat-label">Crowds</span><span class="sidebar-stat-val">Medium</span></div>

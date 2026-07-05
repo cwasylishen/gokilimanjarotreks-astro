@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schemas = [
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Climb Kilimanjaro", "item": "https://gokilimanjarotreks.com/kilimanjaro" },
+    { "@type": "ListItem", "position": 3, "name": "Kosovo Camp", "item": "https://gokilimanjarotreks.com/kosovo-camp" } ] },
+  { "@context": "https://schema.org", "@type": "Article",
+    "headline": "Kosovo Camp vs Barafu Camp: Kilimanjaro's Highest Summit Base Camp",
+    "description": "Kosovo Camp sits at 4,870 m, 220 m above Barafu, and shortens summit night by 1 to 2 hours. The honest comparison: who should take the upgrade, what it costs, and who should stick with Barafu.",
+    "url": "https://gokilimanjarotreks.com/kosovo-camp",
+    "image": "https://gokilimanjarotreks.com/images/gallery/kibo-scree-approach.jpg",
+    "author": { "@type": "Person", "name": "Nelson Mushi", "url": "https://gokilimanjarotreks.com/about" },
+    "publisher": { "@id": "https://gokilimanjarotreks.com/#organization" },
+    "datePublished": "2026-07-04", "dateModified": "2026-07-04", "articleSection": "Routes" },
+  { "@context": "https://schema.org", "@type": "FAQPage", "url": "https://gokilimanjarotreks.com/kosovo-camp", "mainEntity": [
+    { "@type": "Question", "name": "What is Kosovo Camp on Kilimanjaro?", "acceptedAnswer": { "@type": "Answer", "text": "Kosovo Camp is the highest summit base camp on Mount Kilimanjaro at roughly 4,870 m (15,978 ft), about 220 m above the standard Barafu Camp. Only the Crater Camp sits higher. It serves the southern routes (Machame, Lemosho, Umbwe), requires a special permit, and is used as an optional upgrade to Barafu rather than a separate route." } },
+    { "@type": "Question", "name": "How much time does Kosovo Camp save on summit night?", "acceptedAnswer": { "@type": "Answer", "text": "Roughly 1 to 2 hours of climbing. Starting higher also skips the steep, bouldery section that makes the first hours out of Barafu the most miserable part of many summit nights, and it avoids the headlamp congestion of the main camp." } },
+    { "@type": "Question", "name": "How much does the Kosovo Camp upgrade cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typically $150 to $200 per person above the standard Barafu itinerary. That covers the special park permit (about $100), the extra logistics of carrying water up from the Karanga River, and fair additional pay for the crew doing the extra work." } },
+    { "@type": "Question", "name": "Who should not use Kosovo Camp?", "acceptedAnswer": { "@type": "Answer", "text": "First-time trekkers, climbers on short 5 to 6 day itineraries, and anyone showing altitude symptoms at Karanga Camp. Sleeping 220 m higher adds acclimatization stress, so we only take climbers to Kosovo if their oxygen saturation and condition at Karanga Camp show strong adaptation. It is a strategic upgrade for the right climber, not a shortcut." } } ] }
+];
+---
+
+<BaseLayout
+  title="Kosovo Camp vs Barafu: Kilimanjaro's Highest Summit Camp | Go Kilimanjaro Treks"
+  description="Sleep at 4,870 m, cut 1 to 2 hours off summit night, and skip the crowds. The honest comparison of Kosovo Camp and Barafu Camp, who the upgrade suits, and what it costs."
+  ogImage="https://gokilimanjarotreks.com/images/gallery/kibo-scree-approach.jpg"
+  ogImageAlt="Climbers approaching the high camps on Kilimanjaro's summit cone"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/gallery/kibo-scree-approach.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Summit Strategy &bull; Optional Upgrade</span>
+    <h1>Kosovo <em>Camp.</em></h1>
+    <p>The highest summit base camp on Kilimanjaro. Sleep 220 metres above the crowds at Barafu, start summit night 1 to 2 hours closer to Uhuru Peak, and skip the steep rocky scramble in the dark. For the right climber, it is the smartest money on the mountain.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Ask About the Upgrade &#x2192;</a>
+      <a href="/prices" class="btn-ghost">See Climb Prices</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container" style="max-width:840px">
+    <div class="reveal prose-section">
+      <h2><span class="num">1.</span> Two Camps, One Summit Night</h2>
+      <p>Every climber on the southern routes (Machame, Lemosho, Umbwe) spends their final night before the summit at a base camp on the mountain's southeast shoulder. Almost everyone uses <strong>Barafu Camp at 4,650 m</strong>. It is the standard choice, well established, and busy.</p>
+      <p>A short climb above it sits <strong>Kosovo Camp at roughly 4,870 m</strong>, the highest camp on the mountain outside the crater itself. Same routes up, same Mweka descent, same summit. The difference is where you sleep, how far you climb in the dark, and who you share the night with.</p>
+      <p><strong>Go Kilimanjaro Treks recommends Kosovo Camp whenever a climber's acclimatization allows it.</strong> Nelson assesses every group at Karanga Camp, the night before, using oxygen saturation readings and how each climber is actually feeling. Strong numbers, and Kosovo is yours. Any doubt, and Barafu is the right call. The mountain decides, not the brochure.</p>
+
+      <h2><span class="num">2.</span> Why Climbers Pay for 220 Metres</h2>
+      <ul>
+        <li><strong>A shorter summit night.</strong> Starting higher saves roughly 1 to 2 hours of climbing, and those are the coldest, hardest hours of the whole trek.</li>
+        <li><strong>No rocky scramble in the dark.</strong> The steep, bouldery section that makes the first stretch out of Barafu so punishing is already below you.</li>
+        <li><strong>A quiet camp.</strong> Barafu can host hundreds of climbers and crew in peak season. Kosovo holds a fraction of that. Fewer headlamps, no traffic lines, and your guide controls the pace all the way up.</li>
+        <li><strong>An earlier summit.</strong> Kosovo climbers often reach Uhuru Peak ahead of the Barafu crowd, in time for a calmer sunrise on the roof of Africa.</li>
+      </ul>
+
+      <h2><span class="num">3.</span> Kosovo vs Barafu, Side by Side</h2>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr><th>Feature</th><th>Barafu Camp</th><th>Kosovo Camp</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Elevation</strong></td><td>~4,650 m (15,256 ft)</td><td>~4,870 m (15,978 ft)</td></tr>
+            <tr><td><strong>Summit night</strong></td><td>Longer, with a steep rocky section first</td><td>1 to 2 hours shorter, rocky section skipped</td></tr>
+            <tr><td><strong>Crowds</strong></td><td>Often hundreds of climbers in peak season</td><td>Small camp, usually quiet</td></tr>
+            <tr><td><strong>Wind exposure</strong></td><td>Moderate</td><td>Higher, a good sleeping tent handles it</td></tr>
+            <tr><td><strong>Facilities</strong></td><td>Basic, more established</td><td>Minimal, no-frills</td></tr>
+            <tr><td><strong>Permits</strong></td><td>Standard</td><td>Special permit, about $100</td></tr>
+            <tr><td><strong>Cost</strong></td><td>Included in standard price</td><td>$150 to $200 per person extra</td></tr>
+            <tr><td><strong>Itinerary fit</strong></td><td>Any length, 5 to 9 days</td><td>7 to 9 days with strong acclimatization</td></tr>
+            <tr><td><strong>Best for</strong></td><td>First-timers, shorter itineraries, budget focus</td><td>Well-acclimatized climbers who want the edge</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Both camps draw their water from the Karanga River, both sleep in expedition tents, and both look out over the same spectacular precipice face. With proper equipment the nights are comparably cold. The real differences are altitude stress, crowd levels, and what your legs have left when you reach the summit push.</p>
+
+      <h2><span class="num">4.</span> The Honest Part</h2>
+      <p>Kosovo Camp is not a shortcut, and it does not raise your summit odds by itself. Success on Kilimanjaro still comes down to days on the mountain, pacing, hydration, and how your own body handles altitude. Sleeping 220 metres higher is a real physiological cost, which is exactly why we gate it behind the Karanga Camp assessment:</p>
+      <ul>
+        <li>Oxygen saturation trends from daily pulse oximeter checks</li>
+        <li>Any symptoms of altitude sickness, however mild</li>
+        <li>Overall condition and how the climb has felt so far</li>
+      </ul>
+      <p>A climber showing altitude symptoms does not continue to Kosovo, full stop. That discipline is why the upgrade works: it goes only to bodies that are ready for it.</p>
+      <div class="callout"><strong>Where it fits:</strong> Kosovo pairs naturally with our <a href="/kilimanjaro#machame">8-day Machame with the Moir Camp acclimatization day</a> and the <a href="/kilimanjaro#lemosho">7 to 8 day Lemosho</a>. Both build the acclimatization that makes the higher camp an advantage instead of a risk.</div>
+
+      <h2><span class="num">5.</span> What the Upgrade Costs</h2>
+      <p>Typically <strong>$150 to $200 per person</strong> on top of the standard itinerary. That covers the special park permit (about $100), the extra logistics of carrying water and supplies 220 metres higher, and fair additional pay for the crew doing that work. See the <a href="/prices">full price list</a> for the base rates on every route.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Want the Quieter Path to <em>Uhuru Peak?</em></h2>
+      <p>Tell Nelson your dates and route. He will tell you straight whether Kosovo Camp makes sense for your itinerary and experience, and quote it exactly. Personal reply within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Ask About Kosovo Camp &#x2192;</a>
+        <a href="https://wa.me/255677917500" class="btn-wa-lg" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</BaseLayout>
