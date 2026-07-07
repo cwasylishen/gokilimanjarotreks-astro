@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Paste the Chrome Web Store listing URL here once the extension is published.
+const STORE_URL = '';
+
+const schemas = [
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gokilimanjarotreks.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Kilimanjaro New Tab", "item": "https://gokilimanjarotreks.com/new-tab" } ] },
+  { "@context": "https://schema.org", "@type": "SoftwareApplication",
+    "name": "Kilimanjaro New Tab: Daily Summit & Focus Climb",
+    "operatingSystem": "Chrome",
+    "applicationCategory": "BrowserApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "A free Chrome new tab extension with original Kilimanjaro and Serengeti photography, live Moshi weather, a Swahili word a day, and a focus timer that climbs you camp by camp to Uhuru Peak.",
+    "author": { "@id": "https://gokilimanjarotreks.com/#organization" },
+    "url": "https://gokilimanjarotreks.com/new-tab" },
+  { "@context": "https://schema.org", "@type": "FAQPage", "url": "https://gokilimanjarotreks.com/new-tab", "mainEntity": [
+    { "@type": "Question", "name": "Is the Kilimanjaro New Tab extension free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free. No account, no ads, no tracking. The photos are bundled inside the extension, and the only network request it makes is a weather check for Moshi from the free open-meteo service." } },
+    { "@type": "Question", "name": "Where do the photos come from?", "acceptedAnswer": { "@type": "Answer", "text": "Every photo is original photography from Go Kilimanjaro Treks climbs and safaris: Nelson Mushi's mountain, the Serengeti, Ngorongoro, and the trail itself. No stock photos." } },
+    { "@type": "Question", "name": "How does the Climb Mode focus timer work?", "acceptedAnswer": { "@type": "Answer", "text": "Climb Mode is a pomodoro-style focus timer themed as a Machame Route climb. Every completed 25 or 50 minute focus session moves you up the mountain, camp by camp: Machame Camp, Shira, Lava Tower, Barranco, Karanga, Barafu, and finally Uhuru Peak after sixteen sessions. Summiting earns a downloadable certificate." } } ] }
+];
+---
+
+<BaseLayout
+  title="Kilimanjaro New Tab: Free Chrome Extension | Go Kilimanjaro Treks"
+  description="A free Chrome new tab: original Kilimanjaro and Serengeti photography, live Moshi weather, a Swahili word a day, and a focus timer that climbs you to Uhuru Peak. No ads, no tracking."
+  ogImage="https://gokilimanjarotreks.com/images/gallery/summit-sunrise-mawenzi-flare.jpg"
+  ogImageAlt="Sunrise over Mawenzi from Kilimanjaro's summit zone, one of the extension's daily photos"
+  schemas={schemas}
+>
+  <main>
+<section class="page-hero">
+  <img src="/images/gallery/summit-sunrise-mawenzi-flare.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;z-index:0;opacity:0.55">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(2,6,14,0.88) 0%,rgba(2,6,14,0.82) 40%,rgba(2,6,14,0.55) 65%,rgba(2,6,14,0.15) 100%);z-index:1"></div>
+  <div class="container">
+    <span class="page-hero-eyebrow">Free Chrome Extension &bull; No Ads &bull; No Tracking</span>
+    <h1>The Mountain in<br><em>Every New Tab.</em></h1>
+    <p>Original Kilimanjaro and Serengeti photography from Nelson's own climbs, live Moshi weather, a Swahili word a day, and a focus timer that climbs you camp by camp to Uhuru Peak. Open a tab, see the summit.</p>
+    <div class="hero-ctas">
+      {STORE_URL
+        ? <a href={STORE_URL} class="btn-primary" target="_blank" rel="noopener">Add to Chrome, Free &#x2192;</a>
+        : <a href="/contact" class="btn-primary">Coming Soon to the Chrome Web Store</a>}
+      <a href="#how" class="btn-ghost">See What It Does</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-white" id="how">
+  <div class="container" style="max-width:840px">
+    <div class="reveal prose-section">
+      <h2><span class="num">1.</span> A Daily Dose of the Roof of Africa</h2>
+      <p>Every new tab opens on one of 24 original photographs: sunrise over Mawenzi from the summit zone, the glacier walls above the clouds, lions in the crater, elephants at last light, the Maasai welcome. These are not stock photos. They were shot on Go Kilimanjaro Treks climbs and safaris, and a fresh one rotates in each day.</p>
+      <h2><span class="num">2.</span> Live From Moshi</h2>
+      <p>The corner of every tab shows the current time and weather in Moshi, the town at Kilimanjaro's feet where every climb begins. A small daily card teaches you one Swahili word or one mountain fact: pole pole, twende, the Big Five, why the summit is called Uhuru.</p>
+      <h2><span class="num">3.</span> Climb Mode: Focus Your Way to the Summit</h2>
+      <p>Turn on Climb Mode and your deep-work sessions become a Kilimanjaro expedition. Each completed 25 or 50 minute focus session moves you up the Machame Route: Machame Camp, Shira, Lava Tower, Barranco, Karanga, Barafu, and after sixteen sessions, Uhuru Peak at 5,895 m. Summiting earns a downloadable certificate with your name on it. Pole pole applies to work too.</p>
+      <h2><span class="num">4.</span> Private By Design</h2>
+      <p>No account, no ads, no analytics, no data collection. The photos live inside the extension, your climb progress stays in your browser, and the only network request is the Moshi weather check from the free open-meteo service.</p>
+      <div class="callout"><strong>Made by a mountain operator, not a software company:</strong> this extension exists because we think the mountain sells itself. If seeing it every day gets you dreaming, the <a href="/kilimanjaro">routes</a> and <a href="/prices">prices</a> are right here.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>See It Daily. Then <em>Climb It.</em></h2>
+      <p>Install the extension for the views, stay for the dream, and when you are ready, Nelson will walk you to the top of the real thing.</p>
+      <div class="cta-actions">
+        {STORE_URL
+          ? <a href={STORE_URL} class="btn-primary" style="font-size:1.05rem;padding:18px 40px" target="_blank" rel="noopener">Add to Chrome, Free &#x2192;</a>
+          : <a href="/contact" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Plan the Real Climb &#x2192;</a>}
+        <a href="https://wa.me/255677917500" class="btn-wa-lg" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Nelson</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</BaseLayout>

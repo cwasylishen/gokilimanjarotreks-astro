@@ -57,6 +57,7 @@ export const FOOTER_COMPANY: NavItem[] = [
   { href: '/about', label: 'About Us' },
   { href: '/stories', label: 'Climber Stories' },
   { href: '/gallery', label: 'Photo Gallery' },
+  { href: '/new-tab', label: 'Free Chrome New Tab' },
   { href: '/faith-vision-foundation', label: 'Faith Vision Foundation' },
   { href: '/charity-climbs', label: 'Charity Climbs' },
   { href: '/corporate-climbs', label: 'Corporate Team Climbs' },

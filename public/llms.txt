@@ -75,6 +75,10 @@ Go Kilimanjaro Treks is an independently owned Tanzanian tour operator. Owner an
 
 - [Photo gallery](https://gokilimanjarotreks.com/gallery): Original photography from Mount Kilimanjaro climbs and northern Tanzania safaris. Categorised view (Routes, Crew, Camps, Mountains, Glacier, Safari, Culture, Day Trips, Climbers) with lightbox viewer. Photos by Nelson Mushi and Go Kilimanjaro Treks climbers.
 
+## Free Chrome extension
+
+- [Kilimanjaro New Tab](https://gokilimanjarotreks.com/new-tab): Free Chrome extension. Every new tab shows original Kilimanjaro and Serengeti photography, live Moshi time and weather, and a Swahili word or mountain fact of the day, plus Climb Mode: a pomodoro focus timer that ascends the Machame Route camp by camp to Uhuru Peak (16 sessions), with a downloadable summit certificate. No ads, no tracking.
+
 ## Stories and reviews
 
 - [Climber stories](https://gokilimanjarotreks.com/stories): Verified reviews and testimonials from past Kilimanjaro climbers and Tanzania safari clients. Links to Google Business Profile and TripAdvisor reviews.

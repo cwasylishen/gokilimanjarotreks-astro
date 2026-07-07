@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Tab</title>
+<link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <img id="bg" alt="">
+  <div class="wash" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="moshi" id="moshi" title="Live conditions at Kilimanjaro's home town">
+      <span class="moshi-loc">Moshi, Tanzania</span>
+      <span id="moshi-line">--:-- &middot; --&deg;C</span>
+    </div>
+    <nav class="links">
+      <a id="lnk-routes" href="#">Routes</a>
+      <a id="lnk-prices" href="#">Prices</a>
+      <a id="lnk-blog" href="#">Blog</a>
+    </nav>
+  </header>
+
+  <main class="center">
+    <div class="clock" id="clock">--:--</div>
+    <div class="greet" id="greet"></div>
+    <div class="daily" id="daily"></div>
+  </main>
+
+  <footer class="bottom">
+    <div class="credit">
+      <span id="caption"></span>
+      <a id="lnk-credit" href="#">Photo: Go Kilimanjaro Treks</a>
+      <button id="next-photo" title="Next photo">&#x21bb;</button>
+    </div>
+    <button id="climb-toggle" class="climb-btn">&#x26F0; Climb Mode</button>
+  </footer>
+
+  <aside class="climb" id="climb" hidden>
+    <div class="climb-head">
+      <strong>Climb Kilimanjaro, pole pole</strong>
+      <button id="climb-close" title="Close">&#x2715;</button>
+    </div>
+    <p class="climb-sub">Every completed focus session moves you up the Machame Route. Sixteen sessions to Uhuru Peak.</p>
+    <div class="camp-line"><span id="camp-now">Machame Gate &middot; 1,800 m</span><span id="camp-next"></span></div>
+    <div class="bar"><div class="bar-fill" id="bar-fill"></div>
+      <div class="bar-marks" id="bar-marks"></div>
+    </div>
+    <div class="timer" id="timer">25:00</div>
+    <div class="timer-controls">
+      <button id="t-start" class="primary">Start 25 min</button>
+      <button id="t-50">50 min</button>
+      <button id="t-stop" hidden>Give up</button>
+    </div>
+    <div class="climb-stats" id="climb-stats"></div>
+    <div class="summit" id="summit" hidden>
+      <h3>&#x1F3D4;&#xFE0F; Uhuru Peak. 5,895 m.</h3>
+      <p>You climbed the whole mountain in focused work. Pole pole wins again.</p>
+      <input id="cert-name" placeholder="Your name for the certificate" maxlength="40">
+      <button id="cert-btn" class="primary">Download Summit Certificate</button>
+      <a id="lnk-real" href="#">Ready for the real one? See routes &amp; prices &#x2192;</a>
+      <button id="new-climb">Start a new climb</button>
+    </div>
+  </aside>
+
+  <canvas id="cert-canvas" width="1400" height="1000" hidden></canvas>
+
+  <script src="daily.js"></script>
+  <script src="newtab.js"></script>
+</body>
+</html>
