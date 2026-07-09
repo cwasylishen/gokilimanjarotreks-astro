@@ -645,8 +645,15 @@ img{display:block;max-width:100%}
 .moshi-now .mn-icon{font-size:1.3rem;line-height:1;flex-shrink:0}
 .moshi-now .mn-temp{font-size:1.05rem;font-weight:600;color:var(--white)}
 .moshi-now .mn-cond{font-size:.78rem;color:rgba(255,255,255,.7);margin-top:3px;line-height:1.35}
-@media(max-width:900px){.moshi-now{top:auto;right:16px;bottom:120px;left:16px;min-width:auto;max-width:none}.moshi-now .mn-time{font-size:1.3rem}}
-@media(max-width:540px){.moshi-now{bottom:96px;padding:11px 14px}.moshi-now .mn-time{font-size:1.1rem}.moshi-now .mn-temp{font-size:.95rem}}
+/* Mobile: the widget joins the normal flow AFTER the hero content (flex order),
+   so it can never overlap the CTAs regardless of the device's font scaling. */
+@media(max-width:900px){
+  .hero{flex-direction:column;justify-content:center}
+  .moshi-now{position:static;order:2;margin:26px 20px 84px;width:calc(100% - 40px);min-width:auto;max-width:none}
+  .moshi-now .mn-time{font-size:1.3rem}
+  .hero .hero-content{padding-bottom:36px}
+}
+@media(max-width:540px){.moshi-now{padding:11px 14px}.moshi-now .mn-time{font-size:1.1rem}.moshi-now .mn-temp{font-size:.95rem}}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:scrollPulse 2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}
 /* ── Stats band ── */
