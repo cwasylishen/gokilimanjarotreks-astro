@@ -13,15 +13,22 @@ SITEMAP = f'https://{HOST}/sitemap-0.xml'
 ENDPOINT = 'https://api.indexnow.org/indexnow'
 
 
+UA = {'User-Agent': 'Mozilla/5.0 (compatible; GKT-IndexNow/1.0; +https://gokilimanjarotreks.com)'}
+
+
+def get(url):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode('utf-8')
+
+
 def main():
-    with urllib.request.urlopen(SITEMAP, timeout=30) as r:
-        xml = r.read().decode('utf-8')
+    xml = get(SITEMAP)
     urls = re.findall(r'<loc>(.*?)</loc>', xml)
     print(f'sitemap URLs: {len(urls)}')
 
     # sanity: key file must be live before pinging
-    with urllib.request.urlopen(f'https://{HOST}/{KEY}.txt', timeout=30) as r:
-        assert r.read().decode('ascii').strip() == KEY, 'key file mismatch'
+    assert get(f'https://{HOST}/{KEY}.txt').strip() == KEY, 'key file mismatch'
     print('key file verified live')
 
     payload = json.dumps({
@@ -30,8 +37,9 @@ def main():
         'keyLocation': f'https://{HOST}/{KEY}.txt',
         'urlList': urls,
     }).encode('utf-8')
-    req = urllib.request.Request(ENDPOINT, data=payload,
-                                 headers={'Content-Type': 'application/json; charset=utf-8'})
+    headers = dict(UA)
+    headers['Content-Type'] = 'application/json; charset=utf-8'
+    req = urllib.request.Request(ENDPOINT, data=payload, headers=headers)
     with urllib.request.urlopen(req, timeout=30) as r:
         print(f'IndexNow response: HTTP {r.status} (200/202 = accepted)')
 
