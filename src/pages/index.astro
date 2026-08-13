@@ -265,12 +265,12 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
           <div class="fact-box"><strong>Tanzania</strong><span>Northern region, Moshi</span></div>
           <div class="fact-box"><strong>~65%</strong><span>Overall summit rate</span></div>
         </div>
-        <div style="margin-top:32px;padding:24px;background:linear-gradient(135deg,#0b1a2e,#1d3557);border-radius:16px" class="reveal">
-          <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:10px">Best Time to Climb</h3>
-          <p style="font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:16px">Kilimanjaro can be climbed year-round, but the best conditions are during the two dry seasons.</p>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="background:rgba(251,191,36,.15);border-left:3px solid var(--gold);padding:10px 14px;border-radius:8px"><strong style="color:var(--gold);font-size:.85rem">Primary Season:</strong><span style="color:rgba(255,255,255,.8);font-size:.85rem"> January to March &amp; June to October</span></div>
-            <div style="background:rgba(255,255,255,.07);border-left:3px solid rgba(255,255,255,.2);padding:10px 14px;border-radius:8px"><strong style="color:rgba(255,255,255,.7);font-size:.85rem">Shoulder Season:</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem"> November, December, April (quieter, wetter)</span></div>
+        <div class="reveal best-time-box">
+          <h3 class="bt-title">Best Time to Climb</h3>
+          <p class="bt-lead">Kilimanjaro can be climbed year-round, but the best conditions are during the two dry seasons.</p>
+          <div class="bt-rows">
+            <div class="bt-row"><strong>Primary Season:</strong><span> January to March &amp; June to October</span></div>
+            <div class="bt-row-alt"><strong>Shoulder Season:</strong><span class="vf-sub"> November, December, April (quieter, wetter)</span></div>
           </div>
         </div>
       </div>
@@ -286,24 +286,24 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
         <span class="section-eyebrow light">See the Mountain</span>
         <h2 class="section-title light" style="margin-bottom:20px">Watch What Awaits You at 5,895 m</h2>
         <p style="color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:32px">Glaciers, volcanic rock, and a sunrise above the clouds. Kilimanjaro is unlike anything you've ever experienced. This is what Nelson and his team do every week. Watch the journey.</p>
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <div class="vf-list">
+          <div class="vf-row">
+            <div class="vf-icon">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="#fbbf24"/></svg>
             </div>
-            <div><strong style="color:#fff;display:block;font-size:.95rem">270+ successful summits</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">A track record built climb by climb</span></div>
+            <div><strong class="vf-title">270+ successful summits</strong><span class="vf-sub">A track record built climb by climb</span></div>
           </div>
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div class="vf-row">
+            <div class="vf-icon">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#fbbf24"/></svg>
             </div>
-            <div><strong style="color:#fff;display:block;font-size:.95rem">22+ years guiding experience</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">Every route, every season, every level</span></div>
+            <div><strong class="vf-title">22+ years guiding experience</strong><span class="vf-sub">Every route, every season, every level</span></div>
           </div>
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div class="vf-row">
+            <div class="vf-icon">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#fbbf24"/></svg>
             </div>
-            <div><strong style="color:#fff;display:block;font-size:.95rem">Small, personal groups</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem">Maximum 8 climbers, no factory tours</span></div>
+            <div><strong class="vf-title">Small, personal groups</strong><span class="vf-sub">Maximum 8 climbers, no factory tours</span></div>
           </div>
         </div>
       </div>
@@ -453,32 +453,32 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
         <span class="section-eyebrow light">Beyond the Summit</span>
         <h2 class="section-title light">Tanzania Wildlife Safaris</h2>
         <p class="section-lead light" style="margin-top:16px">Kilimanjaro is just the beginning. Tanzania is home to the Serengeti, the world's greatest wildlife spectacle, the Ngorongoro Crater, Tarangire's elephant herds, and the pristine beaches of Zanzibar. Combine your climb with a safari and you have one of the world's great adventure trips.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
-          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F98A; Serengeti National Park &amp; Great Migration</div>
-          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F9A7; Ngorongoro Crater, world's largest intact caldera</div>
-          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F418; Tarangire &amp; Lake Manyara National Parks</div>
-          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.82);font-size:.93rem">&#x1F3D6;&#xFE0F; Zanzibar Beach &amp; Island Extension</div>
+        <div class="safari-list">
+          <div class="safari-li">&#x1F98A; Serengeti National Park &amp; Great Migration</div>
+          <div class="safari-li">&#x1F9A7; Ngorongoro Crater, world's largest intact caldera</div>
+          <div class="safari-li">&#x1F418; Tarangire &amp; Lake Manyara National Parks</div>
+          <div class="safari-li">&#x1F3D6;&#xFE0F; Zanzibar Beach &amp; Island Extension</div>
         </div>
         <a href="/safari" class="btn-primary" style="margin-top:32px;display:inline-flex">Explore Tanzania Safaris &#x2192;</a>
       </div>
-      <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px">
-        <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:20px">Popular Combo Trips</h3>
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
-            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Serengeti Safari</strong>
-            <span style="color:rgba(255,255,255,.6);font-size:.82rem">Climb the mountain, then witness the Great Migration</span>
+      <div class="reveal combo-panel">
+        <h3 class="combo-panel-title">Popular Combo Trips</h3>
+        <div class="combo-list">
+          <div class="combo-card">
+            <strong class="combo-title">Kilimanjaro + Serengeti Safari</strong>
+            <span class="combo-sub">Climb the mountain, then witness the Great Migration</span>
           </div>
-          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
-            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Ngorongoro</strong>
-            <span style="color:rgba(255,255,255,.6);font-size:.82rem">Summit Africa's highest peak, descend into its greatest crater</span>
+          <div class="combo-card">
+            <strong class="combo-title">Kilimanjaro + Ngorongoro</strong>
+            <span class="combo-sub">Summit Africa's highest peak, descend into its greatest crater</span>
           </div>
-          <div style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold)">
-            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro + Zanzibar Beach</strong>
-            <span style="color:rgba(255,255,255,.6);font-size:.82rem">The ultimate combination: summit glory followed by island recovery</span>
+          <div class="combo-card">
+            <strong class="combo-title">Kilimanjaro + Zanzibar Beach</strong>
+            <span class="combo-sub">The ultimate combination: summit glory followed by island recovery</span>
           </div>
-          <a href="/weddings" style="padding:16px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid var(--gold);display:block;text-decoration:none">
-            <strong style="color:var(--white);font-size:.9rem;display:block">Kilimanjaro Wedding + Honeymoon</strong>
-            <span style="color:rgba(255,255,255,.6);font-size:.82rem">Say your vows on the mountain, then honeymoon on safari or in Zanzibar &#x2192;</span>
+          <a href="/weddings" class="combo-card">
+            <strong class="combo-title">Kilimanjaro Wedding + Honeymoon</strong>
+            <span class="combo-sub">Say your vows on the mountain, then honeymoon on safari or in Zanzibar &#x2192;</span>
           </a>
         </div>
       </div>

@@ -10,3 +10,9 @@ Execution log for `update-plan-2026-08-13.md`. Local commits only, no deploy.
 - index.astro hero: fixed relative `srcset` paths to root-absolute and added webp sources for mobile/tablet/desktop; fixed relative `poster` path on the video.
 - Verified: build passes (70 pages), form actions and all `<a href>` values byte-identical to baseline, all 144 referenced webp paths exist on disk.
 - Note: impeccable hook flagged gallery `#lb-img` empty `src`; intentional, populated by the lightbox script (review item 15).
+
+## Phase 2 — CSS consolidation
+- Merged the four `:root` blocks in `global.css` into one (kept `--forest` and `--gold-dk`).
+- Deduped repeated rules keeping the cascade winner: `.page-hero p` (1 def left, the .9-alpha/text-shadow winner), `.cta-section` (merged winner properties incl. `position:relative;overflow:hidden`, restored the sole `.cta-section h2`/`h2 em` rules that lived in a deleted block), `.reveal`, `.callout`, `.dest-faq summary`, `.section-title`.
+- Extracted the named inline-style hotspots into classes with identical computed values: index video feature rows (`.vf-*`), safari teaser (`.safari-list`, `.combo-panel`, `.combo-card`, `.combo-title/.combo-sub`), best-time box (`.best-time-box`, `.bt-*`); kilimanjaro route detail images (`.route-img`) and the summit-night table (`.snt` family). Remaining inline styles (index 28, kilimanjaro 150 of the original ~600 sitewide) left for a later pass; partial by design.
+- Verified: build passes, form actions identical, only diff vs baseline href set is the hashed CSS filename.
