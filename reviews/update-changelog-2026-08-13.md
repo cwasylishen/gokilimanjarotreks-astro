@@ -30,3 +30,16 @@ Execution log for `update-plan-2026-08-13.md`. Local commits only, no deploy.
 - Packing-list popup: `aria-live="polite"` on `#pkmd-success` and `#pkmd-error`; close button label is now "Close packing list offer". Focus trap deferred (would change script behavior).
 - Gallery lightbox: confirmed the script already sets `lbImg.alt = p.caption` on open; no change needed.
 - Verified: build passes, form actions and non-hashed hrefs identical, `role="menu"` gone from output.
+
+## Phase 5 — Copy polish
+- FAQ (page copy + FAQ JSON-LD kept in sync): nested parenthetical recast to `(pole pole, Swahili for "slowly, slowly")`. JSON-LD re-validated after the change.
+- "100% Safety Record" softened to "Safety / First, Every Climb" on index, partners, and charity-climbs stat bands; about page Nelson stat "Safety Record: 100% Safe" -> "Approach: Safety First". Nelson was not reachable in this run, so the plan's soft fallback was used; if he can anchor a checkable fact (for example zero client evacuations), swap it back in.
+- Hero line "Conquer Kilimanjaro." kept unchanged per the plan (owner's preference pending).
+- Verified: build passes, no em dashes or AI-tell phrases in touched pages, form actions and non-hashed hrefs identical.
+
+## Phase 6 — Photo placement (SKIPPED)
+- Pending: Nelson's photo batch has not arrived. The placement map in the update plan is untouched and still current.
+
+## Not done / notes
+- Screenshot before/after diffs and live-site curl checks were not run (no deploy in this task; local build verification only).
+- ~430 inline style attributes remain outside the named hotspots; candidates for a later invisible refactor pass.
