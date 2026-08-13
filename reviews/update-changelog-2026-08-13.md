@@ -16,3 +16,10 @@ Execution log for `update-plan-2026-08-13.md`. Local commits only, no deploy.
 - Deduped repeated rules keeping the cascade winner: `.page-hero p` (1 def left, the .9-alpha/text-shadow winner), `.cta-section` (merged winner properties incl. `position:relative;overflow:hidden`, restored the sole `.cta-section h2`/`h2 em` rules that lived in a deleted block), `.reveal`, `.callout`, `.dest-faq summary`, `.section-title`.
 - Extracted the named inline-style hotspots into classes with identical computed values: index video feature rows (`.vf-*`), safari teaser (`.safari-list`, `.combo-panel`, `.combo-card`, `.combo-title/.combo-sub`), best-time box (`.best-time-box`, `.bt-*`); kilimanjaro route detail images (`.route-img`) and the summit-night table (`.snt` family). Remaining inline styles (index 28, kilimanjaro 150 of the original ~600 sitewide) left for a later pass; partial by design.
 - Verified: build passes, form actions identical, only diff vs baseline href set is the hashed CSS filename.
+
+## Phase 3 — Craft & cohesion
+- Footer: replaced the "f" / "in" / 💬 social anchors with inline SVG glyphs (Facebook, Instagram, WhatsApp); same hrefs, aria-labels, targets. Contact rows 📞/✉️ swapped for small stroke SVGs.
+- index.astro: replaced the 8 emoji card icons (feature list 🧭👥❤️📋, why-us 🎯🪖🤝✂️) with inline SVGs in the site's existing icon style (amber stroke on light, gold stroke on dark). The scissors on "Fully Tailored Packages" is now a sliders/adjust icon.
+- Retired the gold side-tab `border-left` pattern into hairline borders with matching accent tint: `.cred-item`, `.week-card`, `.callout` (+ blue/red/green variants), `.combo-card`, and the two inline instances on kilimanjaro.astro (flagship callout, summit-night safety box).
+- Activated the reveal animation: `html.js .reveal{opacity:0;transform:translateY(14px)}` gated behind `@media(prefers-reduced-motion:no-preference)`; the `js` class is added by the existing reveal script itself, so no-JS users always see content. One added line in BaseLayout (allowed as the intended-behavior fix).
+- Verified: build passes, form actions identical, non-hashed hrefs identical.

@@ -164,7 +164,9 @@ const allSchemas = [ORG_LD, ...schemas];
         });
       }
 
-      // Reveal animation
+      // Reveal animation (html.js gates the CSS initial hidden state so
+      // content is never hidden when JS does not run)
+      document.documentElement.classList.add('js');
       const reveals = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
       const sweep = () => {
         for (let i = reveals.length - 1; i >= 0; i--) {
