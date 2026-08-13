@@ -123,7 +123,7 @@ footer{background:#060e1c;padding:72px 0 32px;border-top:1px solid rgba(255,255,
 .footer-col ul a{font-size:.88rem;color:rgba(255,255,255,.55);transition:color .2s}
 .footer-col ul a:hover{color:var(--gold)}
 .footer-bottom{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.62)}
 .social-links{display:flex;gap:12px}
 .social-links a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.85rem;transition:background .2s,color .2s}
 .social-links a:hover{background:var(--amber-cta);color:var(--white)}
@@ -209,7 +209,7 @@ footer{background:#060e1c;padding:72px 0 32px;border-top:1px solid rgba(255,255,
 .testi-author{display:flex;align-items:center;gap:12px}
 .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--amber-cta);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);flex-shrink:0}
 .testi-name{font-weight:700;color:var(--white);font-size:.9rem}
-.testi-meta{font-size:.78rem;color:rgba(255,255,255,.5)}
+.testi-meta{font-size:.78rem;color:rgba(255,255,255,.62)}
 .org-list{margin:18px 0;padding-left:24px;display:flex;flex-direction:column;gap:8px}
 .org-list li{list-style:disc;font-size:.95rem;color:var(--text);line-height:1.65}
 .org-list li a{color:var(--amber-cta);font-weight:500}
@@ -704,7 +704,7 @@ img{display:block;max-width:100%}
 .stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:16px}
 .testi-text{color:rgba(255,255,255,.85);line-height:1.75;font-size:.95rem;flex:1;margin-bottom:20px;font-style:italic}
 .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--amber-cta);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);font-size:1rem;flex-shrink:0}
-.testi-meta{font-size:.78rem;color:rgba(255,255,255,.55)}
+.testi-meta{font-size:.78rem;color:rgba(255,255,255,.62)}
 /* ── How it works ── */
 .steps-grid{display:grid;gap:32px}
 @media(min-width:640px){.steps-grid{grid-template-columns:repeat(2,1fr)}}

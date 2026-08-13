@@ -20,9 +20,9 @@ const inDropdown = NAV_DROPDOWN.some((item) => isActive(item.href));
         <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
           {NAV_DROPDOWN_LABEL} <span class="arrow" aria-hidden="true">▾</span>
         </button>
-        <div class="nav-dropdown-menu" role="menu">
+        <div class="nav-dropdown-menu">
           {NAV_DROPDOWN.map((item) => (
-            <a href={item.href} role="menuitem" class:list={{ active: isActive(item.href) }}>{item.label}</a>
+            <a href={item.href} class:list={{ active: isActive(item.href) }}>{item.label}</a>
           ))}
         </div>
       </div>

@@ -23,3 +23,10 @@ Execution log for `update-plan-2026-08-13.md`. Local commits only, no deploy.
 - Retired the gold side-tab `border-left` pattern into hairline borders with matching accent tint: `.cred-item`, `.week-card`, `.callout` (+ blue/red/green variants), `.combo-card`, and the two inline instances on kilimanjaro.astro (flagship callout, summit-night safety box).
 - Activated the reveal animation: `html.js .reveal{opacity:0;transform:translateY(14px)}` gated behind `@media(prefers-reduced-motion:no-preference)`; the `js` class is added by the existing reveal script itself, so no-JS users always see content. One added line in BaseLayout (allowed as the intended-behavior fix).
 - Verified: build passes, form actions identical, non-hashed hrefs identical.
+
+## Phase 4 — Accessibility
+- Nav.astro: removed `role="menu"`/`role="menuitem"` from the Plan Your Trip dropdown; kept `aria-haspopup`/`aria-expanded` and all handlers.
+- Contrast: footer fine-print links `.35` -> `.62` alpha, `.footer-bottom p` `.4` -> `.62`, `.testi-meta` `.5`/`.55` -> `.62`.
+- Packing-list popup: `aria-live="polite"` on `#pkmd-success` and `#pkmd-error`; close button label is now "Close packing list offer". Focus trap deferred (would change script behavior).
+- Gallery lightbox: confirmed the script already sets `lbImg.alt = p.caption` on open; no change needed.
+- Verified: build passes, form actions and non-hashed hrefs identical, `role="menu"` gone from output.

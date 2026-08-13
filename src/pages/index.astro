@@ -510,7 +510,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
 <!-- Packing-list lead-magnet popup -->
 <div class="pkmd" id="pkmd" role="dialog" aria-modal="true" aria-labelledby="pkmd-title" aria-hidden="true">
   <div class="pkmd-card">
-    <button class="pkmd-close" id="pkmd-close" aria-label="Close">&#x2715;</button>
+    <button class="pkmd-close" id="pkmd-close" aria-label="Close packing list offer">&#x2715;</button>
     <div class="pkmd-left">
       <span class="pkmd-badge">Free PDF Guide</span>
       <h2 id="pkmd-title">Nelson's <em>Kilimanjaro Packing List.</em></h2>
@@ -539,9 +539,9 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
         </div>
         <button type="submit" id="pkmd-btn"><span id="pkmd-btn-text">Send Me the PDF &#x2192;</span></button>
         <p class="pkmd-fine">No spam. Nelson may follow up about your climb. Unsubscribe anytime.</p>
-        <div id="pkmd-error" class="pkmd-error"></div>
+        <div id="pkmd-error" class="pkmd-error" aria-live="polite"></div>
       </form>
-      <div id="pkmd-success" class="pkmd-success">
+      <div id="pkmd-success" class="pkmd-success" aria-live="polite">
         <h3>Asante! Check your email.</h3>
         <p>Your download is starting now. If it does not, <a href="/downloads/kilimanjaro-packing-list.pdf" download>click here to grab the PDF</a>.</p>
       </div>
