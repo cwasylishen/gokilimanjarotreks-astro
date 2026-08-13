@@ -17,8 +17,11 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
 <section class="hero" aria-label="Hero">
   <!-- Hero: Kilimanjaro mountain above the clouds, replace with Nelson's best summit shot -->
   <picture>
-    <source media="(max-width:640px)" srcset="images/hero-uhuru-mobile.jpg">
-    <source media="(max-width:1024px)" srcset="images/hero-uhuru-tablet.jpg">
+    <source media="(max-width:640px)" type="image/webp" srcset="/images/hero-uhuru-mobile.webp">
+    <source media="(max-width:640px)" srcset="/images/hero-uhuru-mobile.jpg">
+    <source media="(max-width:1024px)" type="image/webp" srcset="/images/hero-uhuru-tablet.webp">
+    <source media="(max-width:1024px)" srcset="/images/hero-uhuru-tablet.jpg">
+    <source type="image/webp" srcset="/images/hero-uhuru.webp">
     <img src="/images/hero-uhuru.jpg"
          sizes="100vw"
          class="hero-bg-img"
@@ -102,7 +105,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
         <a href="/about" class="btn-primary" style="margin-top:32px;display:inline-flex">Read Nelson's Story &#x2192;</a>
       </div>
       <div class="about-img-wrap reveal">
-        <img src="/images/nelson-home.jpg" alt="Nelson Mushi and team at Kilimanjaro summit" width="800" height="600" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+        <picture><source type="image/webp" srcset="/images/nelson-home.webp"><img src="/images/nelson-home.jpg" alt="Nelson Mushi and team at Kilimanjaro summit" width="800" height="600" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block"></picture>
         <div class="about-badge">Nelson Mushi<small>Lead Guide &amp; Founder</small></div>
       </div>
     </div>
@@ -120,7 +123,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
     <div class="routes-grid">
       <article class="route-card reveal">
         <div class="route-card-photo rc-lemosho">
-          <img src="/images/route-lemosho.jpg" alt="Lemosho Route, lush rainforest and Shira Plateau, Kilimanjaro" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-lemosho.webp"><img src="/images/route-lemosho.jpg" alt="Lemosho Route, lush rainforest and Shira Plateau, Kilimanjaro" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Most Popular</span>
         </div>
         <div class="route-card-body">
@@ -132,7 +135,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
       </article>
       <article class="route-card reveal">
         <div class="route-card-photo rc-northern">
-          <img src="/images/route-northern.jpg" alt="Northern Circuit, remote northern slopes of Kilimanjaro at sunrise" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-northern.webp"><img src="/images/route-northern.jpg" alt="Northern Circuit, remote northern slopes of Kilimanjaro at sunrise" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Highest Success Rate</span>
         </div>
         <div class="route-card-body">
@@ -144,7 +147,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
       </article>
       <article class="route-card reveal">
         <div class="route-card-photo rc-marangu">
-          <img src="/images/route-marangu.jpg" alt="Marangu Route, mountain huts and forest trail on Kilimanjaro" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-marangu.webp"><img src="/images/route-marangu.jpg" alt="Marangu Route, mountain huts and forest trail on Kilimanjaro" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Hut Accommodation</span>
         </div>
         <div class="route-card-body">
@@ -156,7 +159,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
       </article>
       <article class="route-card reveal">
         <div class="route-card-photo rc-rongai">
-          <img src="/images/route-rongai.jpg" alt="Rongai Route, northern approach to Kilimanjaro with Kenya plains view" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-rongai.webp"><img src="/images/route-rongai.jpg" alt="Rongai Route, northern approach to Kilimanjaro with Kenya plains view" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Quietest Route</span>
         </div>
         <div class="route-card-body">
@@ -168,7 +171,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
       </article>
       <article class="route-card reveal">
         <div class="route-card-photo rc-umbwe">
-          <img src="/images/route-umbwe.jpg" alt="Umbwe Route, steep ridgeline through Kilimanjaro rainforest" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-umbwe.webp"><img src="/images/route-umbwe.jpg" alt="Umbwe Route, steep ridgeline through Kilimanjaro rainforest" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Advanced Climbers</span>
         </div>
         <div class="route-card-body">
@@ -180,7 +183,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
       </article>
       <article class="route-card reveal">
         <div class="route-card-photo rc-machame">
-          <img src="/images/route-machame.jpg" alt="Machame Route, scenic Shira Plateau and Kilimanjaro landscape" loading="lazy" width="800" height="450">
+          <picture><source type="image/webp" srcset="/images/route-machame.webp"><img src="/images/route-machame.jpg" alt="Machame Route, scenic Shira Plateau and Kilimanjaro landscape" loading="lazy" width="800" height="450"></picture>
           <span class="route-card-badge">Scenic &amp; Varied</span>
         </div>
         <div class="route-card-body">
@@ -309,7 +312,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TourOperator","name":
           <!-- Video hosted on Cloudflare R2: Tanzania-Travel-Experts.mp4 -->
           <video
             id="heroVideo"
-            poster="images/hero-uhuru.jpg"
+            poster="/images/hero-uhuru.jpg"
             autoplay
             muted
             loop

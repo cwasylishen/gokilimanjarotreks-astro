@@ -55,8 +55,8 @@ const galleryLd = {
       {PHOTOS.map((p, i) => (
         <a class="gal-card" data-cat={p.category} data-idx={i} href={`/images/gallery/${p.slug}`} aria-label={`View larger: ${p.caption}`}>
           <picture>
-            <source type="image/webp" srcset={`/images/gallery/${p.slug.replace('.jpg','.webp')}`} />
-            <img src={`/images/gallery/${p.slug}`} alt={p.caption} loading="lazy" />
+            <source type="image/webp" srcset={`/images/gallery/${p.slug.replace('.jpg','-thumb.webp')}`} />
+            <img src={`/images/gallery/${p.slug.replace('.jpg','-thumb.jpg')}`} alt={p.caption} loading="lazy" />
           </picture>
           <div class="gal-meta"><span class="gal-cat">{p.category}</span>{p.caption}</div>
         </a>
