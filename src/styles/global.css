@@ -1,12 +1,12 @@
 /* Consolidated global stylesheet for the Go Kilimanjaro Treks Astro build.
    Every CSS rule from the legacy 35 HTML files, deduped. */
 
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/cormorant-garamond-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-display:swap;src:url('fonts/cormorant-garamond-latin-600-italic.woff2') format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-sans-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/dm-sans-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/dm-sans-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/dm-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/cormorant-garamond-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-display:swap;src:url('/fonts/cormorant-garamond-latin-600-italic.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/dm-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/dm-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/dm-sans-latin-700-normal.woff2') format('woff2')}
 :root{--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--ink:#0b1a2e;--ink-2:#111827;--navy:#1d3557;--gold:#fbbf24;--gold-dk:#d97706;--amber-cta:#b45309;--amber-hover:#92400e;--forest:#166534;--cream:#f9f7f4;--white:#ffffff;--text:#374151;--muted:#6b7280;--border:#e5e7eb}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
