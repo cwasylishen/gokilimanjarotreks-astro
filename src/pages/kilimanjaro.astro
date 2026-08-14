@@ -268,6 +268,10 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <div class="day-item"><div class="day-num">6</div><div class="day-info"><strong>Horombo Hut → Marangu Gate</strong><span>Final descent through forest, certificate ceremony</span></div></div>
         </div>
       </div>
+      <figure class="photo-figure upright" style="margin-top:28px">
+        <picture><source type="image/webp" srcset="/images/kibo-hut-approach-marangu.webp"><img src="/images/kibo-hut-approach-marangu.jpg" alt="Three trekkers resting on the alpine-desert saddle on the Marangu route, the snow-streaked summit cone of Kibo rising behind them under a deep blue sky" loading="lazy" width="1040" height="1300"></picture>
+        <figcaption>Day 4 on the Marangu route: across the saddle toward Kibo Hut at 4,703 m, with the summit cone in full view before the midnight push. Nelson's photograph, from a five to six day Marangu trek.</figcaption>
+      </figure>
     </div>
     <div>
       <div class="route-sidebar">
@@ -561,10 +565,16 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         <h2 class="section-title light">What Summit Night Looks Like</h2>
         <p class="section-lead light" style="margin:14px auto 0;max-width:720px">Summit night is long, cold, and the hardest physical work of the trek. Here is what you can expect from the moment your guide wakes you to the moment you are back in your tent.</p>
       </div>
-      <figure class="photo-figure upright" style="margin-bottom:36px">
-        <picture><source type="image/webp" srcset="/images/stella-point-summit-group.webp"><img src="/images/stella-point-summit-group.jpg" alt="Four climbers in down jackets and gaiters standing at the carved Stella Point signboard reading 5,756 m, first sun on the rock and snow lying on the crater rim behind them" loading="lazy" width="1000" height="1333"></picture>
-        <figcaption>Stella Point, 5,756 m, on the crater rim in the first light of the morning. This is the 6:00 AM line in the table below, reached by a Go Kilimanjaro Treks group after a night of walking in the dark. Uhuru Peak is another 1 to 2 hours from this signboard.</figcaption>
-      </figure>
+      <div class="photo-pair">
+        <figure class="photo-figure upright">
+          <picture><source type="image/webp" srcset="/images/stella-point-summit-group.webp"><img src="/images/stella-point-summit-group.jpg" alt="Four climbers in down jackets and gaiters standing at the carved Stella Point signboard reading 5,756 m, first sun on the rock and snow lying on the crater rim behind them" loading="lazy" width="1000" height="1333"></picture>
+          <figcaption><strong>The waypoint.</strong> Stella Point, 5,756 m, on the crater rim in the first light of the morning. This is the 6:00 AM line in the table below, reached after a night of walking in the dark. Uhuru Peak is another 1 to 2 hours from this signboard.</figcaption>
+        </figure>
+        <figure class="photo-figure upright">
+          <picture><source type="image/webp" srcset="/images/uhuru-peak-summit-team.webp"><img src="/images/uhuru-peak-summit-team.jpg" alt="Nelson Mushi, seated in the blue jacket, with his climbers and guides at the carved Uhuru Peak signboard reading Tanzania 5,895 m AMSL, Africa's highest point, world's highest free standing mountain, in snow and blowing cloud on the summit" loading="lazy" width="1000" height="1333"></picture>
+          <figcaption><strong>The arrival.</strong> Uhuru Peak, 5,895 m, the true summit and the highest point in Africa. Nelson Mushi is seated in the blue jacket with his team, seven hours up from Barafu Camp. This is the 7 to 8 AM line in the table below.</figcaption>
+        </figure>
+      </div>
       <div style="background:rgba(255,255,255,.06);border-radius:18px;padding:28px;border:1px solid rgba(255,255,255,.1)">
         <div style="overflow-x:auto"><table class="snt">
           <thead><tr>
@@ -584,12 +594,15 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
         </table></div>
       </div>
       <div style="margin-top:28px;background:rgba(212,165,116,.12);border:1px solid rgba(251,191,36,.3);border-radius:12px;padding:18px 22px;color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65">
+        <strong style="color:var(--gold)">Safety gear, one to one:</strong> the team carries a full set of summit safety gear for every climber on the trek, a one-to-one ratio rather than a shared pool passed around when someone needs it. Nothing on summit night depends on who reached for it first.
+      </div>
+      <div style="margin-top:18px;background:rgba(212,165,116,.12);border:1px solid rgba(251,191,36,.3);border-radius:12px;padding:18px 22px;color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65">
         <strong style="color:var(--gold)">Critical safety rule:</strong> Clients never lead to the summit or down from the summit. Always follow your guide and stay close at all times. Climbers who lead can become lost or disoriented in the dark, which puts them and the entire group at risk. If you need to rest, tell your guide and rest with the group.
       </div>
       <div style="margin-top:18px;color:rgba(255,255,255,.78);font-size:.93rem;line-height:1.6">
         Four base camps serve as the launch point for summit night, depending on your route:
         <ul style="margin-top:10px;padding-left:22px">
-          <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">Barafu Camp (4,670 m):</strong> used by Lemosho, Machame, and Umbwe. Steep hike to Stella Point, then 1 to 2 hours to Uhuru Peak.</li>
+          <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">Barafu Camp (4,670 m):</strong> used by Lemosho, Machame, and Umbwe. Steep hike to Stella Point, then 1 to 2 hours to Uhuru Peak. Nelson's own groups take about 7 hours from Barafu to the summit sign.</li>
           <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">Kibo Hut (4,700 m):</strong> used by Marangu and some Rongai itineraries. Longer hike to Gilman's Point, then 2 to 3 hours to Uhuru Peak.</li>
           <li style="list-style:disc;margin-bottom:4px"><strong style="color:var(--gold)">School Hut (4,750 m):</strong> used by the Northern Circuit and some Rongai variants. Direct and quiet path to the summit.</li>
           <li style="list-style:disc;margin-bottom:0"><strong style="color:var(--gold)"><a href="/kosovo-camp" style="color:var(--gold)">Kosovo Camp (4,870 m)</a>:</strong> the highest summit base camp, an optional upgrade above Barafu for well-acclimatized climbers on Machame, Lemosho, and Umbwe. Cuts 1 to 2 hours off summit night.</li>
@@ -655,7 +668,7 @@ const schemas = [{"@context":"https://schema.org","@type":"TouristTrip","name":"
           <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
             <div style="font-size:1.5rem;margin-bottom:10px">&#x1FA7A;</div>
             <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--ink-2);margin-bottom:8px">Safety Equipment</h3>
-            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">First aid kits, pulse oximeters for daily health monitoring, supplemental oxygen available.</p>
+            <p style="font-size:.88rem;color:var(--muted);line-height:1.65">First aid kits, pulse oximeters for daily health monitoring, supplemental oxygen available. Summit safety gear is carried at a one-to-one ratio, a set per climber.</p>
           </div>
           <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px">
             <div style="font-size:1.5rem;margin-bottom:10px">&#x1F3AB;</div>

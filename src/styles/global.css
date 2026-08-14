@@ -1255,3 +1255,7 @@ a.combo-card{display:block;text-decoration:none}
 /* Upright phone frames: hold them to a sane column instead of a full-bleed tower */
 .photo-figure.upright{max-width:520px;margin-left:auto;margin-right:auto}
 .photo-figure.upright figcaption{text-align:center;padding-left:0;padding-right:0}
+/* Two upright frames read as a sequence: the waypoint, then the arrival */
+.photo-pair{display:grid;gap:20px;max-width:920px;margin:0 auto 36px}
+.photo-pair .photo-figure{margin:0;max-width:none}
+@media (min-width:760px){.photo-pair{grid-template-columns:1fr 1fr;gap:24px}}
