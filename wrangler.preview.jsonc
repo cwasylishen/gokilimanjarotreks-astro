@@ -1,0 +1,7 @@
+{
+  "name": "kili-photo-preview-0814",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-06-15",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "404-page" },
+  "workers_dev": true
+}
