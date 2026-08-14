@@ -1212,3 +1212,8 @@ a.combo-card{display:block;text-decoration:none}
 .snt td{padding:14px 12px}
 .snt td.t-time{color:var(--gold);font-weight:700;white-space:nowrap}
 .snt td.t-desc{color:rgba(255,255,255,.75)}
+/* ── Inline photo figure (client photography in body sections) ── */
+.photo-figure{margin:0 0 28px}
+.photo-figure img{width:100%;height:auto;display:block;border-radius:16px}
+.photo-figure figcaption{font-size:.82rem;line-height:1.5;color:var(--muted);padding:10px 4px 0}
+.section-dark .photo-figure figcaption,.photo-figure.on-dark figcaption{color:rgba(255,255,255,.7)}
