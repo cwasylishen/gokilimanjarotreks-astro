@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE } from '../data/site';
-const schemas = [{"@context":"https://schema.org","@type":"TravelAgency","name":"Go Kilimanjaro Treks","url":"https://gokilimanjarotreks.com","email":"info@gokilimanjarotreks.com","telephone":"+255677917500","address":{"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":"-3.3731","longitude":"37.3441"},"contactPoint":[{"@type":"ContactPoint","telephone":"+255677917500","email":"info@gokilimanjarotreks.com","contactType":"customer service","areaServed":"TZ","availableLanguage":["English","Swahili"]},{"@type":"ContactPoint","telephone":"+255713917500","contactType":"reservations","areaServed":"TZ","availableLanguage":["English","Swahili"]}],"dateModified":"2026-05-26"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://gokilimanjarotreks.com/contact"}],"dateModified":"2026-05-26"}];
+import { SITE, OFFICES } from '../data/site';
+// The TravelAgency / LocalBusiness graph (address, phone, emergency line, Kenya
+// office) is emitted sitewide from ORG_LD in BaseLayout. No duplicate here.
+const schemas = [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gokilimanjarotreks.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://gokilimanjarotreks.com/contact"}],"dateModified":"2026-05-26"}];
 ---
 
 <BaseLayout
@@ -146,6 +148,65 @@ const schemas = [{"@context":"https://schema.org","@type":"TravelAgency","name":
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICES -->
+<section class="section-tinted" id="offices">
+  <div class="container">
+    <div class="reveal" style="max-width:640px">
+      <span class="section-eyebrow">Where to Find Us</span>
+      <h2 class="section-title">Two Offices, One Team</h2>
+      <p style="font-size:.97rem;color:var(--muted);line-height:1.7;margin-top:12px">Nelson runs the head office in Moshi, at the foot of the mountain. Andrew looks after travellers joining us from Nairobi and the Kenyan side of the border.</p>
+    </div>
+    <div class="offices-grid">
+      {OFFICES.map((office) => (
+        <div class:list={['office-card', 'reveal', office.id === 'kenya' && 'office-card--kenya']} id={`${office.id}-office`}>
+          <span class="office-label">{office.label}</span>
+          <h3 class="office-name">{office.name}</h3>
+          <p class="office-person"><strong>{office.person}</strong>, {office.role}</p>
+          <div class="office-lines">
+            <a class="office-line" href={`https://wa.me/${office.whatsappIntl}`} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.558 4.14 1.535 5.878L.054 23.617c-.1.334.218.649.551.546l5.865-1.857A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.597 9.597 0 01-4.916-1.354l-.352-.21-3.658 1.158 1.175-3.557-.23-.365A9.597 9.597 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4S21.6 6.698 21.6 12 17.302 21.6 12 21.6z"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+              <span class="office-line-body">
+                <span class="office-line-label">WhatsApp</span>
+                <span class="office-line-value">{office.whatsapp}</span>
+              </span>
+            </a>
+            {office.voice && (
+              <a class="office-line" href={`tel:${office.whatsapp.replace(/\s/g, '')}`}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="office-line-body">
+                  <span class="office-line-label">Call the office</span>
+                  <span class="office-line-value">{office.whatsapp}</span>
+                </span>
+              </a>
+            )}
+            <a class="office-line" href={`mailto:${office.email}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span class="office-line-body">
+                <span class="office-line-label">Email</span>
+                <span class="office-line-value">{office.email}</span>
+              </span>
+            </a>
+            <address class="office-address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>{office.addressLines.map((line, i) => (<>{i > 0 && <br />}{line}</>))}</span>
+            </address>
+          </div>
+          {office.emergencyIntl && (
+            <a class="office-emergency" href={`tel:${office.emergencyIntl}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+              <span>
+                <span class="office-emergency-label">Emergency line, 24 hours</span>
+                <span class="office-emergency-value">{office.emergency}</span>
+                <span class="office-emergency-note">For climbers already on the mountain and their families at home. Please use WhatsApp above for bookings and quotes.</span>
+              </span>
+            </a>
+          )}
+        </div>
+      ))}
     </div>
   </div>
 </section>
